@@ -5,6 +5,12 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -30,7 +36,14 @@ module.exports = {
       white: '#fff',
       orange: '#ffb900',
     },
+    fontFamily: {
+      manrope: ['Manrope-Regular', 'sans-serif'],
+      'manrope-bold': ['Manrope-Bold', 'sans-serif'],
+      'manrope-semibold': ['Manrope-SemiBold', 'sans-serif'],
+      montserrat: ['Montserrat-SemiBold', 'sans-serif'],
+      'sf-ui-display': ['SFUIDisplay-SemiBold', 'sans-serif'],
+    },
     extend: {},
   },
   plugins: [],
-}
+};
