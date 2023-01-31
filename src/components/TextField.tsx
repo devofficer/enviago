@@ -7,6 +7,10 @@ type TextFieldProps = {
 
 export default function TextField(props: TextFieldProps) {
   return (
-    <input type="text" className={cls("textfield", props.className)} placeholder={props.placeholder} />
-  )
+    <input
+      type="text"
+      className={cls('textfield', props.className)}
+      placeholder={props.placeholder}
+    />
+  );
 }
