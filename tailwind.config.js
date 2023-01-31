@@ -41,7 +41,7 @@ module.exports = {
       'manrope-bold': ['Manrope-Bold', 'sans-serif'],
       'manrope-semibold': ['Manrope-SemiBold', 'sans-serif'],
       'manrope-extrabold': ['Manrope-ExtraBold', 'sans-serif'],
-      montserrat: ['Montserrat-SemiBold', 'sans-serif'],
+      'montserrat-semibold': ['Montserrat-SemiBold', 'sans-serif'],
       'sf-ui-display': ['SFUIDisplay-SemiBold', 'sans-serif'],
     },
     container: {

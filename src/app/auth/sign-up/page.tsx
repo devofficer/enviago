@@ -1,3 +1,4 @@
+import Divider from '@/components/Divider';
 import ForwardButton from '@/components/ForwardButton';
 import TextField from '@/components/TextField';
 
@@ -13,7 +14,8 @@ export default function SignUp() {
       <TextField placeholder="Email" className="mb-4" />
       <TextField placeholder="Password" className="mb-4" />
       <TextField placeholder="Confirm Password" className="mb-4" />
-      <ForwardButton>Continue</ForwardButton>
+      <ForwardButton className="mb-[1.875rem]">Continue</ForwardButton>
+      <Divider className="mb-[1.5rem]">or</Divider>
     </div>
   );
 }
