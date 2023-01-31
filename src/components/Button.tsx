@@ -6,8 +6,10 @@ type ButtonProps = {
   className?: string;
 };
 
-export default function Button(props: ButtonProps) {
+export default function Button({ className, children }: ButtonProps) {
   return (
-    <button className={cls('btn', props?.className)}>{props.children}</button>
+    <button className={cls('btn hover:brightness-75', className)}>
+      {children}
+    </button>
   );
 }

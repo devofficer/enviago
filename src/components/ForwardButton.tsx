@@ -12,7 +12,7 @@ export default function ForwardButton(props: ForwardButtonProps) {
   return (
     <Button
       className={cls(
-        'justify-between bg-purple text-white pr-[0.5rem]',
+        'justify-between text-white pr-[0.5rem] bg-purple',
         props.className
       )}
     >
