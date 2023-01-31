@@ -2,31 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Manrope-Regular";
-  src: url("/fonts/Manrope-Regular.ttf");
-}
-@font-face {
-  font-family: "Manrope-Medium";
-  src: url("/fonts/Manrope-Medium.ttf");
-}
-@font-face {
-  font-family: "Manrope-SemiBold";
-  src: url("/fonts/Manrope-SemiBold.ttf");
-}
-@font-face {
-  font-family: "Manrope-Bold";
-  src: url("/fonts/Manrope-Bold.ttf");
-}
-@font-face {
-  font-family: "Montserrat-Bold";
-  src: url("/fonts/Montserrat-Bold.ttf");
-}
-@font-face {
-  font-family: "Montserrat-SemiBold";
-  src: url("/fonts/Montserrat-SemiBold.ttf");
-}
-@font-face {
-  font-family: "SFUIDisplay-SemiBold";
-  src: url("/fonts/SFUIDisplay-SemiBold.woff");
-}
+@import './font-family.css';
+@import './components.css';
+@import './screen.css';
