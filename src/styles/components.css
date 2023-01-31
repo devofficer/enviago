@@ -28,9 +28,10 @@
 
   .btn {
     @apply px-[1.75rem] 
-      flex 
+      flex
       text-center
       items-center 
+      justify-center
       rounded-[18px] 
       text-[0.875rem] 
       w-full 

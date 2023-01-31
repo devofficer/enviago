@@ -1,6 +1,8 @@
+import OutlinedButton from '@/components/OutlinedButton';
 import Divider from '@/components/Divider';
 import ForwardButton from '@/components/ForwardButton';
 import TextField from '@/components/TextField';
+import Image from 'next/image';
 
 export default function SignUp() {
   return (
@@ -16,6 +18,10 @@ export default function SignUp() {
       <TextField placeholder="Confirm Password" className="mb-4" />
       <ForwardButton className="mb-[1.875rem]">Continue</ForwardButton>
       <Divider className="mb-[1.5rem]">or</Divider>
+      <OutlinedButton>
+        <Image className="mr-[1.313rem]" src="/images/icons/google.svg" width={18} height={18} alt="google" />
+        Continue with Google
+      </OutlinedButton>
     </div>
   );
 }
