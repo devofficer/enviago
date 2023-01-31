@@ -1,3 +1,4 @@
+import ForwardButton from "@/components/ForwardButton";
 import TextField from "@/components/TextField";
 
 export default function SignUp() {
@@ -12,7 +13,9 @@ export default function SignUp() {
       <TextField placeholder="Email" className="mb-4" />
       <TextField placeholder="Password" className="mb-4" />
       <TextField placeholder="Confirm Password" className="mb-4" />
-      
+      <ForwardButton>
+        Continue
+      </ForwardButton>
     </div>
   )
 }

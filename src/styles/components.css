@@ -24,6 +24,17 @@
       dark:text-white 
       dark:focus:ring-blue 
       dark:focus:border-blue;
+  }
 
+  .btn {
+    @apply px-[1.75rem] 
+      flex 
+      text-center
+      items-center 
+      rounded-[18px] 
+      text-[0.875rem] 
+      w-full 
+      font-manrope-extrabold 
+      min-h-[60px];
   }
 }
