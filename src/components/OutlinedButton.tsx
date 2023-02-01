@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 import Button from './Button';
 import cls from 'classnames';
@@ -12,7 +11,7 @@ export default function OutlinedButton(props: OutlinedButtonProps) {
   return (
     <Button
       className={cls(
-        'text-gray-cool bg-white font-manrope-semibold text-[.875rem] border border-solid border-gray-trans',
+        'text-gray-cool bg-white text-[.875rem] border border-solid border-gray-trans',
         props.className
       )}
     >
