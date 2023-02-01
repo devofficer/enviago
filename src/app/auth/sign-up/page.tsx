@@ -2,11 +2,11 @@ import OutlinedButton from '@/components/OutlinedButton';
 import Divider from '@/components/Divider';
 import ForwardButton from '@/components/ForwardButton';
 import TextField from '@/components/TextField';
-import Image from 'next/image';
+import Icon from '@/components/Icon';
 
 export default function SignUp() {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center self-center xl:px-[10.25rem] px-10 w-full">
       <p className="font-manrope-bold text-[1.375rem] text-black mb-1">
         Welcome&nbsp;👋
       </p>
@@ -19,7 +19,7 @@ export default function SignUp() {
       <ForwardButton className="mb-[1.875rem]">Continue</ForwardButton>
       <Divider className="mb-[1.5rem]">or</Divider>
       <OutlinedButton>
-        <Image className="mr-[1.313rem]" src="/images/icons/google.svg" width={18} height={18} alt="google" />
+        <Icon className="mr-[1.313rem]" type="google" />
         Continue with Google
       </OutlinedButton>
     </div>

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Icon from '@/components/Icon';
 
 export default function AuthLayout({
   children,
@@ -9,13 +9,7 @@ export default function AuthLayout({
     <div className="w-screen bg-gradient-to-r from-[#2961ff_50%] to-[#ffffff_50%]">
       <div className="container flex h-screen overflow-hidden bg-gradient-to-r from-[#2961ff_55%] to-[#ffffff_45%]">
         <div className="w-[55%] py-10 px-12 text-white xl:pl-[9.375rem] xl:pr-[6.875rem]">
-          <Image
-            className="mb-10"
-            src="/images/logo.svg"
-            alt="logo"
-            width={202}
-            height={49}
-          />
+          <Icon className="mb-10" type="logo" />
           <p className="font-manrope-extrabold text-[4.75rem] leading-[4.75rem] mb-8">
             Fast, safe, social payments
           </p>
@@ -24,7 +18,7 @@ export default function AuthLayout({
             Enviago.
           </p>
         </div>
-        <div className="w-[45%] self-center xl:px-[10.25rem] px-10">
+        <div className="w-[45%] flex relative">
           {children}
         </div>
       </div>
