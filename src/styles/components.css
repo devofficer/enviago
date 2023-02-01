@@ -38,4 +38,21 @@
       font-manrope-extrabold 
       min-h-[60px];
   }
+
+  .select {
+    @apply bg-white 
+      border 
+      border-gray-trans 
+      text-gray
+      font-manrope-semibold
+      text-[.75rem]
+      rounded-[1rem]
+      focus:ring-blue 
+      focus:border-blue 
+      focus:outline-none
+      block 
+      w-full 
+      px-[1.125rem]
+      py-[1.5rem];
+  }
 }
