@@ -1,27 +1,32 @@
-import Image from "next/image";
+import Image from 'next/image';
 import clsx from 'classnames';
 
 const icons = {
   logo: {
-    src: "/images/logo.svg",
+    src: '/images/logo.svg',
     width: 202,
     height: 49,
   },
   google: {
-    src: "/images/icons/google.svg",
+    src: '/images/icons/google.svg',
     width: 18,
     height: 18,
   },
   forward: {
-    src: "/images/icons/forward-arrow.svg",
+    src: '/images/icons/forward-arrow.svg',
     width: 20,
     height: 18,
   },
   backward: {
-    src: "/images/icons/backward-arrow.svg",
+    src: '/images/icons/backward-arrow.svg',
     width: 20,
     height: 18,
-  }
+  },
+  phone: {
+    src: '/images/icons/phone.svg',
+    width: 39,
+    height: 51,
+  },
 };
 
 type IconProps = {
@@ -37,6 +42,12 @@ export default function Icon(props: IconProps) {
   const icon = icons[props.type];
 
   return (
-    <Image className={clsx(props.className)} src={icon.src} width={props.width || icon.width} height={props.height || icon.height} alt={props.type} />
-  )
+    <Image
+      className={clsx(props.className)}
+      src={icon.src}
+      width={props.width || icon.width}
+      height={props.height || icon.height}
+      alt={props.type}
+    />
+  );
 }
