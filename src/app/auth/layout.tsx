@@ -18,7 +18,7 @@ export default function AuthLayout({
             Enviago.
           </p>
         </div>
-        <div className="w-[45%] flex relative">
+        <div className="w-[45%]">
           {children}
         </div>
       </div>

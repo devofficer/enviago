@@ -6,7 +6,7 @@ import Icon from '@/components/Icon';
 
 export default function SignUp() {
   return (
-    <div className="flex flex-col items-center self-center xl:px-[10.25rem] px-10 w-full">
+    <div className="flex flex-col items-center justify-center xl:px-[10.25rem] px-10 w-full h-full">
       <p className="font-manrope-bold text-[1.375rem] text-black mb-1">
         Welcome&nbsp;👋
       </p>
