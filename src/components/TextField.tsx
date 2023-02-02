@@ -7,6 +7,7 @@ type TextFieldProps = {
   placeholder?: string;
   className?: string;
   value?: string;
+  password?: boolean;
   onChange?: (value: string) => void;
 };
 
@@ -42,7 +43,7 @@ export default function TextField(props: TextFieldProps) {
         {props.placeholder}
       </label>
       <input
-        type="text"
+        type={props.password ? "password" : "text"}
         id={id}
         value={text}
         className={clsx(
