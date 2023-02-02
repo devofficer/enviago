@@ -8,7 +8,7 @@
       border 
       border-gray-trans 
       text-black 
-      text-[0.75rem] 
+      text-[.875rem] 
       rounded-[15px] 
       font-manrope-semibold
       focus:ring-blue 
@@ -16,14 +16,7 @@
       focus:outline-none
       block 
       w-full 
-      py-[1.5rem]
-      px-[1.125rem]
-      dark:bg-gray-trans 
-      dark:border-gray-trans 
-      dark:placeholder-gray-trans
-      dark:text-white 
-      dark:focus:ring-blue 
-      dark:focus:border-blue;
+      px-[1.125rem];
   }
 
   .btn {
