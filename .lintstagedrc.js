@@ -3,10 +3,8 @@ module.exports = {
   '**/*.(ts|tsx)': () => 'yarn tsc --noEmit',
 
   // Lint & Prettify TS and JS files
-  '**/*.(ts|tsx|js)': (filenames) => [
-    // `yarn eslint --fix ${filenames.join(' ')}`,
+  '**/*.(ts|tsx|js)': (filenames) =>
     `yarn prettier --write ${filenames.join(' ')}`,
-  ],
 
   // Prettify only Markdown and JSON files
   '**/*.(md|json)': (filenames) =>
