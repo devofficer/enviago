@@ -49,5 +49,9 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    import('@tailwindcss/forms')({
+      strategy: 'class',
+    }),
+  ],
 };

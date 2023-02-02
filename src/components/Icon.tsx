@@ -27,6 +27,11 @@ const icons = {
     width: 39,
     height: 51,
   },
+  pen: {
+    src: '/images/icons/pen.svg',
+    width: 32,
+    height: 32,
+  },
 };
 
 type IconProps = {
