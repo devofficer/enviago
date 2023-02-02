@@ -1,9 +1,14 @@
 import ForwardButton from '@/components/ForwardButton';
+import IconButton from '@/components/IconButton';
 import TextField from '@/components/TextField';
 
 export default function ResetPassword() {
   return (
-    <div className="flex flex-col items-center justify-center xl:px-[10.25rem] px-10 w-full h-full">
+    <div className="relative flex flex-col items-center justify-center xl:px-[10.25rem] px-10 w-full h-full">
+      <IconButton
+        className="xl:top-[4rem] xl:left-[4rem] top-[2rem] left-[2rem] absolute"
+        icon="backward"
+      />
       <p className="font-manrope-bold text-[1.375rem] text-black mb-1">
         Forgot your details?
       </p>
