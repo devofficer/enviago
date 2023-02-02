@@ -1,13 +1,15 @@
-import Button from "@/components/Button";
-import Checkbox from "@/components/Checkbox";
-import Icon from "@/components/Icon";
-import IconButton from "@/components/IconButton";
-import TextField from "@/components/TextField";
+import Button from '@/components/Button';
+import Checkbox from '@/components/Checkbox';
+import IconButton from '@/components/IconButton';
+import TextField from '@/components/TextField';
 
 export default function Phone() {
   return (
     <div className="relative flex flex-col items-center justify-center h-full xl:px-[10rem] px-10">
-      <IconButton className="xl:top-[4rem] xl:left-[4rem] top-[2rem] left-[2rem] absolute" icon="backward" />
+      <IconButton
+        className="xl:top-[4rem] xl:left-[4rem] top-[2rem] left-[2rem] absolute"
+        icon="backward"
+      />
       <p className="font-manrope-bold text-[1.375rem] text-black mb-[.75rem] leading-[1.45]">
         Let’s set up your account
       </p>
@@ -22,12 +24,12 @@ export default function Phone() {
       <TextField placeholder="Email" className="mb-[1rem]" />
       <Checkbox className="mb-[1.875rem]">
         <span className="font-manrope-semibold text-[.75rem] text-navy leading-[.875rem]">
-          I’m 18 years old and agree to the <span className="text-blue">E-Sign Disclosure and Consent</span> to receive all communications electronically.
+          I’m 18 years old and agree to the{' '}
+          <span className="text-blue">E-Sign Disclosure and Consent</span> to
+          receive all communications electronically.
         </span>
       </Checkbox>
-      <Button className="bg-purple text-white">
-        Complete sign up
-      </Button>
+      <Button className="bg-purple text-white">Complete sign up</Button>
     </div>
-  )
+  );
 }
