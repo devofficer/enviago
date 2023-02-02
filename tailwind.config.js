@@ -50,8 +50,8 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    import('@tailwindcss/forms')({
-      strategy: 'class',
-    }),
+    require("@tailwindcss/forms")({
+      strategy: 'class'
+    })
   ],
 };
