@@ -32,6 +32,11 @@ const icons = {
     width: 32,
     height: 32,
   },
+  envelope: {
+    src: '/images/icons/envelope.svg',
+    width: 39,
+    height: 39,
+  },
 };
 
 type IconProps = {
