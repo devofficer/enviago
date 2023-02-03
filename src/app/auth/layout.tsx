@@ -21,7 +21,7 @@ export default function AuthLayout({
             </p>
           </div>
 
-          <div className="flex flex-col">
+          <div className="xl:flex hidden flex-col">
             <Image
               className="self-center"
               src="/images/auth/group1.png"
