@@ -1,0 +1,12 @@
+<svg width="780" height="900" viewBox="0 0 780 900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="8ysticfpla" d="M0 0h780v900H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use fill="#2961FF" xlink:href="#8ysticfpla"/>
+        <g transform="translate(390 552)">
+            <ellipse fill="#01DDC3" opacity=".1" cx="323.864" cy="268.929" rx="151.136" ry="147.071"/>
+            <ellipse fill="#F9F9F9" opacity=".06" cx="151.136" cy="147.071" rx="151.136" ry="147.071"/>
+        </g>
+    </g>
+</svg>
