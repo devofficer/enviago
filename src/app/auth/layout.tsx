@@ -7,9 +7,9 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-screen bg-gradient-to-r from-[#2961ff_50%] to-[#ffffff_50%]">
-      <div className="container flex h-screen overflow-hidden bg-gradient-to-r from-[#2961ff_55%] to-[#ffffff_45%]">
-        <div className="w-[55%] flex flex-col justify-between py-[2.5rem] px-12 xl:pl-[9.375rem] xl:pr-[6.875rem] bg-[url(/images/auth/bg.svg)] bg-no-repeat bg-right-bottom">
+    <div className="w-screen lg:bg-gradient-to-r from-[#2961ff_50%] to-[#ffffff_50%]">
+      <div className="container flex h-screen overflow-hidden lg:bg-gradient-to-r from-[#2961ff_55%] to-[#ffffff_45%]">
+        <div className="w-[55%] hidden lg:flex flex-col justify-between py-[2.5rem] px-12 xl:pl-[9.375rem] xl:pr-[6.875rem] bg-[url(/images/auth/bg.svg)] bg-no-repeat bg-right-bottom">
           <div className="text-white">
             <Icon className="mb-[5.625rem]" type="logo" />
             <p className="font-manrope-extrabold text-[4.75rem] leading-[4.75rem] mb-[3rem]">
@@ -38,7 +38,7 @@ export default function AuthLayout({
             />
           </div>
         </div>
-        <div className="w-[45%]">{children}</div>
+        <div className="lg:w-[45%] w-full">{children}</div>
       </div>
     </div>
   );
