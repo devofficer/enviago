@@ -5,17 +5,22 @@ import cls from 'classnames';
 type OutlinedButtonProps = {
   children: React.ReactNode;
   className?: string;
+  variant?: 'primary' | 'secondary';
 };
 
-export default function OutlinedButton(props: OutlinedButtonProps) {
+export default function OutlinedButton({ className, children, variant = 'primary' }: OutlinedButtonProps) {
   return (
     <Button
       className={cls(
-        'text-gray-cool bg-white text-[.875rem] border border-solid border-gray-trans',
-        props.className
+        'bg-white text-[.875rem] border border-solid',
+        className,
+        {
+          'border-purple text-purple': variant === 'primary',
+          'border-gray-trans text-gray-cool': variant === 'secondary'
+        }
       )}
     >
-      {props.children}
+      {children}
     </Button>
   );
 }

@@ -26,7 +26,7 @@ export default function SignIn() {
       <TextField placeholder="Password" className="mb-4" />
       <Button className="bg-purple text-white mb-[1.875rem]">Log in</Button>
       <Divider className="mb-[1.5rem]">or</Divider>
-      <OutlinedButton className="mb-[1.5rem]">
+      <OutlinedButton className="mb-[1.5rem]" variant='secondary'>
         <Icon className="mr-[1.313rem]" type="google" />
         Continue with Google
       </OutlinedButton>

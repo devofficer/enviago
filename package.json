@@ -9,6 +9,18 @@
     "lint": "next lint",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.*": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@next/font": "13.1.5",
     "@types/node": "18.11.18",

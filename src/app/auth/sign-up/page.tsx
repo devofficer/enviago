@@ -18,7 +18,7 @@ export default function SignUp() {
       <TextField placeholder="Confirm Password" className="mb-4" />
       <ForwardButton className="mb-[1.875rem]">Continue</ForwardButton>
       <Divider className="mb-[1.5rem]">or</Divider>
-      <OutlinedButton>
+      <OutlinedButton variant='secondary'>
         <Icon className="mr-[1.313rem]" type="google" />
         Continue with Google
       </OutlinedButton>
