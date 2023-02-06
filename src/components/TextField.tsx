@@ -27,29 +27,32 @@ export default function TextField(props: TextFieldProps) {
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
     >
-      <label
-        htmlFor={id}
-        className={clsx(
-          'absolute top-0 left-0',
-          'font-manrope-semibold text-[12px]',
-          'transition-all',
-          'origin-top-left translate-x-[18px]',
-          'pointer-events-none',
-          shrink
-            ? 'translate-y-[12px] text-purple'
-            : 'translate-y-[28px] text-gray-cool'
-        )}
-      >
-        {props.placeholder}
-      </label>
+      {props.placeholder && (
+        <label
+          htmlFor={id}
+          className={clsx(
+            'absolute top-0 left-0',
+            'font-manrope-semibold text-[12px]',
+            'transition-all',
+            'origin-top-left translate-x-[18px]',
+            'pointer-events-none',
+            shrink
+              ? 'translate-y-[12px] text-purple'
+              : 'translate-y-[28px] text-gray-cool'
+          )}
+        >
+          {props.placeholder}
+        </label>
+      )}
       <input
         type={props.password ? "password" : "text"}
         id={id}
         value={text}
         className={clsx(
           'textfield',
-          shrink ? 'pt-[32px] pb-[16px]' : 'py-[24px]'
+          shrink && props.placeholder ? 'pt-[32px] pb-[16px]' : 'py-[24px]'
         )}
+        style={{ textAlign: 'inherit' }}
         onChange={handleChange}
       />
     </div>
