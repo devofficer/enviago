@@ -1,6 +1,6 @@
-import Button from "@/components/Button";
-import IconButton from "@/components/IconButton";
-import Select from "@/components/Select";
+import Button from '@/components/Button';
+import IconButton from '@/components/IconButton';
+import Select from '@/components/Select';
 
 export default function Country() {
   return (
@@ -19,11 +19,13 @@ export default function Country() {
         <p className="font-manrope-semibold text-[.875rem] text-center text-gray-dark leading-[1.125rem] mb-[2.25rem]">
           Please select your country of residence.
         </p>
-        <Select options={[]} placeholder="Select country" className="mb-[1.125rem]" />
+        <Select
+          options={[]}
+          placeholder="Select country"
+          className="mb-[1.125rem]"
+        />
       </div>
-      <Button className="bg-purple text-white mb-[0.5rem]">
-        Next
-      </Button>
+      <Button className="bg-purple text-white mb-[0.5rem]">Next</Button>
     </div>
-  )
+  );
 }

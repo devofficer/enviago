@@ -12,7 +12,7 @@ export default function ResetPassword() {
       <span className="absolute top-[2.625rem] lg:hidden text-[.875rem] font-manrope-semibold">
         Reset Password
       </span>
-      <div className='w-full text-center'>
+      <div className="w-full text-center">
         <p className="font-manrope-bold text-[1.375rem] text-black mb-1">
           Forgot your details?
         </p>

@@ -1,7 +1,7 @@
-import Button from "@/components/Button";
-import IconButton from "@/components/IconButton";
-import OutlinedButton from "@/components/OutlinedButton";
-import TextField from "@/components/TextField";
+import Button from '@/components/Button';
+import IconButton from '@/components/IconButton';
+import OutlinedButton from '@/components/OutlinedButton';
+import TextField from '@/components/TextField';
 
 export default function Phone() {
   return (
@@ -18,13 +18,17 @@ export default function Phone() {
           Enter your phone number
         </p>
         <p className="font-manrope-semibold text-[.875rem] text-center text-gray-dark leading-[1.125rem] mb-[1.125rem] px-[1.375rem]">
-          We’ll text you  a code so we can confirm that it’s you
+          We’ll text you a code so we can confirm that it’s you
         </p>
         <TextField placeholder="Phone number" className="mb-[.625rem]" />
         <p className="font-manrope-semibold text-[.75rem] text-navy leading-[.875rem] mb-[1.875rem] text-left">
-          By tapping one of the buttons, you confirm that you are authorized to use the phone number entered
-          and agree to receive SMS texts verifying your identity and as otherwise permitted by
-          <span className="text-blue">&nbsp;Enviago User Agreement</span> and <span className="text-blue">Privacy Policy</span>. Carrier fees may apply.
+          By tapping one of the buttons, you confirm that you are authorized to
+          use the phone number entered and agree to receive SMS texts verifying
+          your identity and as otherwise permitted by
+          <span className="text-blue">
+            &nbsp;Enviago User Agreement
+          </span> and <span className="text-blue">Privacy Policy</span>. Carrier
+          fees may apply.
         </p>
       </div>
       <div className="w-full">
@@ -36,5 +40,5 @@ export default function Phone() {
         </OutlinedButton>
       </div>
     </div>
-  )
+  );
 }

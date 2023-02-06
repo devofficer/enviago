@@ -15,9 +15,13 @@ export default function ConfirmPassword() {
       <p className="font-manrope-bold text-[1.375rem] text-black mb-[2.25rem]">
         Enter your new password
       </p>
-      <TextField placeholder='Password' password className='mb-[1rem]' />
-      <TextField placeholder='Confirm Password' password className='mb-[1rem]' />
-      <Button className='bg-purple text-white'>Set</Button>
+      <TextField placeholder="Password" password className="mb-[1rem]" />
+      <TextField
+        placeholder="Confirm Password"
+        password
+        className="mb-[1rem]"
+      />
+      <Button className="bg-purple text-white">Set</Button>
     </div>
   );
 }

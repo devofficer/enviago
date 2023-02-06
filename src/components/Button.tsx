@@ -8,7 +8,9 @@ type ButtonProps = {
 
 export default function Button({ className, children }: ButtonProps) {
   return (
-    <button className={cls('btn hover:brightness-75 text-[.875rem]', className)}>
+    <button
+      className={cls('btn hover:brightness-75 text-[.875rem]', className)}
+    >
       {children}
     </button>
   );

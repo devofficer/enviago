@@ -40,14 +40,12 @@ export default function Welcome() {
           <IconButton icon="google" className="mr-[16px]" variant="circle" />
           <IconButton icon="phone" variant="circle" />
         </div>
-        <div className='flex items-center'>
-          <LinkButton path='#'>
-            Terms
-          </LinkButton>
-          <span className='font-manrope text-[12px] text-navy'>&nbsp;/&nbsp;</span>
-          <LinkButton path='#'>
-            Privacy
-          </LinkButton>
+        <div className="flex items-center">
+          <LinkButton path="#">Terms</LinkButton>
+          <span className="font-manrope text-[12px] text-navy">
+            &nbsp;/&nbsp;
+          </span>
+          <LinkButton path="#">Privacy</LinkButton>
         </div>
       </div>
     </div>

@@ -8,9 +8,11 @@ type SelectProps = {
 
 export default function Select(props: SelectProps) {
   return (
-    <select className={clsx("select", props.className)}>
+    <select className={clsx('select', props.className)}>
       {props.placeholder && (
-        <option disabled selected>{props.placeholder}</option>
+        <option disabled selected>
+          {props.placeholder}
+        </option>
       )}
       {props.options.map((option, idx) => (
         <option key={idx}>{option}</option>

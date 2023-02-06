@@ -12,18 +12,18 @@ export default function CheckEmail() {
       <span className="absolute top-[2.625rem] lg:hidden text-[.875rem] font-manrope-semibold">
         Reset Password
       </span>
-      <div className='w-full text-center'>
-        <Icon type="envelope" className='mb-[1.125rem] mx-auto ' />
+      <div className="w-full text-center">
+        <Icon type="envelope" className="mb-[1.125rem] mx-auto " />
         <p className="font-manrope-bold text-[1.375rem] text-black mb-[0.5rem]">
           Check your email
         </p>
         <p className="font-manrope-semibold text-gray-dark text-[.875rem] text-center leading-[1.125rem] mb-[1.125rem]">
           Password reset link has just been sent to
           <br />
-          <span className='text-blue'>leonardoolivera@gmail.com</span>
+          <span className="text-blue">leonardoolivera@gmail.com</span>
         </p>
       </div>
-      <Button className='bg-purple text-white'>Log in</Button>
+      <Button className="bg-purple text-white">Log in</Button>
     </div>
   );
 }

@@ -38,7 +38,9 @@ export default function AuthLayout({
             />
           </div>
         </div>
-        <div className="lg:w-[45%] lg:overflow-hidden w-full overflow-auto">{children}</div>
+        <div className="lg:w-[45%] lg:overflow-hidden w-full overflow-auto">
+          {children}
+        </div>
       </div>
     </div>
   );
