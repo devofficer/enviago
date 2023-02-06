@@ -23,7 +23,7 @@ export default function TextField(props: TextFieldProps) {
 
   return (
     <div
-      className={clsx('w-full', 'relative', 'flex flex-col', props.className)}
+      className={clsx(props.className, 'w-full', 'relative', 'flex flex-col', 'text-left')}
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
     >
@@ -50,7 +50,7 @@ export default function TextField(props: TextFieldProps) {
         value={text}
         className={clsx(
           'textfield',
-          shrink && props.placeholder ? 'pt-[32px] pb-[16px]' : 'py-[24px]'
+          (shrink && props.placeholder) ? 'pt-[32px] pb-[16px]' : 'py-[24px]'
         )}
         style={{ textAlign: 'inherit' }}
         onChange={handleChange}
