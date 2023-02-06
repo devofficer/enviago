@@ -8,8 +8,8 @@ import LinkButton from '@/components/LinkButton';
 
 export default function Welcome() {
   return (
-    <div>
-      <div className="bg-blue w-full h-[315px] flex flex-col pt-[73px] rounded-b-[1rem] bg-[url(/images/auth/circle.svg)] bg-no-repeat bg-[right_-32px_bottom_3.2px] mb-[84px]">
+    <div className="lg:flex items-center w-full h-full">
+      <div className="lg:hidden bg-blue w-full h-[315px] flex flex-col pt-[73px] rounded-b-[1rem] bg-[url(/images/auth/circle.svg)] bg-no-repeat bg-[right_-32px_bottom_3.2px] mb-[84px]">
         <Icon type="logo" className="self-center justify-self-center" />
         <Image
           className="self-end"
@@ -26,7 +26,7 @@ export default function Welcome() {
           alt="group"
         />
       </div>
-      <div className="flex flex-col items-center justify-center px-10 pb-[44px]">
+      <div className="w-full flex flex-col items-center justify-center px-10 pb-[44px] lg:pb-0">
         <p className="font-manrope-bold text-[1.375rem] text-black mb-1">
           Welcome&nbsp;👋
         </p>
