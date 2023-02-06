@@ -15,7 +15,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,json}": [
+    "src/**/*.{js,jsx,ts,tsx,json}": [
       "eslint",
       "prettier --write",
       "git add"
