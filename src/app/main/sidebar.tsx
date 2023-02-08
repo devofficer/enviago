@@ -33,13 +33,13 @@ export default function Sidebar() {
   const pathname = usePathname() as string;
 
   return (
-    <div className="lg:pointer-events-auto lg:flex flex-col lg:w-[240px] lg:overflow-y-auto lg:pt-[36px] lg:pb-[60px]">
-      <div className="hidden lg:flex mb-[52px] justify-center">
+    <div className="hidden pointer-events-auto lg:flex flex-col w-[240px] overflow-y-auto pt-[36px] pb-[60px]">
+      <div className="flex mb-[52px] justify-center">
         <a aria-label="Home" href="/">
           <LogoSvg className="fill-blue w-[168px]" />
         </a>
       </div>
-      <nav className="hidden lg:block lg:mb-[22px]">
+      <nav className="mb-[22px]">
         <ul role="list">
           {navbarItems.map((item, idx) => (
             <li

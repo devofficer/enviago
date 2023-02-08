@@ -30,6 +30,7 @@ module.exports = {
           cool: '#a2a8b0',
           trans: '#ebebeb',
           pale: '#f7f8fb',
+          steel: '#797f89',
         },
         green: '#0ccdd2',
         red: '#ff769f',
