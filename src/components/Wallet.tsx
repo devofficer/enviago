@@ -1,9 +1,14 @@
 import clsx from 'classnames';
 
-export default function Wallet() {
+type WalletProps = {
+  className?: string;
+};
+
+export default function Wallet({ className }: WalletProps) {
   return (
     <div
       className={clsx(
+        className,
         'bg-[url(/images/wallet-bg.svg)] bg-no-repeat bg-cover',
         'w-[321px] h-[106px]',
         'px-[23px] py-[21px]'
