@@ -3,7 +3,6 @@ import Button from '@/components/Button';
 import Checkbox from '@/components/Checkbox';
 import IconButton from '@/components/IconButton';
 import TextField from '@/components/TextField';
-import Image from 'next/image';
 
 export default function Setup() {
   return (

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import IconButton from './IconButton';
+import PenSvg from '@/assets/icons/pen.svg';
 import clsx from 'classnames';
 
 type AvatarProps = {
@@ -24,11 +25,9 @@ export default function Avatar({
         variant="custom"
         className="absolute bottom-[-4px] right-[-4px]"
       >
-        <Image
-          src="/images/icons/pen.svg"
+        <PenSvg
           width={36}
           height={36}
-          alt="pen"
           className="w-[36px] h-[36px] rounded-full"
         />
       </IconButton>
