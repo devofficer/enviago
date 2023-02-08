@@ -2,6 +2,7 @@ import Button from '@/components/Button';
 import Checkbox from '@/components/Checkbox';
 import IconButton from '@/components/IconButton';
 import TextField from '@/components/TextField';
+import Image from 'next/image';
 
 export default function Phone() {
   return (
@@ -20,8 +21,11 @@ export default function Phone() {
         <p className="font-manrope-semibold text-[.875rem] text-center text-gray-dark leading-[1.125rem] mb-[1.813rem] px-[1.375rem]">
           We need your legal name to make sure it’s really you.
         </p>
-        <div className="w-[100px] h-[100px] rounded-full bg-[url(/images/avatars/user.svg)] relative mb-[1.125rem] mx-auto">
-          <div className="w-[36px] h-[36px] rounded-full bg-blue absolute bottom-0 right-0 bg-[url(/images/icons/pen.svg)] bg-cover" />
+        <div className="relative mb-[1.125rem] w-[100px] h-[100px] mx-auto">
+          <Image src="/images/avatars/user.svg" width={100} height={100} alt="user" className="rounded-full" />
+          <IconButton variant='custom' className="absolute bottom-[-4px] right-[-4px]">
+            <Image src="/images/icons/pen.svg" width={36} height={36} alt="pen" className="w-[36px] h-[36px] rounded-full" />
+          </IconButton>
         </div>
         <TextField placeholder="Full legal name" className="mb-[0.5rem]" />
         <TextField placeholder="Username" className="mb-[0.5rem]" />

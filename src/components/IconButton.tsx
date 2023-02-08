@@ -1,32 +1,37 @@
 import clsx from 'classnames';
+import React, { Children } from 'react';
 import type { Icons } from './Icon';
 import Icon from './Icon';
 
 type IconButtonProps = {
-  icon: Icons;
+  icon?: Icons;
   className?: string;
-  variant?: 'circle' | 'square';
+  variant?: 'circle' | 'square' | 'custom';
+  children?: React.ReactNode;
 };
 
 export default function IconButton({
   icon,
   className,
+  children,
   variant = 'square',
 }: IconButtonProps) {
   return (
     <div
       className={clsx(
-        'flex items-center justify-center hover:scale-[1.25] transition-all p-[12px] ',
+        'flex items-center justify-center hover:scale-[1.15] transition-all',
         className,
         {
-          'bg-blue-ice rounded-[11px] w-[2.5rem] h-[2.5rem]':
+          'bg-blue-ice rounded-[11px] w-[2.5rem] h-[2.5rem] p-[12px]':
             variant === 'square',
-          'w-[42px] h-[42px] rounded-full border border-gray-trans':
+          'w-[42px] h-[42px] rounded-full border border-gray-trans p-[12px]':
             variant === 'circle',
         }
       )}
     >
-      <Icon type={icon} className="w-full h-full" />
+      {icon ? (
+        <Icon type={icon} className="w-full h-full" />
+      ) : children}
     </div>
   );
 }
