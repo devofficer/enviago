@@ -37,6 +37,7 @@ module.exports = {
         navy: '#022150',
         white: '#fff',
         orange: '#ffb900',
+        dark: '#192638',
       },
       fontFamily: {
         manrope: ['Manrope-Regular', 'sans-serif'],

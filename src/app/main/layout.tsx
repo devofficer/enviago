@@ -22,7 +22,7 @@ export default function MainLayout({
         <Sidebar />
         <div className="lg:pointer-events-auto lg:block lg:w-[372px] lg:overflow-y-auto lg:ml-auto"></div>
       </header>
-      <div className="relative lg:p-[40px]">
+      <div className="relative lg:p-[40px] bg-gray-pale">
         <div className="flex justify-between">
           <div className="mb-[24px]">
             {breadcrumb.length > 1 && (
