@@ -1,10 +1,11 @@
+import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
 import Checkbox from '@/components/Checkbox';
 import IconButton from '@/components/IconButton';
 import TextField from '@/components/TextField';
 import Image from 'next/image';
 
-export default function Phone() {
+export default function Setup() {
   return (
     <div className="relative flex flex-col items-center lg:justify-center justify-between xl:px-[10.25rem] px-10 pt-[120px] pb-[42px] lg:py-0 w-full h-full overflow-auto overflow-auto">
       <IconButton
@@ -21,12 +22,7 @@ export default function Phone() {
         <p className="font-manrope-semibold text-[.875rem] text-center text-gray-dark leading-[1.125rem] mb-[1.813rem] px-[1.375rem]">
           We need your legal name to make sure it’s really you.
         </p>
-        <div className="relative mb-[1.125rem] w-[100px] h-[100px] mx-auto">
-          <Image src="/images/avatars/user.svg" width={100} height={100} alt="user" className="rounded-full" />
-          <IconButton variant='custom' className="absolute bottom-[-4px] right-[-4px]">
-            <Image src="/images/icons/pen.svg" width={36} height={36} alt="pen" className="w-[36px] h-[36px] rounded-full" />
-          </IconButton>
-        </div>
+        <Avatar className="mb-[1.125rem] mx-auto" />
         <TextField placeholder="Full legal name" className="mb-[0.5rem]" />
         <TextField placeholder="Username" className="mb-[0.5rem]" />
         <TextField placeholder="Email" className="mb-[1rem]" />

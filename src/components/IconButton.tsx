@@ -29,9 +29,7 @@ export default function IconButton({
         }
       )}
     >
-      {icon ? (
-        <Icon type={icon} className="w-full h-full" />
-      ) : children}
+      {icon ? <Icon type={icon} className="w-full h-full" /> : children}
     </div>
   );
 }
