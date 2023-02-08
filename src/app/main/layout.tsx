@@ -1,11 +1,12 @@
 'use client';
 
-import { useMemo } from 'react';
+import { Fragment, useMemo } from 'react';
 import Image from 'next/image';
 import Sidebar from './sidebar';
 import { usePathname } from 'next/navigation';
 import BREADCRUMBS from '@/utils/breadcrumbs';
 import Link from 'next/link';
+import clsx from 'classnames';
 
 export default function MainLayout({
   children,
@@ -23,7 +24,7 @@ export default function MainLayout({
       </header>
       <div className="relative lg:p-[40px]">
         <div className="flex justify-between">
-          <div>
+          <div className="mb-[24px]">
             {breadcrumb.length > 1 && (
               <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
                 {breadcrumb[breadcrumb.length - 1].label}
@@ -32,27 +33,39 @@ export default function MainLayout({
             <nav className="rounded-md w-full">
               <ol className="list-reset flex font-manrope-semibold tex-[14px]">
                 {breadcrumb.map(({ label, path }, idx) => (
-                  <>
+                  <Fragment key={idx}>
                     <li>
-                      <Link href={path} className="text-gray-steel hover:text-blue">
+                      <Link
+                        href={path}
+                        className={clsx('hover:text-blue', {
+                          'text-blue': idx > 0 && idx === breadcrumb.length - 1,
+                          'text-gray-steel':
+                            idx === 0 || idx < breadcrumb.length - 1,
+                        })}
+                      >
                         {label}
                       </Link>
                     </li>
-                    {(idx < breadcrumb.length - 1) && (
+                    {idx < breadcrumb.length - 1 && (
                       <li>
                         <span className="text-gray-500 mx-2">/</span>
                       </li>
                     )}
-                  </>
+                  </Fragment>
                 ))}
               </ol>
             </nav>
           </div>
-          <div className="relative">
-            <Image src="/images/language-switcher.svg" width={30} height={34} alt="avatar" />
+          <div className="relative mb-[40px]">
+            <Image
+              src="/images/language-switcher.svg"
+              width={30}
+              height={34}
+              alt="avatar"
+            />
           </div>
         </div>
-        <main className="">{children}</main>
+        <main>{children}</main>
       </div>
     </div>
   );
