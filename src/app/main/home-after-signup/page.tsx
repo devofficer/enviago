@@ -7,7 +7,7 @@ import ContactSvg from '@/assets/contact.svg';
 import ProfileSvg from '@/assets/profile.svg';
 import BankSvg from '@/assets/bank.svg';
 
-export default function Home() {
+export default function HomeAfterSignup() {
   return (
     <div>
       <div className="flex flex-wrap">

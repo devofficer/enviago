@@ -1,7 +1,7 @@
 import TransactionCard from '@/components/TransactionCard';
 import transactions from '@/mock/transactions';
 
-export default function Home() {
+export default function Transactions() {
   return (
     <div>
       <ul className="flex flex-wrap text-[14px] font-manrope-bold text-center text-gray mb-[31px]">
