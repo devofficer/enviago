@@ -88,7 +88,7 @@ export default function MainLayout({
                 ))}
               </ol>
             </nav>
-            {pathname === LINKS.homeAfterSignUp && (
+            {pathname === LINKS.homeAfterSignUp.path && (
               <span className="font-manrope-bold text-[22px] leading-[32px]">
                 Elwin Sharvill
               </span>
