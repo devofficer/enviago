@@ -4,19 +4,24 @@ import cls from 'classnames';
 type DividerProps = {
   className?: string;
   children?: React.ReactNode;
+  color?: 'primary' | 'secondary';
 };
 
-export default function Divider(props: DividerProps) {
+export default function Divider({ color = 'primary', className, children }: DividerProps) {
   return (
     <div
       className={cls(
-        'border border-sold border-[#efefef] w-full h-0 flex justify-center relative',
-        props.className
+        className,
+        'border border-sold w-full h-0 flex justify-center relative',
+        {
+          'border-[#efefef]': color === 'primary',
+          'border-[#f5f7f9]': color === 'secondary',
+        }
       )}
     >
-      {props.children ? (
+      {children ? (
         <div className="px-[1rem] text-[#969aa8] font-montserrat-semibold bg-white absolute mt-[-.75rem]">
-          {props.children}
+          {children}
         </div>
       ) : null}
     </div>
