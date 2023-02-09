@@ -1,6 +1,5 @@
 import Button from '@/components/Button';
 import IconButton from '@/components/IconButton';
-import OutlinedButton from '@/components/OutlinedButton';
 import TextField from '@/components/TextField';
 
 export default function Phone() {
@@ -35,9 +34,9 @@ export default function Phone() {
         <Button className="bg-purple text-white mb-[0.5rem]">
           Text me code
         </Button>
-        <OutlinedButton className="border-purple text-purple font-manrope-extrabold">
+        <Button variant="outlined">
           Send via WhatsApp
-        </OutlinedButton>
+        </Button>
       </div>
     </div>
   );

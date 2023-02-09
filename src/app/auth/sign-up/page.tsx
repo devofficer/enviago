@@ -1,10 +1,10 @@
-import OutlinedButton from '@/components/OutlinedButton';
 import Divider from '@/components/Divider';
 import ForwardButton from '@/components/ForwardButton';
 import TextField from '@/components/TextField';
 import Icon from '@/components/Icon';
 import IconButton from '@/components/IconButton';
 import LinkButton from '@/components/LinkButton';
+import Button from '@/components/Button';
 
 export default function SignUp() {
   return (
@@ -28,10 +28,10 @@ export default function SignUp() {
         <TextField placeholder="Confirm Password" className="mb-4" />
         <ForwardButton className="mb-[1.875rem]">Continue</ForwardButton>
         <Divider className="mb-[1.5rem]">or</Divider>
-        <OutlinedButton variant="secondary" className="mb-[1.5rem]">
+        <Button variant="outlined" color="secondary" className="mb-[1.5rem]">
           <Icon className="mr-[1.313rem]" type="google" />
           Continue with Google
-        </OutlinedButton>
+        </Button>
       </div>
       <p className="text-[.75rem] font-manrope text-navy leading-[1.5rem]">
         Already have an account?&nbsp;

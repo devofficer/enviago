@@ -1,4 +1,3 @@
-import OutlinedButton from '@/components/OutlinedButton';
 import Divider from '@/components/Divider';
 import Image from 'next/image';
 import Icon from '@/components/Icon';
@@ -34,7 +33,7 @@ export default function Welcome() {
           Sign up or log in to get started!
         </p>
         <Button variant="contained" className="mb-[.625rem]">Sign up</Button>
-        <OutlinedButton className="mb-[1.5rem]">Log in</OutlinedButton>
+        <Button variant="outlined" className="mb-[1.5rem]">Log in</Button>
         <Divider className="mb-[1.375rem]">or</Divider>
         <div className="flex mb-[32px]">
           <IconButton icon="google" className="mr-[16px]" variant="circle" />

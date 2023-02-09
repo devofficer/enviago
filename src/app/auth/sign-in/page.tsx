@@ -1,4 +1,3 @@
-import OutlinedButton from '@/components/OutlinedButton';
 import Divider from '@/components/Divider';
 import Button from '@/components/Button';
 import TextField from '@/components/TextField';
@@ -26,10 +25,10 @@ export default function SignIn() {
       <TextField placeholder="Password" className="mb-4" />
       <Button className="bg-purple text-white mb-[1.875rem]">Log in</Button>
       <Divider className="mb-[1.5rem]">or</Divider>
-      <OutlinedButton className="mb-[1.5rem] " variant="secondary">
+      <Button className="mb-[1.5rem] " variant="outlined" color="secondary">
         <Icon className="mr-[1.313rem]" type="google" />
         Continue with Google
-      </OutlinedButton>
+      </Button>
       <LinkButton path="/auth/reset-password">Reset my password</LinkButton>
     </div>
   );
