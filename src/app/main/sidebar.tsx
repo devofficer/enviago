@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 
 import LogoSvg from '@/assets/icons/logo.svg';
 import ExchangeSvg from '@/assets/exchange.svg';
+import ExchangeLightSvg from '@/assets/exchange-light.svg';
 import LogoutSvg from '@/assets/icons/logout.svg';
 import LINKS from '@/utils/links';
 
@@ -68,10 +69,29 @@ export default function Sidebar() {
           ))}
         </ul>
       </nav>
-      <div className="bg-gray-pale pl-[6px] py-[4px] mx-[20px] rounded-[30px] flex items-center text-[16px] font-manrope-medium cursor-pointer">
-        <ExchangeSvg className="mr-[8px]" />
+      <Link
+        href={LINKS.reqSend.path}
+        className={clsx(
+          'group hover:bg-blue hover:text-white pl-[6px] py-[4px] mx-[20px] rounded-[30px] flex items-center text-[16px] font-manrope-medium cursor-pointer',
+          {
+            'bg-blue text-white': pathname.startsWith(LINKS.reqSend.path),
+            'bg-gray-pale text-black': !pathname.startsWith(LINKS.reqSend.path),
+          }
+        )}
+      >
+        <ExchangeSvg
+          className={clsx('mr-[8px] group-hover:hidden', {
+            hidden: pathname.startsWith(LINKS.reqSend.path),
+          })}
+        />
+        <ExchangeLightSvg
+          className={clsx('mr-[8px] group-hover:block', {
+            block: pathname.startsWith(LINKS.reqSend.path),
+            hidden: !pathname.startsWith(LINKS.reqSend.path),
+          })}
+        />
         Send&nbsp;/&nbsp;Request
-      </div>
+      </Link>
       <Link
         href="/auth/logout"
         className="mt-auto flex items-center px-[42px] py-[20px] cursor-pointer font-manrope-medium text-gray fill-gray active:fill-blue hover:font-manrope-bold active:text-blue hover:bg-gray-pale"

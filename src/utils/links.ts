@@ -15,6 +15,11 @@ const LINKS = {
     path: '/main/transactions/details',
     label: 'Transaction details',
   },
+  reqSend: {
+    path: '/main/request-send',
+    label: 'Send or Request Money',
+    breadcrumb: 'Send or Request',
+  },
 };
 
 export default LINKS;
