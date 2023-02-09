@@ -5,3 +5,9 @@
 @import './font-family.css';
 @import './components.css';
 @import './screen.css';
+
+@layer base {
+  html {
+    font-family: Manrope-Semibold;
+  }
+}

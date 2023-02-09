@@ -11,6 +11,7 @@ import IconButton from '@/components/IconButton';
 import PenSvg from '@/assets/icons/pen.svg';
 import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
+import LINKS from '@/utils/links';
 
 export default function MainLayout({
   children,
@@ -62,7 +63,7 @@ export default function MainLayout({
                 {breadcrumb[breadcrumb.length - 1].label}
               </div>
             )}
-            <nav className="rounded-md w-full">
+            <nav className="w-full">
               <ol className="list-reset flex font-manrope-semibold tex-[14px]">
                 {breadcrumb.map(({ label, path }, idx) => (
                   <Fragment key={idx}>
@@ -87,6 +88,9 @@ export default function MainLayout({
                 ))}
               </ol>
             </nav>
+            {pathname === LINKS.homeAfterSignUp && (
+              <span className="font-manrope-bold text-[22px] leading-[32px]">Elwin Sharvill</span>
+            )}
           </div>
           <div className="relative mb-[40px]">
             <Image
