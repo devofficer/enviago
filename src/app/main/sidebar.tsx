@@ -9,12 +9,12 @@ import LINKS from '@/utils/links';
 
 const navbarItems = [
   {
-    path: LINKS.home,
+    path: LINKS.home.path,
     icon: require('@/assets/icons/home.svg').default,
     label: 'Home',
   },
   {
-    path: LINKS.trans,
+    path: LINKS.trans.path,
     icon: require('@/assets/icons/time.svg').default,
     label: 'Transactions',
   },

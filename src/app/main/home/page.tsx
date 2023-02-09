@@ -3,6 +3,7 @@ import RequestSvg from '@/assets/request.svg';
 import ShareSvg from '@/assets/share.svg';
 import SendSvg from '@/assets/send.svg';
 import TransactionCard from '@/components/TransactionCard';
+import transactions from '@/mock/transactions';
 
 export default function Home() {
   return (
@@ -25,15 +26,9 @@ export default function Home() {
       <h1 className="font-manrope-bold text-[18px] leading-[24px] text-black mb-[17px]">
         Recent Activity
       </h1>
-      <div>
-        <TransactionCard className="mb-[16px]" />
-        <TransactionCard className="mb-[16px]" />
-        <TransactionCard className="mb-[16px]" />
-        <TransactionCard className="mb-[16px]" />
-        <TransactionCard className="mb-[16px]" />
-        <TransactionCard className="mb-[16px]" />
-        <TransactionCard className="mb-[16px]" />
-      </div>
+      {transactions.map((trans, idx) => (
+        <TransactionCard key={idx} data={trans} className="mb-[16px]" />
+      ))}
     </div>
   );
 }

@@ -1,7 +1,16 @@
 const LINKS = {
-  home: '/main/home',
-  homeAfterSignUp: '/main/home-after-signup',
-  trans: '/main/transactions',
+  home: {
+    path: '/main/home',
+    label: 'Enviago',
+  },
+  homeAfterSignUp: {
+    path: '/main/home-after-signup',
+    label: 'Home',
+  },
+  trans: {
+    path: '/main/transactions',
+    label: 'Transactions',
+  },
 };
 
 export default LINKS;
