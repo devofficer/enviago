@@ -8,7 +8,7 @@ type TextFieldProps = {
   className?: string;
   value?: string;
   password?: boolean;
-  onChange?: (value: string) => void;
+  onChange?: (_value: string) => void;
 };
 
 export default function TextField(props: TextFieldProps) {

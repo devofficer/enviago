@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import ContainedButton from './ContainedButton';
 import clsx from 'classnames';
+import Button from './Button';
 
 type TransactionCardProps = {
   className?: string;
@@ -54,9 +54,9 @@ export default function TransactionCard({
           })}
         >{`${data.type === 'request' ? '-' : '+'}${data.amount}`}</span>
       </div>
-      <ContainedButton size="small" className="hidden group-hover:block">
+      <Button variant="contained" size="small" className="hidden group-hover:block">
         Details
-      </ContainedButton>
+      </Button>
     </div>
   );
 }
