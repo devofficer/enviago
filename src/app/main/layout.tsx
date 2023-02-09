@@ -65,7 +65,7 @@ export default function MainLayout({
             )}
             <nav className="w-full">
               <ol className="list-reset flex font-manrope-semibold tex-[14px]">
-                {breadcrumb.map(({ label, path }, idx) => (
+                {breadcrumb.map(({ breadcrumb: bread, label, path }, idx) => (
                   <Fragment key={idx}>
                     <li>
                       <Link
@@ -76,7 +76,7 @@ export default function MainLayout({
                             idx === 0 || idx < breadcrumb.length - 1,
                         })}
                       >
-                        {label}
+                        {bread || label}
                       </Link>
                     </li>
                     {idx < breadcrumb.length - 1 && (
