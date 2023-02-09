@@ -60,7 +60,7 @@ export default function MainLayout({
           <div className="mb-[24px]">
             {breadcrumb.length > 1 && (
               <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
-                {breadcrumb[breadcrumb.length - 1].label}
+                {breadcrumb[1].label}
               </div>
             )}
             <nav className="w-full">

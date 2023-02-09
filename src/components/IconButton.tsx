@@ -7,6 +7,7 @@ type IconButtonProps = {
   icon?: Icons;
   className?: string;
   variant?: 'circle' | 'square' | 'custom';
+  color?: 'primary' | 'secondary';
   children?: React.ReactNode;
 };
 
@@ -15,6 +16,7 @@ export default function IconButton({
   className,
   children,
   variant = 'square',
+  color = 'primary'
 }: IconButtonProps) {
   return (
     <div
@@ -22,14 +24,16 @@ export default function IconButton({
         'flex items-center justify-center hover:scale-[1.15] transition-all',
         className,
         {
-          'bg-blue-ice rounded-[11px] w-[2.5rem] h-[2.5rem] p-[12px]':
+          'rounded-[11px] w-[2.5rem] h-[2.5rem] p-[12px]':
             variant === 'square',
+          'bg-blue-ice': variant === 'square' && color === 'primary',
+          'bg-white': variant === 'square' && color === 'secondary',
           'w-[42px] h-[42px] rounded-full border border-gray-trans p-[12px]':
             variant === 'circle',
         }
       )}
     >
       {icon ? <Icon type={icon} className="w-full h-full" /> : children}
-    </div>
+    </div >
   );
 }
