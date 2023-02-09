@@ -34,9 +34,7 @@ export default function Phone() {
         <Button className="bg-purple text-white mb-[0.5rem]">
           Text me code
         </Button>
-        <Button variant="outlined">
-          Send via WhatsApp
-        </Button>
+        <Button variant="outlined">Send via WhatsApp</Button>
       </div>
     </div>
   );

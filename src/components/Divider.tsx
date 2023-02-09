@@ -7,7 +7,11 @@ type DividerProps = {
   color?: 'primary' | 'secondary';
 };
 
-export default function Divider({ color = 'primary', className, children }: DividerProps) {
+export default function Divider({
+  color = 'primary',
+  className,
+  children,
+}: DividerProps) {
   return (
     <div
       className={cls(

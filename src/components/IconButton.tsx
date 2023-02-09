@@ -16,7 +16,7 @@ export default function IconButton({
   className,
   children,
   variant = 'square',
-  color = 'primary'
+  color = 'primary',
 }: IconButtonProps) {
   return (
     <div
@@ -24,8 +24,7 @@ export default function IconButton({
         'flex items-center justify-center hover:scale-[1.15] transition-all',
         className,
         {
-          'rounded-[11px] w-[2.5rem] h-[2.5rem] p-[12px]':
-            variant === 'square',
+          'rounded-[11px] w-[2.5rem] h-[2.5rem] p-[12px]': variant === 'square',
           'bg-blue-ice': variant === 'square' && color === 'primary',
           'bg-white': variant === 'square' && color === 'secondary',
           'w-[42px] h-[42px] rounded-full border border-gray-trans p-[12px]':
@@ -34,6 +33,6 @@ export default function IconButton({
       )}
     >
       {icon ? <Icon type={icon} className="w-full h-full" /> : children}
-    </div >
+    </div>
   );
 }

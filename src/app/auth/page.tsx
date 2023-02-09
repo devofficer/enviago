@@ -32,8 +32,12 @@ export default function Welcome() {
         <p className="font-manrope-semibold text-gray-dark text-[0.875rem] mb-[1.125rem]">
           Sign up or log in to get started!
         </p>
-        <Button variant="contained" className="mb-[.625rem]">Sign up</Button>
-        <Button variant="outlined" className="mb-[1.5rem]">Log in</Button>
+        <Button variant="contained" className="mb-[.625rem]">
+          Sign up
+        </Button>
+        <Button variant="outlined" className="mb-[1.5rem]">
+          Log in
+        </Button>
         <Divider className="mb-[1.375rem]">or</Divider>
         <div className="flex mb-[32px]">
           <IconButton icon="google" className="mr-[16px]" variant="circle" />

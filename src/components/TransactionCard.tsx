@@ -54,7 +54,11 @@ export default function TransactionCard({
           })}
         >{`${data.type === 'request' ? '-' : '+'}${data.amount}`}</span>
       </div>
-      <Button variant="contained" size="small" className="hidden group-hover:block">
+      <Button
+        variant="contained"
+        size="small"
+        className="hidden group-hover:block"
+      >
         Details
       </Button>
     </div>

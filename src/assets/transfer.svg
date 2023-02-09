@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="aedimvapla" d="M0 0h24v24H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="7k2a56lerb" fill="#fff">
+            <use xlink:href="#aedimvapla"/>
+        </mask>
+        <g mask="url(#7k2a56lerb)" stroke="#000" stroke-dasharray="0,0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2">
+            <path d="M5.58 11.59 3.64 4.88c-.24-.82.6-1.55 1.38-1.18l15.1 6.99c.77.36.77 1.46 0 1.81l-15.1 6.99a1 1 0 0 1-1.38-1.19l1.94-6.71zM5.58 11.59h4.79"/>
+        </g>
+    </g>
+</svg>

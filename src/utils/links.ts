@@ -14,7 +14,7 @@ const LINKS = {
   transDetails: {
     path: '/main/transactions/details',
     label: 'Transaction details',
-  }
+  },
 };
 
 export default LINKS;
