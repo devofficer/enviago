@@ -53,9 +53,7 @@ export default function Home() {
             <h2 className="text-dark text-[14px] leading-[20px] mb-[4px]">
               Find people to pay
             </h2>
-            <p className="text-gray text-[12px]">
-              Sync your phone contacts
-            </p>
+            <p className="text-gray text-[12px]">Sync your phone contacts</p>
           </div>
         </div>
         <div className="bg-white rounded-[18px] px-[16px] py-[19px] flex items-center">
@@ -64,10 +62,10 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-dark text-[14px] leading-[20px] mb-[4px]">
-            Personalize your profile
+              Personalize your profile
             </h2>
             <p className="text-gray text-[12px]">
-            Edit your Enviago link, profile, and more
+              Edit your Enviago link, profile, and more
             </p>
           </div>
         </div>
@@ -77,10 +75,10 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-dark text-[14px] leading-[20px] mb-[4px]">
-            Link your bank account
+              Link your bank account
             </h2>
             <p className="text-gray text-[12px]">
-            Connect with your bank account
+              Connect with your bank account
             </p>
           </div>
         </div>

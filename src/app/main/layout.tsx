@@ -89,7 +89,9 @@ export default function MainLayout({
               </ol>
             </nav>
             {pathname === LINKS.homeAfterSignUp && (
-              <span className="font-manrope-bold text-[22px] leading-[32px]">Elwin Sharvill</span>
+              <span className="font-manrope-bold text-[22px] leading-[32px]">
+                Elwin Sharvill
+              </span>
             )}
           </div>
           <div className="relative mb-[40px]">

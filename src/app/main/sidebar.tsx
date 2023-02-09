@@ -5,15 +5,16 @@ import { usePathname } from 'next/navigation';
 import LogoSvg from '@/assets/icons/logo.svg';
 import ExchangeSvg from '@/assets/exchange.svg';
 import LogoutSvg from '@/assets/icons/logout.svg';
+import LINKS from '@/utils/links';
 
 const navbarItems = [
   {
-    path: '/main/home',
+    path: LINKS.home,
     icon: require('@/assets/icons/home.svg').default,
     label: 'Home',
   },
   {
-    path: '/main/trans',
+    path: LINKS.trans,
     icon: require('@/assets/icons/time.svg').default,
     label: 'Transactions',
   },

@@ -4,9 +4,13 @@ import clsx from 'classnames';
 
 type TransactionCardProps = {
   className?: string;
+  data: Transaction;
 };
 
-export default function TransactionCard({ className }: TransactionCardProps) {
+export default function TransactionCard({
+  className,
+  data,
+}: TransactionCardProps) {
   return (
     <div
       className={clsx(
@@ -24,18 +28,31 @@ export default function TransactionCard({ className }: TransactionCardProps) {
         />
         <div className="flex flex-col font-manrope-semibold">
           <div className="group-hover:hidden text-dark text-[14px] leading-[20px] mb-[4px]">
-            Gibby Radki
+            {data.username}
           </div>
           <div className="hidden group-hover:block text-white text-[14px] leading-[20px] mb-[4px]">
-            Gibby Radki requested $250.
+            {`${data.username} ${
+              data.type === 'request' ? 'Requested' : 'Sent'
+            } ${data.amount}`}
           </div>
           <div className="text-gray group-hover:text-white text-[12px] leading-[16px]">
-            3 hours ago
+            {`${data.timestamp} ago`}
           </div>
         </div>
       </div>
-      <div className="group-hover:hidden text-green font-manrope-bold tracking-[1px]">
-        +$250
+      <div className="group-hover:hidden font-manrope-bold tracking-[1px]">
+        {data.status === 'done' ? null : (
+          <div className="text-orange bg-orange bg-opacity-[26%] rounded-[15px] leading-[20px] px-[8px] py-[4px] mb-[5px]">
+            {data.status}
+          </div>
+        )}
+        <span
+          className={clsx('float-right', {
+            'text-green': data.type === 'send' && data.status === 'done',
+            'text-red': data.type === 'request' && data.status === 'done',
+            'text-blue': data.status === 'awaiting',
+          })}
+        >{`${data.type === 'request' ? '-' : '+'}${data.amount}`}</span>
       </div>
       <ContainedButton size="small" className="hidden group-hover:block">
         Details
