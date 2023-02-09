@@ -44,19 +44,19 @@ export default function Sidebar() {
       <nav className="mb-[22px]">
         <ul role="list">
           {navbarItems.map((item, idx) => (
-            <li
-              key={idx}
-              className={clsx(
-                'pl-[40px] pr-[16px] py-[20px] cursor-pointer hover:bg-gray-pale',
-                {
-                  'font-manrope-bold text-blue bg-gray-pale':
-                    item.path.startsWith(pathname),
-                  'font-manrope-medium text-gray':
-                    !item.path.startsWith(pathname),
-                }
-              )}
-            >
-              <Link href={item.path} className="flex items-center">
+            <li key={idx}>
+              <Link
+                href={item.path}
+                className={clsx(
+                  'flex items-center pl-[40px] pr-[16px] py-[20px] cursor-pointer hover:bg-gray-pale',
+                  {
+                    'font-manrope-bold text-blue bg-gray-pale':
+                      item.path.startsWith(pathname),
+                    'font-manrope-medium text-gray':
+                      !item.path.startsWith(pathname),
+                  }
+                )}
+              >
                 <item.icon
                   className={clsx('mr-[.875rem]', {
                     'fill-blue': item.path.startsWith(pathname),
