@@ -1,5 +1,5 @@
 import clsx from 'classnames';
-import React, { Children } from 'react';
+import React from 'react';
 import type { Icons } from './Icon';
 import Icon from './Icon';
 
