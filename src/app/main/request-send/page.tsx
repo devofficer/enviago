@@ -27,7 +27,7 @@ export default function RequestOrSend() {
         <TextField
           placeholder="Name, @username, email, phone"
           size="small"
-          endAdornment={<Icon type="pen" />}
+          startAdornment={<Icon type="pen" />}
         />
       </div>
     </div>

@@ -42,17 +42,14 @@ export default function TextField({
       className={clsx(className, 'w-full', 'relative', 'flex', 'text-left', {
         'justify-start': !!startAdornment,
         'justify-end': !!endAdornment,
+        'h-[52px]': size === 'small',
+        'h-[72px]': size === 'medium',
       })}
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
     >
       {(startAdornment || endAdornment) && (
-        <div
-          className={clsx('flex items-center mx-[16px] z-10', {
-            'h-[52px]': size === 'small',
-            'h-[72px]': size === 'medium',
-          })}
-        >
+        <div className="flex items-center mx-[16px] z-10 h-full">
           {startAdornment || endAdornment}
         </div>
       )}
