@@ -55,7 +55,7 @@ export default function MainLayout({
           <Button>Share link</Button>
         </div>
       </header>
-      <div className="relative px-[25px] py-[40px] lg:p-[40px] bg-gray-pale">
+      <div className="relative px-[25px] pt-[40px] pb-[104px] lg:p-[40px] bg-gray-pale">
         <div className="flex justify-between">
           <div className="mb-[24px]">
             {breadcrumb.length > 1 && (
