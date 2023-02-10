@@ -10,7 +10,7 @@ export default function Wallet({ className }: WalletProps) {
       className={clsx(
         className,
         'bg-[url(/images/wallet-bg.svg)] bg-right bg-no-repeat bg-contain bg-blue rounded-[25px]',
-        'min-w-[321px] min-h-[106px] w-full',
+        'min-w-[321px] min-h-[106px]',
         'px-[23px] py-[21px]'
       )}
     >

@@ -11,7 +11,7 @@ export default function HomeAfterSignup() {
   return (
     <div>
       <div className="flex flex-wrap justify-center lg:justify-start">
-        <Wallet className="lg:mr-[16px] mb-[16px]" />
+        <Wallet className="lg:mr-[16px] mb-[16px] w-full" />
         <div className="hidden lg:flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
           <RequestSvg className="mb-[9px]" />
           <span className="text-gray text-[14px]">Request</span>

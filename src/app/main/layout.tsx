@@ -55,7 +55,7 @@ export default function MainLayout({
           <Button>Share link</Button>
         </div>
       </header>
-      <div className="relative px-[25px] py-[20px] lg:p-[40px] bg-gray-pale">
+      <div className="relative px-[25px] py-[40px] lg:p-[40px] bg-gray-pale">
         <div className="flex justify-between">
           <div className="mb-[24px]">
             {breadcrumb.length > 1 && (
@@ -88,7 +88,7 @@ export default function MainLayout({
                 ))}
               </ol>
             </nav>
-            {pathname === LINKS.homeAfterSignUp.path && (
+            {pathname.startsWith(LINKS.home.path) && (
               <span className="font-manrope-bold text-[22px] leading-[32px]">
                 Elwin Sharvill
               </span>

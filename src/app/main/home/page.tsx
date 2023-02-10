@@ -8,8 +8,8 @@ import transactions from '@/mock/transactions';
 export default function Home() {
   return (
     <div>
-      <div className="flex flex-wrap">
-        <Wallet className="mr-[16px] mb-[16px]" />
+      <div className="flex flex-wrap mobile:justify-between">
+        <Wallet className="mr-[16px] mb-[16px] mobile:w-full mobile:mr-0" />
         <div className="flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
           <RequestSvg className="mb-[9px]" />
           <span className="text-gray text-[14px]">Request</span>
@@ -18,7 +18,7 @@ export default function Home() {
           <ShareSvg className="mb-[9px]" />
           <span className="text-gray text-[14px]">Share URL</span>
         </div>
-        <div className="flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
+        <div className="flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mb-[16px]">
           <SendSvg className="mb-[9px]" />
           <span className="text-gray text-[14px]">Send</span>
         </div>
