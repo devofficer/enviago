@@ -1,4 +1,4 @@
-type Transaction = {
+export type Transaction = {
   username: string;
   type: 'request' | 'send';
   status: 'done' | 'awaiting';
