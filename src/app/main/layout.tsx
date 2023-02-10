@@ -25,7 +25,7 @@ export default function MainLayout({
     <div className="lg:ml-[240px] lg:mr-[372px] bg-gray-pale h-screen">
       <header className="lg:pointer-events-none lg:fixed lg:inset-0 lg:z-40 lg:flex">
         <Sidebar />
-        <div className="lg:pointer-events-auto lg:block lg:w-[372px] lg:overflow-y-auto lg:ml-auto pt-[44px] pl-[29px] pr-[17px]">
+        <div className="hidden lg:pointer-events-auto lg:block lg:w-[372px] lg:overflow-y-auto lg:ml-auto pt-[44px] pl-[29px] pr-[17px]">
           <div className="flex items-center justify-between mb-[8px]">
             <span className="font-manrope-bold text-white text-[22px] leading-[32px] bg-gray mb-[11px]">
               Indira Shree
@@ -55,16 +55,16 @@ export default function MainLayout({
           <Button>Share link</Button>
         </div>
       </header>
-      <div className="relative lg:p-[40px] bg-gray-pale">
+      <div className="relative px-[25px] py-[20px] lg:p-[40px] bg-gray-pale">
         <div className="flex justify-between">
           <div className="mb-[24px]">
             {breadcrumb.length > 1 && (
-              <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
+              <div className="font-manrope-bold text-[1.375rem] leading-[2rem] text-black">
                 {breadcrumb[1].label}
               </div>
             )}
             <nav className="w-full">
-              <ol className="list-reset flex font-manrope-semibold tex-[14px]">
+              <ol className="list-reset flex font-manrope-semibold text-[.875rem]">
                 {breadcrumb.map(({ breadcrumb: bread, label, path }, idx) => (
                   <Fragment key={idx}>
                     <li>

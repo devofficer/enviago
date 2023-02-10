@@ -10,28 +10,28 @@ import BankSvg from '@/assets/bank.svg';
 export default function HomeAfterSignup() {
   return (
     <div>
-      <div className="flex flex-wrap">
-        <Wallet className="mr-[16px] mb-[16px]" />
-        <div className="flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
+      <div className="flex flex-wrap justify-center lg:justify-start">
+        <Wallet className="lg:mr-[16px] mb-[16px]" />
+        <div className="hidden lg:flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
           <RequestSvg className="mb-[9px]" />
           <span className="text-gray text-[14px]">Request</span>
         </div>
-        <div className="flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
+        <div className="hidden lg:flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
           <ShareSvg className="mb-[9px]" />
           <span className="text-gray text-[14px]">Share URL</span>
         </div>
-        <div className="flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
+        <div className="hidden lg:flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
           <SendSvg className="mb-[9px]" />
           <span className="text-gray text-[14px]">Send</span>
         </div>
       </div>
-      <h1 className="font-manrope-bold text-[18px] leading-[24px] text-black mb-[9px]">
+      <h1 className="font-manrope-bold text-[1.125rem] leading-[24px] text-black mb-[9px] text-center lg:text-start">
         Welcome to Enviago
       </h1>
-      <p className="text-gray text-[14px] leading-[18px] mb-[17px]">
+      <p className="text-gray text-[.875rem] leading-[18px] mb-[17px] text-center lg:text-start">
         What would you like to do first?
       </p>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid xl:grid-cols-2 grid-cols-1 gap-4">
         <div className="bg-white rounded-[18px] px-[16px] py-[19px] flex items-center">
           <div className="flex items-center justify-center w-[39px] h-[39px] bg-purple rounded-full mr-[14px]">
             <CashSvg />
