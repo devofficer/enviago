@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import clsx from 'classnames';
+import Link from 'next/link';
 
 export type ButtonProps = {
   children: React.ReactNode;
@@ -7,18 +8,20 @@ export type ButtonProps = {
   size?: 'small' | 'medium' | 'large' | `${string}px`;
   color?: 'primary' | 'secondary';
   variant?: 'contained' | 'outlined';
+  href?: string;
 };
 
 export default function Button({
   className,
   children,
+  href,
   color = 'primary',
   variant = 'contained',
   size = 'medium',
 }: ButtonProps) {
-  return (
-    <button
-      className={clsx(
+  const classes = useMemo(
+    () =>
+      clsx(
         className,
         'flex items-center justify-center',
         'text-center text-[0.875rem] font-manrope-extrabold',
@@ -36,9 +39,15 @@ export default function Button({
             color === 'secondary' && variant === 'outlined',
           'border border-solid': variant === 'outlined',
         }
-      )}
-    >
+      ),
+    [size, color, variant, className]
+  );
+
+  return href ? (
+    <Link href={href} className={classes}>
       {children}
-    </button>
+    </Link>
+  ) : (
+    <button className={classes}>{children}</button>
   );
 }

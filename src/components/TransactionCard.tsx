@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import clsx from 'classnames';
 import Button from './Button';
+import LINKS from '@/utils/links';
 
 type TransactionCardProps = {
   className?: string;
@@ -57,7 +58,8 @@ export default function TransactionCard({
       <Button
         variant="contained"
         size="small"
-        className="hidden group-hover:block"
+        className="hidden group-hover:flex"
+        href={LINKS.transDetails.path}
       >
         Details
       </Button>
