@@ -63,16 +63,17 @@ export default function Sidebar() {
                       'flex items-center pl-[40px] pr-[16px] py-[20px] cursor-pointer hover:bg-gray-pale',
                       {
                         'font-manrope-bold text-blue bg-gray-pale':
-                          item.path.startsWith(pathname),
-                        'font-manrope-medium text-gray':
-                          !item.path.startsWith(pathname),
+                          pathname.startsWith(item.path),
+                        'font-manrope-medium text-gray': !pathname.startsWith(
+                          item.path
+                        ),
                       }
                     )}
                   >
                     <item.icon
                       className={clsx('mr-[.875rem]', {
-                        'fill-blue': item.path.startsWith(pathname),
-                        'fill-gray': !item.path.startsWith(pathname),
+                        'fill-blue': pathname.startsWith(item.path),
+                        'fill-gray': !pathname.startsWith(item.path),
                       })}
                     />
                     <span>{item.label}</span>
@@ -114,8 +115,8 @@ export default function Sidebar() {
           <Link key={idx} href={item.path}>
             <item.icon
               className={clsx('hover:fill-blue', {
-                'fill-blue': item.path.startsWith(pathname),
-                'fill-gray': !item.path.startsWith(pathname),
+                'fill-blue': pathname.startsWith(item.path),
+                'fill-gray': !pathname.startsWith(item.path),
               })}
             />
           </Link>
