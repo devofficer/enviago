@@ -28,10 +28,10 @@ export default function TransactionCard({
           className="w-[39px] h-[39px] mr-[14px]"
         />
         <div className="flex flex-col font-manrope-semibold">
-          <div className="group-hover:hidden text-dark text-[14px] leading-[20px] mb-[4px]">
+          <div className="group-hover:hidden text-dark text-[.875rem] leading-[20px] mb-[4px]">
             {data.username}
           </div>
-          <div className="hidden group-hover:block text-white text-[14px] leading-[20px] mb-[4px]">
+          <div className="hidden group-hover:block text-white text-[.875rem] leading-[20px] mb-[4px]">
             {`${data.username} ${
               data.type === 'request' ? 'Requested' : 'Sent'
             } ${data.amount}`}

@@ -12,6 +12,7 @@ import PenSvg from '@/assets/icons/pen.svg';
 import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
 import LINKS from '@/utils/links';
+import useBreakpoint from '@/hooks/use-breakpoint';
 
 export default function MainLayout({
   children,
@@ -20,6 +21,7 @@ export default function MainLayout({
 }) {
   const pathname = usePathname() as string;
   const breadcrumb = useMemo(() => BREADCRUMBS[pathname] || [], [pathname]);
+  const { isMobile } = useBreakpoint();
 
   return (
     <div className="lg:ml-[240px] lg:mr-[372px] bg-gray-pale h-screen">
@@ -49,7 +51,7 @@ export default function MainLayout({
             A writer, digital marketing pioneer, and Wall Street Journal
             best-selling author who inspires and empowers people.
           </p>
-          <div className="border border-gray-trans rounded-[15px] px-[16px] py-[26px] font-manrope-semibold text-gray text-[14px] mb-[10px]">
+          <div className="border border-gray-trans rounded-[15px] px-[16px] py-[26px] font-manrope-semibold text-gray text-[.875rem] mb-[10px]">
             enviago.com/<span className="text-purple">@indirashree</span>
           </div>
           <Button>Share link</Button>
@@ -57,43 +59,47 @@ export default function MainLayout({
       </header>
       <div className="relative px-[25px] pt-[40px] pb-[104px] lg:p-[40px] bg-gray-pale">
         <div className="flex justify-between">
-          <div className="mb-[11px] lg:mb-[24px]">
-            {breadcrumb.length > 1 && (
-              <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
-                {breadcrumb[1].label}
-              </div>
-            )}
-            <nav className="hidden lg:block w-full">
-              <ol className="list-reset flex font-manrope-semibold text-[.875rem]">
-                {breadcrumb.map(({ breadcrumb: bread, label, path }, idx) => (
-                  <Fragment key={idx}>
-                    <li>
-                      <Link
-                        href={path}
-                        className={clsx('hover:text-blue', {
-                          'text-blue': idx > 0 && idx === breadcrumb.length - 1,
-                          'text-gray-steel':
-                            idx === 0 || idx < breadcrumb.length - 1,
-                        })}
-                      >
-                        {bread || label}
-                      </Link>
-                    </li>
-                    {idx < breadcrumb.length - 1 && (
+          {(!isMobile || pathname.split('/').length <= 3) && (
+            <div className="mb-[11px] lg:mb-[24px]">
+              {breadcrumb.length > 1 && (
+                <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
+                  {breadcrumb[1].label}
+                </div>
+              )}
+              <nav className="hidden lg:block w-full">
+                <ol className="list-reset flex font-manrope-semibold text-[.875rem]">
+                  {breadcrumb.map(({ breadcrumb: bread, label, path }, idx) => (
+                    <Fragment key={idx}>
                       <li>
-                        <span className="text-gray-500 mx-2">/</span>
+                        <Link
+                          href={path}
+                          className={clsx('hover:text-blue', {
+                            'text-blue':
+                              idx > 0 && idx === breadcrumb.length - 1,
+                            'text-gray-steel':
+                              idx === 0 || idx < breadcrumb.length - 1,
+                          })}
+                        >
+                          {bread || label}
+                        </Link>
                       </li>
-                    )}
-                  </Fragment>
-                ))}
-              </ol>
-            </nav>
-            {pathname.startsWith(LINKS.home.path) && (
-              <span className="font-manrope-bold text-[22px] leading-[32px]">
-                Elwin Sharvill
-              </span>
-            )}
-          </div>
+                      {idx < breadcrumb.length - 1 && (
+                        <li>
+                          <span className="text-gray-500 mx-2">/</span>
+                        </li>
+                      )}
+                    </Fragment>
+                  ))}
+                </ol>
+              </nav>
+              {pathname.startsWith(LINKS.home.path) && (
+                <span className="font-manrope-bold text-[22px] leading-[32px]">
+                  Elwin Sharvill
+                </span>
+              )}
+            </div>
+          )}
+
           {pathname.startsWith(LINKS.home.path) ? (
             <div className="relative mb-[40px]">
               <Image

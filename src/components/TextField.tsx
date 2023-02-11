@@ -63,7 +63,7 @@ export default function TextField({
             'origin-top-left',
             'pointer-events-none',
             'text-black/30',
-            'text-[14px]',
+            'text-[.875rem]',
             'z-10',
             {
               'translate-y-[12px] text-purple': shrink && size === 'medium',

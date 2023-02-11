@@ -6,8 +6,13 @@ import TransferSvg from '@/assets/transfer.svg';
 export default function TransactionDetails() {
   return (
     <div>
-      <IconButton icon="backward" color="secondary" className="mb-[30px]" />
-      <div className="grid grid-cols-2 gap-[43px]">
+      <div className="flex items-center mb-[30px]">
+        <IconButton icon="backward" color="secondary" />
+        <div className="flex-grow text-black text-center text-[.875rem] leading-[1.25rem]">
+          Transaction details
+        </div>
+      </div>
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-[43px]">
         <div className="bg-white rounded-[15px] pt-[30px] pb-[22px] px-[54px]">
           <div className="pt-[18px] pb-[16px] flex flex-col items-center justify-center bg-gray bg-opacity-[18%] rounded-[15px] mb-[19px]">
             <span className="text-green font-manrope-bold text-[24px] leading-[32px] mb-4">
@@ -17,7 +22,7 @@ export default function TransactionDetails() {
               Chilean peso
             </span>
           </div>
-          <div className="text-gray-steel text-[14px] leading-[18px] mb-[12px]">
+          <div className="text-gray-steel text-[.875rem] leading-[18px] mb-[12px]">
             From
           </div>
           <div className="flex items-center mb-[12px]">
@@ -28,7 +33,7 @@ export default function TransactionDetails() {
               alt="avatar"
               className="rounded-full w-[48px] h-[48px] mr-[15px]"
             />
-            <span className="text-[14px] text-dark leading-[20px]">
+            <span className="text-[.875rem] text-dark leading-[20px]">
               Quinten Kortum
             </span>
           </div>
@@ -57,7 +62,7 @@ export default function TransactionDetails() {
                 className="w-[40px] h-[40px] mr-[12px]"
               />
               <div>
-                <div className="text-[14px] text-black">
+                <div className="text-[.875rem] text-black">
                   <span className="font-manrope-bold mr-[12px]">Meng Ru</span>
                   <span className="font-manrope-medium">1h</span>
                 </div>
@@ -75,7 +80,7 @@ export default function TransactionDetails() {
                 className="w-[40px] h-[40px] mr-[12px]"
               />
               <div>
-                <div className="text-[14px] text-black">
+                <div className="text-[.875rem] text-black">
                   <span className="font-manrope-bold mr-[12px]">
                     Quinten Kortum
                   </span>
@@ -96,7 +101,7 @@ export default function TransactionDetails() {
                 className="w-[40px] h-[40px] mr-[12px]"
               />
               <div>
-                <div className="text-[14px] text-black">
+                <div className="text-[.875rem] text-black">
                   <span className="font-manrope-bold mr-[12px]">Meng Ru</span>
                   <span className="font-manrope-medium">1h</span>
                 </div>
@@ -107,7 +112,7 @@ export default function TransactionDetails() {
             </div>
           </div>
           <div className="bg-white rounded-[100px] px-[20px] py-[16px] flex justify-between items-center">
-            <span className="text-gray-steel text-[14px] leading-[18px]">
+            <span className="text-gray-steel text-[.875rem] leading-[18px]">
               Comment…
             </span>
             <TransferSvg />

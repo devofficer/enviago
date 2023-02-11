@@ -12,15 +12,15 @@ export default function Home() {
         <Wallet className="lg:mr-[16px] mb-[16px] w-full lg:w-max" />
         <div className="flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
           <RequestSvg className="mb-[9px]" />
-          <span className="text-gray text-[14px]">Request</span>
+          <span className="text-gray text-[.875rem]">Request</span>
         </div>
         <div className="flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
           <ShareSvg className="mb-[9px]" />
-          <span className="text-gray text-[14px]">Share URL</span>
+          <span className="text-gray text-[.875rem]">Share URL</span>
         </div>
         <div className="flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mb-[16px]">
           <SendSvg className="mb-[9px]" />
-          <span className="text-gray text-[14px]">Send</span>
+          <span className="text-gray text-[.875rem]">Send</span>
         </div>
       </div>
       <h1 className="font-manrope-bold text-[18px] leading-[24px] text-black mb-[17px]">

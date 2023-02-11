@@ -14,15 +14,15 @@ export default function HomeAfterSignup() {
         <Wallet className="lg:mr-[16px] mb-[16px] w-full" />
         <div className="hidden lg:flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
           <RequestSvg className="mb-[9px]" />
-          <span className="text-gray text-[14px]">Request</span>
+          <span className="text-gray text-[.875rem]">Request</span>
         </div>
         <div className="hidden lg:flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
           <ShareSvg className="mb-[9px]" />
-          <span className="text-gray text-[14px]">Share URL</span>
+          <span className="text-gray text-[.875rem]">Share URL</span>
         </div>
         <div className="hidden lg:flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
           <SendSvg className="mb-[9px]" />
-          <span className="text-gray text-[14px]">Send</span>
+          <span className="text-gray text-[.875rem]">Send</span>
         </div>
       </div>
       <h1 className="font-manrope-bold text-[1.125rem] leading-[24px] text-black mb-[9px] text-center lg:text-start">
@@ -37,7 +37,7 @@ export default function HomeAfterSignup() {
             <CashSvg />
           </div>
           <div>
-            <h2 className="text-dark text-[14px] leading-[20px] mb-[4px]">
+            <h2 className="text-dark text-[.875rem] leading-[20px] mb-[4px]">
               Make your first payment
             </h2>
             <p className="text-gray text-[12px]">
@@ -50,7 +50,7 @@ export default function HomeAfterSignup() {
             <ContactSvg />
           </div>
           <div>
-            <h2 className="text-dark text-[14px] leading-[20px] mb-[4px]">
+            <h2 className="text-dark text-[.875rem] leading-[20px] mb-[4px]">
               Find people to pay
             </h2>
             <p className="text-gray text-[12px]">Sync your phone contacts</p>
@@ -61,7 +61,7 @@ export default function HomeAfterSignup() {
             <ProfileSvg />
           </div>
           <div>
-            <h2 className="text-dark text-[14px] leading-[20px] mb-[4px]">
+            <h2 className="text-dark text-[.875rem] leading-[20px] mb-[4px]">
               Personalize your profile
             </h2>
             <p className="text-gray text-[12px]">
@@ -74,7 +74,7 @@ export default function HomeAfterSignup() {
             <BankSvg />
           </div>
           <div>
-            <h2 className="text-dark text-[14px] leading-[20px] mb-[4px]">
+            <h2 className="text-dark text-[.875rem] leading-[20px] mb-[4px]">
               Link your bank account
             </h2>
             <p className="text-gray text-[12px]">

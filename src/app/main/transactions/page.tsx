@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function Transactions() {
   return (
     <div>
-      <ul className="flex flex-wrap w-max bg-white rounded-[39px] p-[3px] text-[14px] font-manrope-bold text-center text-gray mb-[11px] lg:mb-[31px]">
+      <ul className="flex flex-wrap w-max bg-white rounded-[39px] p-[3px] text-[.875rem] font-manrope-bold text-center text-gray mb-[11px] lg:mb-[31px]">
         <li>
           <Link
             href="#"

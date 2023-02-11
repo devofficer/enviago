@@ -7,7 +7,7 @@ import Button from '@/components/Button';
 export default function RequestOrSend() {
   return (
     <div>
-      <ul className="flex flex-wrap text-[14px] font-manrope-bold text-center text-gray mb-[28px]">
+      <ul className="flex flex-wrap text-[.875rem] font-manrope-bold text-center text-gray mb-[28px]">
         <li>
           <a
             href="#"
@@ -36,7 +36,7 @@ export default function RequestOrSend() {
         <div className="flex items-center mb-[21px]">
           <AttachmentSvg className="mr-[14px]" />
           <div>
-            <div className="mb-[5px] text-[14px] font-manrope-medium text-black">
+            <div className="mb-[5px] text-[.875rem] font-manrope-medium text-black">
               Share your <span className="text-blue">Enviago.com</span> link
             </div>
             <div className="text-gray text-[12px] leading-[16px]">
@@ -57,7 +57,7 @@ export default function RequestOrSend() {
               className="mr-[14px] w-[39px] h-[39px]"
             />
             <div>
-              <div className="text-[14px] leading-[20px] text-dark mb-[4px]">
+              <div className="text-[.875rem] leading-[20px] text-dark mb-[4px]">
                 Gibby Radki
               </div>
               <div className="text-[12px] leading-[16px] text-gray">
@@ -74,7 +74,7 @@ export default function RequestOrSend() {
               className="mr-[14px] w-[39px] h-[39px]"
             />
             <div>
-              <div className="text-[14px] leading-[20px] text-dark mb-[4px]">
+              <div className="text-[.875rem] leading-[20px] text-dark mb-[4px]">
                 Sofietje Boksem
               </div>
               <div className="text-[12px] leading-[16px] text-gray">
@@ -91,7 +91,7 @@ export default function RequestOrSend() {
               className="mr-[14px] w-[39px] h-[39px]"
             />
             <div>
-              <div className="text-[14px] leading-[20px] text-dark mb-[4px]">
+              <div className="text-[.875rem] leading-[20px] text-dark mb-[4px]">
                 Saga Lindén
               </div>
               <div className="text-[12px] leading-[16px] text-gray">
