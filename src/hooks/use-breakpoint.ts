@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useMemo, useState } from 'react';
 import throttle from 'lodash.throttle';
 import { getCurrentBreakpoint } from '@/utils/tailwind';
