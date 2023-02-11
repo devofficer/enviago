@@ -1,13 +1,10 @@
 'use client';
 
 import TransactionCard from '@/components/TransactionCard';
-import useTailwindBreakpoint from '@/hooks/use-breakpoint';
 import transactions from '@/mock/transactions';
 import Link from 'next/link';
 
 export default function Transactions() {
-  const bp = useTailwindBreakpoint();
-  console.log(bp);
   return (
     <div>
       <ul className="flex flex-wrap w-max bg-white rounded-[39px] p-[3px] text-[14px] font-manrope-bold text-center text-gray mb-[11px] lg:mb-[31px]">

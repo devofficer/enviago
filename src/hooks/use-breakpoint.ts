@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import throttle from 'lodash.throttle';
 import { getCurrentBreakpoint } from '@/utils/tailwind';
 
 const useBreakpoint = () => {
   const [brkPnt, setBrkPnt] = useState<string>(getCurrentBreakpoint());
+  const isMobile = useMemo(() => ['xs', 'sm', 'md'].includes(brkPnt), [brkPnt]);
 
   useEffect(() => {
     const calcInnerWidth = throttle(() => {
@@ -13,7 +14,10 @@ const useBreakpoint = () => {
     return () => window.removeEventListener('resize', calcInnerWidth);
   }, []);
 
-  return brkPnt;
+  return {
+    bp: brkPnt,
+    isMobile,
+  };
 };
 
 export default useBreakpoint;
