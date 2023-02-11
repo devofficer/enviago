@@ -23,6 +23,7 @@ export const getCurrentBreakpoint = (): string => {
     const breakpointValue = getBreakpointValue(breakpoint);
     if (
       breakpointValue > biggestBreakpointValue &&
+      window &&
       window.innerWidth >= breakpointValue
     ) {
       biggestBreakpointValue = breakpointValue;
