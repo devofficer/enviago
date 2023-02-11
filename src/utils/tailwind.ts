@@ -1,3 +1,5 @@
+'use client';
+
 import resolveConfig from 'tailwindcss/resolveConfig';
 import { KeyValuePair } from 'tailwindcss/types/config';
 import tailwindConfig from '../../tailwind.config';
@@ -23,7 +25,6 @@ export const getCurrentBreakpoint = (): string => {
     const breakpointValue = getBreakpointValue(breakpoint);
     if (
       breakpointValue > biggestBreakpointValue &&
-      window &&
       window.innerWidth >= breakpointValue
     ) {
       biggestBreakpointValue = breakpointValue;
