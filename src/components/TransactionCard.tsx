@@ -58,7 +58,7 @@ export default function TransactionCard({
       <Button
         variant="contained"
         size="small"
-        className="hidden group-hover:flex"
+        className="hidden lg:group-hover:flex"
         href={LINKS.transDetails.path}
       >
         Details

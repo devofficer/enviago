@@ -11,7 +11,6 @@ module.exports = {
         md: '768px',
         lg: '976px',
         xl: '1440px',
-        mobile: { max: '976px' },
       },
       colors: {
         transparent: 'transparent',

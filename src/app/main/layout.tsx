@@ -57,13 +57,13 @@ export default function MainLayout({
       </header>
       <div className="relative px-[25px] pt-[40px] pb-[104px] lg:p-[40px] bg-gray-pale">
         <div className="flex justify-between">
-          <div className="mb-[24px]">
+          <div className="mb-[11px] lg:mb-[24px]">
             {breadcrumb.length > 1 && (
-              <div className="font-manrope-bold text-[1.375rem] leading-[2rem] text-black">
+              <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
                 {breadcrumb[1].label}
               </div>
             )}
-            <nav className="w-full">
+            <nav className="hidden lg:block w-full">
               <ol className="list-reset flex font-manrope-semibold text-[.875rem]">
                 {breadcrumb.map(({ breadcrumb: bread, label, path }, idx) => (
                   <Fragment key={idx}>
@@ -94,14 +94,25 @@ export default function MainLayout({
               </span>
             )}
           </div>
-          <div className="relative mb-[40px]">
-            <Image
-              src="/images/language-switcher.svg"
-              width={30}
-              height={34}
-              alt="avatar"
-            />
-          </div>
+          {pathname.startsWith(LINKS.home.path) ? (
+            <div className="relative mb-[40px]">
+              <Image
+                src="/images/language-switcher.svg"
+                width={30}
+                height={34}
+                alt="avatar"
+              />
+            </div>
+          ) : (
+            <div className="hidden lg:block relative mb-[40px]">
+              <Image
+                src="/images/language-switcher.svg"
+                width={30}
+                height={34}
+                alt="avatar"
+              />
+            </div>
+          )}
         </div>
         <main>{children}</main>
       </div>
