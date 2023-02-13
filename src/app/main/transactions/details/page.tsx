@@ -60,7 +60,10 @@ export default function TransactionDetails() {
             3 comments
           </div>
           <div className="mb-[13px]">
-            <div className="px-[16px] py-[18px] flex items-center bg-white rounded-[15px] mb-[12px]">
+            <div
+              className="px-[16px] py-[18px] flex items-center bg-white rounded-[15px] mb-[12px]"
+              onClick={() => setPopupOpen(true)}
+            >
               <Image
                 src="/images/avatars/female.png"
                 width={101}
@@ -126,7 +129,37 @@ export default function TransactionDetails() {
           />
         </div>
       </div>
-      <Popup open={popupOpen} onClose={() => setPopupOpen(false)}></Popup>
+      <Popup
+        open={popupOpen}
+        onClose={() => setPopupOpen(false)}
+        className="flex flex-col justify-between"
+      >
+        <div className="px-[16px] py-[18px] flex items-center bg-gray-pale rounded-[15px] mb-[12px]">
+          <Image
+            src="/images/avatars/female.png"
+            width={101}
+            height={100}
+            alt="avatar"
+            className="w-[40px] h-[40px] mr-[12px]"
+          />
+          <div>
+            <div className="text-[.875rem] text-black">
+              <span className="font-manrope-bold mr-[12px]">Meng Ru</span>
+              <span className="font-manrope-medium">1h</span>
+            </div>
+            <span className="text-gray-dark text-[13px] leading-[18px]">
+              What is this for?
+            </span>
+          </div>
+        </div>
+        <TextField
+          variant="filled"
+          color="secondary"
+          placeholder="Comment…"
+          size="small"
+          endAdornment={<TransferSvg />}
+        />
+      </Popup>
     </div>
   );
 }

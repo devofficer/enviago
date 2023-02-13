@@ -10,6 +10,7 @@ type TextFieldProps = {
   password?: boolean;
   variant?: 'filled' | 'outlined';
   size?: 'small' | 'medium' | 'large';
+  color?: 'primary' | 'secondary';
   startAdornment?: React.ReactNode;
   endAdornment?: React.ReactNode;
   onChange?: (_value: string) => void;
@@ -21,6 +22,7 @@ export default function TextField({
   placeholder,
   startAdornment,
   endAdornment,
+  color = 'primary',
   size = 'medium',
   variant = 'outlined',
   className,
@@ -62,7 +64,7 @@ export default function TextField({
             'transition-all',
             'origin-top-left',
             'pointer-events-none',
-            'text-black/30',
+
             'text-[.875rem]',
             'z-10',
             {
@@ -72,6 +74,8 @@ export default function TextField({
               'opacity-0': (focused || text) && size === 'small',
               'translate-x-[18px]': !startAdornment,
               'translate-x-[52px]': !!startAdornment,
+              'text-black/30': color === 'primary',
+              'text-gray-steel': color === 'secondary',
             }
           )}
         >
@@ -83,7 +87,6 @@ export default function TextField({
         id={id}
         value={text}
         className={clsx(
-          'bg-white',
           'text-black',
           'text-[.875rem]',
           'font-manrope-semibold',
@@ -97,6 +100,8 @@ export default function TextField({
             'py-[24px]': !(shrink && placeholder) && size === 'medium',
             'py-[15px]': size === 'small',
             'border border-gray-trans': variant === 'outlined',
+            'bg-white': color === 'primary',
+            'bg-gray-pale': color === 'secondary',
             'rounded-[15px]': size === 'medium',
             'rounded-[25px]': size === 'small',
             'pl-[18px]': !startAdornment,
