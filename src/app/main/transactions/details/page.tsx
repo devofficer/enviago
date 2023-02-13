@@ -81,7 +81,10 @@ export default function TransactionDetails() {
                 </span>
               </div>
             </div>
-            <div className="px-[16px] py-[18px] flex items-center bg-white rounded-[15px] mb-[12px]">
+            <div
+              className="px-[16px] py-[18px] flex items-center bg-white rounded-[15px] mb-[12px]"
+              onClick={() => setPopupOpen(true)}
+            >
               <Image
                 src="/images/avatars/female.png"
                 width={101}
@@ -102,7 +105,10 @@ export default function TransactionDetails() {
                 </span>
               </div>
             </div>
-            <div className="px-[16px] py-[18px] flex items-center bg-white rounded-[15px] mb-[12px]">
+            <div
+              className="px-[16px] py-[18px] flex items-center bg-white rounded-[15px] mb-[12px]"
+              onClick={() => setPopupOpen(true)}
+            >
               <Image
                 src="/images/avatars/female.png"
                 width={101}
