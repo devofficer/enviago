@@ -1,9 +1,6 @@
-'use client';
-
-import { Fragment, useMemo } from 'react';
+import { Fragment } from 'react';
 import Image from 'next/image';
 import Sidebar from './sidebar';
-import { usePathname } from 'next/navigation';
 import BREADCRUMBS from '@/utils/breadcrumbs';
 import Link from 'next/link';
 import clsx from 'classnames';
@@ -12,24 +9,18 @@ import PenSvg from '@/assets/icons/pen.svg';
 import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
 import LINKS from '@/utils/links';
-import useBreakpoint from '@/hooks/use-breakpoint';
+import { checkMobile, getServerPath } from '@/utils/next-helpers';
 
 export default function MainLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname() as string;
-  const { mobile } = useBreakpoint();
-  const breadcrumb = useMemo(() => BREADCRUMBS[pathname] || [], [pathname]);
-  const isHome = useMemo(
-    () => pathname.startsWith(LINKS.home.path),
-    [pathname]
-  );
-  const isParentPage = useMemo(
-    () => pathname.split('/').length <= 3,
-    [pathname]
-  );
+  const pathname = getServerPath();
+  const isMobile = checkMobile();
+  const breadcrumb = BREADCRUMBS[pathname];
+  const isHome = pathname.startsWith(LINKS.home.path);
+  const isParentPage = pathname.split('/').length <= 3;
 
   return (
     <div className="lg:ml-[240px] lg:mr-[372px] bg-gray-pale h-screen">
@@ -68,12 +59,12 @@ export default function MainLayout({
       <div className="relative px-[25px] pt-[40px] pb-[104px] lg:p-[40px] bg-gray-pale">
         <div className="flex justify-between">
           <div className="mb-[11px] lg:mb-[24px]">
-            {(isHome ? false : mobile ? isParentPage : true) && (
+            {(isHome ? false : isMobile ? isParentPage : true) && (
               <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
                 {breadcrumb[1].label}
               </div>
             )}
-            {(mobile ? isHome : true) && (
+            {(isMobile ? isHome : true) && (
               <nav className="w-full">
                 <ol className="list-reset flex font-manrope-semibold text-[.875rem]">
                   {breadcrumb.map(({ breadcrumb: bread, label, path }, idx) => (

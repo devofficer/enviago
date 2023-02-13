@@ -16,7 +16,7 @@ export default function Avatar({
     <div className={clsx(className, 'relative w-[100px] h-[100px]')}>
       <Image
         src={url}
-        width={100}
+        width={101}
         height={100}
         alt="user"
         className="rounded-full"
