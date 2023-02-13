@@ -1,5 +1,5 @@
 import clsx from 'classnames';
-import React, { useMemo } from 'react';
+import React, { useId } from 'react';
 
 type CheckboxProps = {
   className?: string;
@@ -7,7 +7,7 @@ type CheckboxProps = {
 };
 
 export default function Checkbox(props: CheckboxProps) {
-  const id = useMemo(() => `checkbox-${new Date().getTime().toString()}`, []);
+  const id = useId();
 
   return (
     <div className={clsx('flex', props.className)}>

@@ -61,7 +61,7 @@ export default function MainLayout({
           <div className="mb-[11px] lg:mb-[24px]">
             {(isHome ? false : isMobile ? isParentPage : true) && (
               <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
-                {breadcrumb[1].label}
+                {breadcrumb[1]?.label}
               </div>
             )}
             {(isMobile ? isHome : true) && (

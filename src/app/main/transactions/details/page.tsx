@@ -3,6 +3,7 @@ import IconButton from '@/components/IconButton';
 import Image from 'next/image';
 import TransferSvg from '@/assets/transfer.svg';
 import TextField from '@/components/TextField';
+import Popup from '@/components/Popup';
 
 export default function TransactionDetails() {
   return (
@@ -112,9 +113,15 @@ export default function TransactionDetails() {
               </div>
             </div>
           </div>
-          <TextField variant='filled' placeholder='Comment…' size='small' endAdornment={<TransferSvg />} />
+          <TextField
+            variant="filled"
+            placeholder="Comment…"
+            size="small"
+            endAdornment={<TransferSvg />}
+          />
         </div>
       </div>
+      <Popup open={true}>Hello</Popup>
     </div>
   );
 }

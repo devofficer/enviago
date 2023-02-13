@@ -1,7 +1,7 @@
 'use client';
 
 import clsx from 'classnames';
-import React, { useMemo, useState } from 'react';
+import React, { useId, useMemo, useState } from 'react';
 
 type TextFieldProps = {
   placeholder?: string;
@@ -25,7 +25,7 @@ export default function TextField({
   variant = 'outlined',
   className,
 }: TextFieldProps) {
-  const id = useMemo(() => `textfield-${new Date().getTime().toString()}`, []);
+  const id = useId();
   const [focused, setFocused] = useState(false);
   const [text, setText] = useState(value || '');
   const shrink = useMemo(
