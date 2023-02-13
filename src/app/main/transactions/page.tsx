@@ -1,5 +1,3 @@
-'use client';
-
 import TransactionCard from '@/components/TransactionCard';
 import transactions from '@/mock/transactions';
 import Link from 'next/link';
