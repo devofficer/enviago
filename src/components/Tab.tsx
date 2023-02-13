@@ -6,11 +6,17 @@ type TabProps = {
   tabs: Array<string>;
   onSelect?: (_tabId: string) => void;
   active: string;
+  className?: string;
 };
 
-export default function Tab({ tabs, active, onSelect }: TabProps) {
+export default function Tab({ tabs, active, onSelect, className }: TabProps) {
   return (
-    <ul className="flex flex-wrap w-max bg-white rounded-[39px] p-[3px] lg:p-0 lg:bg-inherit text-[.875rem] font-manrope-bold text-center text-gray mb-[11px] lg:mb-[31px]">
+    <ul
+      className={clsx(
+        'flex flex-wrap w-max bg-white rounded-[39px] p-[3px] lg:p-0 lg:bg-inherit text-[.875rem] font-manrope-bold text-center text-gray',
+        className
+      )}
+    >
       {tabs.map((tab) => (
         <li
           key={tab}

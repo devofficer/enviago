@@ -13,6 +13,8 @@ import TimeSvg from '@/assets/icons/time.svg';
 import SettingSvg from '@/assets/icons/setting.svg';
 import ProfileSvg from '@/assets/icons/user.svg';
 import LINKS from '@/utils/links';
+import { useState } from 'react';
+import RequestPopup from './request-popup';
 
 const navbarItems = [
   {
@@ -28,7 +30,6 @@ const navbarItems = [
   {
     path: LINKS.reqSend.path,
     icon: ExchangeSvg,
-    lightIcon: ExchangeLightSvg,
     label: 'Transactions',
   },
   {
@@ -45,6 +46,7 @@ const navbarItems = [
 
 export default function Sidebar() {
   const pathname = usePathname() as string;
+  const [requestPopupOpen, setRequestPopupOpen] = useState(false);
 
   return (
     <div className="fixed w-full h-[84px] bg-white z-sidebar bottom-0 pointer-events-auto flex lg:flex-col lg:justify-start lg:w-[240px] lg:h-full lg:overflow-y-auto lg:pt-[36px] lg:pb-[60px]">
@@ -113,16 +115,20 @@ export default function Sidebar() {
         </ul>
       </nav>
       <div className="flex items-center w-full justify-around lg:hidden">
-        {navbarItems.map((item, idx) => (
-          <Link key={idx} href={item.path}>
-            <item.icon
-              className={clsx('hover:fill-blue', {
-                'fill-blue': pathname.startsWith(item.path),
-                'fill-gray': !pathname.startsWith(item.path),
-              })}
-            />
-          </Link>
-        ))}
+        {navbarItems.map((item, idx) =>
+          item.path !== LINKS.reqSend.path ? (
+            <Link key={idx} href={item.path}>
+              <item.icon
+                className={clsx('hover:fill-blue', {
+                  'fill-blue': pathname.startsWith(item.path),
+                  'fill-gray': !pathname.startsWith(item.path),
+                })}
+              />
+            </Link>
+          ) : (
+            <item.icon key={idx} onClick={() => setRequestPopupOpen(true)} />
+          )
+        )}
       </div>
       <Link
         href="/auth/logout"
@@ -131,6 +137,10 @@ export default function Sidebar() {
         <LogoutSvg className="mr-[.875rem]" />
         <span>Log out</span>
       </Link>
+      <RequestPopup
+        open={requestPopupOpen}
+        onClose={() => setRequestPopupOpen(false)}
+      />
     </div>
   );
 }

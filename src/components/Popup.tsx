@@ -32,7 +32,7 @@ export default function Popup({
     >
       <div
         className={twMerge(
-          'bg-white rounded-t-[30px] z-dialog mt-[20vh] w-full h-[80vh] px-[25px] py-[41px]',
+          'bg-white rounded-t-[30px] z-dialog mt-[20vh] w-full h-[80vh] px-[25px] py-[41px] overflow-y-auto',
           className
         )}
       >

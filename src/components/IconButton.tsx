@@ -9,12 +9,14 @@ type IconButtonProps = {
   variant?: 'circle' | 'square' | 'custom';
   color?: 'primary' | 'secondary';
   children?: React.ReactNode;
+  onClick?: () => void;
 };
 
 export default function IconButton({
   icon,
   className,
   children,
+  onClick,
   variant = 'square',
   color = 'primary',
 }: IconButtonProps) {
@@ -31,6 +33,7 @@ export default function IconButton({
             variant === 'circle',
         }
       )}
+      onClick={onClick}
     >
       {icon ? <Icon type={icon} className="w-full h-full" /> : children}
     </div>

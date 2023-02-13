@@ -14,6 +14,7 @@ export default function Transactions() {
         active={tab}
         onSelect={(t) => setTab(t)}
         tabs={['All', 'Sent', 'Requested']}
+        className="mb-[11px] lg:mb-[31px]"
       />
       {transactions.map((trans, idx) => (
         <TransactionCard
