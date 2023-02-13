@@ -51,6 +51,13 @@ module.exports = {
       container: {
         center: true,
       },
+      zIndex: {
+        base: '0',
+        header: '50',
+        sidebar: '51',
+        backdrop: '100',
+        dialog: '101',
+      },
     },
   },
   plugins: [

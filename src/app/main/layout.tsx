@@ -22,12 +22,18 @@ export default function MainLayout({
   const pathname = usePathname() as string;
   const { mobile } = useBreakpoint();
   const breadcrumb = useMemo(() => BREADCRUMBS[pathname] || [], [pathname]);
-  const isHome = useMemo(() => pathname.startsWith(LINKS.home.path), [pathname]);
-  const isParentPage = useMemo(() => pathname.split('/').length <= 3, [pathname]);
+  const isHome = useMemo(
+    () => pathname.startsWith(LINKS.home.path),
+    [pathname]
+  );
+  const isParentPage = useMemo(
+    () => pathname.split('/').length <= 3,
+    [pathname]
+  );
 
   return (
     <div className="lg:ml-[240px] lg:mr-[372px] bg-gray-pale h-screen">
-      <header className="lg:pointer-events-none lg:fixed lg:inset-0 lg:z-40 lg:flex">
+      <header className="lg:pointer-events-none lg:fixed lg:inset-0 lg:z-header lg:flex">
         <Sidebar />
         <div className="hidden lg:pointer-events-auto lg:block lg:w-[372px] lg:overflow-y-auto lg:ml-auto pt-[44px] pl-[29px] pr-[17px]">
           <div className="flex items-center justify-between mb-[8px]">

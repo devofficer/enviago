@@ -4,6 +4,7 @@ import ShareSvg from '@/assets/share.svg';
 import SendSvg from '@/assets/send.svg';
 import TransactionCard from '@/components/TransactionCard';
 import transactions from '@/mock/transactions';
+import Dialog from '@/components/Dialog';
 
 export default function Home() {
   return (
@@ -29,6 +30,9 @@ export default function Home() {
       {transactions.map((trans, idx) => (
         <TransactionCard key={idx} data={trans} className="mb-[16px]" />
       ))}
+      <Dialog open={true} className="">
+        Hello
+      </Dialog>
     </div>
   );
 }
