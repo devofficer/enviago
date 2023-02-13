@@ -40,6 +40,7 @@ export default function Home() {
       <Dialog
         open={openDialog}
         className="px-[24px] py-[30px] w-[325px] text-center"
+        onClose={() => setOpenDialog(false)}
       >
         <NotifySvg className="mx-auto mb-[15px]" />
         <p className="px-[22px] font-manrope-bold text-[22px] leading-[32px] text-black mb-[13px]">

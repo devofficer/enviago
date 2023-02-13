@@ -1,11 +1,16 @@
+'use client';
+
 import Divider from '@/components/Divider';
 import IconButton from '@/components/IconButton';
 import Image from 'next/image';
 import TransferSvg from '@/assets/transfer.svg';
 import TextField from '@/components/TextField';
 import Popup from '@/components/Popup';
+import { useState } from 'react';
 
 export default function TransactionDetails() {
+  const [popupOpen, setPopupOpen] = useState(false);
+
   return (
     <div>
       <div className="flex items-center mb-[30px]">
@@ -121,7 +126,7 @@ export default function TransactionDetails() {
           />
         </div>
       </div>
-      <Popup open={true}>Hello</Popup>
+      <Popup open={popupOpen} onClose={() => setPopupOpen(false)}></Popup>
     </div>
   );
 }
