@@ -7,14 +7,16 @@ export type ButtonProps = {
   className?: string;
   size?: 'small' | 'medium' | 'large' | `${string}px`;
   color?: 'primary' | 'secondary';
-  variant?: 'contained' | 'outlined';
+  variant?: 'contained' | 'outlined' | 'naked';
   href?: string;
+  onClick?: () => void;
 };
 
 export default function Button({
   className,
   children,
   href,
+  onClick,
   color = 'primary',
   variant = 'contained',
   size = 'medium',
@@ -30,11 +32,13 @@ export default function Button({
         {
           'min-h-[42px] px-[24px]': size === 'small',
           'min-h-[60px] px-[1.75rem] w-full': size === 'medium',
+          'text-purple':
+            color === 'primary' &&
+            (variant === 'outlined' || variant === 'naked'),
           'bg-purple text-white':
             color === 'primary' && variant === 'contained',
           'bg-white': variant === 'outlined',
-          'text-purple border-purple':
-            color === 'primary' && variant === 'outlined',
+          'border-purple': color === 'primary' && variant === 'outlined',
           'border-gray-trans text-gray-cool':
             color === 'secondary' && variant === 'outlined',
           'border border-solid': variant === 'outlined',
@@ -48,6 +52,8 @@ export default function Button({
       {children}
     </Link>
   ) : (
-    <button className={classes}>{children}</button>
+    <button className={classes} onClick={onClick}>
+      {children}
+    </button>
   );
 }

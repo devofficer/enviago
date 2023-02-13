@@ -1,39 +1,20 @@
 'use client';
 
+import Tab from '@/components/Tab';
 import TransactionCard from '@/components/TransactionCard';
 import transactions from '@/mock/transactions';
-import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Transactions() {
+  const [tab, setTab] = useState('All');
+
   return (
     <div>
-      <ul className="flex flex-wrap w-max bg-white rounded-[39px] p-[3px] text-[.875rem] font-manrope-bold text-center text-gray mb-[11px] lg:mb-[31px]">
-        <li>
-          <Link
-            href="#"
-            className="inline-block w-[100px] py-[8px] text-white bg-blue rounded-[39px] active"
-            aria-current="page"
-          >
-            All
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="#"
-            className="inline-block w-[100px] py-[8px] rounded-[39px] hover:text-gray-dark hover:bg-gray-light"
-          >
-            Sent
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="#"
-            className="inline-block w-[100px] py-[8px] rounded-[39px] hover:text-gray-dark hover:bg-gray-light"
-          >
-            Requested
-          </Link>
-        </li>
-      </ul>
+      <Tab
+        active={tab}
+        onSelect={(t) => setTab(t)}
+        tabs={['All', 'Sent', 'Requested']}
+      />
       {transactions.map((trans, idx) => (
         <TransactionCard
           key={idx}

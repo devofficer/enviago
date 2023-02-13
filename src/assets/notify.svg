@@ -1,0 +1,26 @@
+<svg width="139" height="144" viewBox="0 0 139 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M66 130c27.614 0 50-22.386 50-50S93.614 30 66 30 16 52.386 16 80s22.386 50 50 50z" id="skgv22ws9a"/>
+        <path d="M66 134c29.823 0 54-24.177 54-54S95.823 26 66 26 12 50.177 12 80s24.177 54 54 54z" id="8874s8fk8b"/>
+        <path d="M66 138c32.033 0 58-25.967 58-58S98.033 22 66 22 8 47.967 8 80s25.967 58 58 58z" id="dy5aptldac"/>
+        <mask id="33qh6t4jid" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="100" height="100" fill="#fff">
+            <use xlink:href="#skgv22ws9a"/>
+        </mask>
+        <mask id="anhbslm5oe" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="108" height="108" fill="#fff">
+            <use xlink:href="#8874s8fk8b"/>
+        </mask>
+        <mask id="22jv8meibf" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="116" height="116" fill="#fff">
+            <use xlink:href="#dy5aptldac"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use stroke="#2961FF" mask="url(#33qh6t4jid)" stroke-width="2.222" stroke-dasharray="0,0" xlink:href="#skgv22ws9a"/>
+        <use stroke-opacity=".523" stroke="#2961FF" mask="url(#anhbslm5oe)" stroke-width="1.6" stroke-dasharray="0,0" xlink:href="#8874s8fk8b"/>
+        <g fill="#313381" fill-rule="nonzero">
+            <path d="M66.998 105c-5.52-.006-9.994-4.473-9.998-9.983A2.015 2.015 0 0 1 59.023 93h15.956A2.02 2.02 0 0 1 77 95.017c-.006 5.511-4.48 9.977-10.002 9.983zm-5.604-7.966a5.956 5.956 0 0 0 5.605 3.932 5.956 5.956 0 0 0 5.605-3.932h-11.21z"/>
+            <path d="M84.304 97H48.692c-2.94 0-5.395-2.278-5.667-5.255-.273-2.978 1.727-5.677 4.615-6.23V73.088C47.695 62.529 56.122 54 66.497 54c10.376 0 18.803 8.53 18.858 19.088v12.427c2.89.55 4.893 3.25 4.62 6.23-.272 2.98-2.73 5.257-5.671 5.255zm-35.612-7.424c-.58-.011-1.12.298-1.414.807a1.657 1.657 0 0 0 0 1.65 1.6 1.6 0 0 0 1.414.807h35.612a1.6 1.6 0 0 0 1.413-.808c.293-.509.293-1.14 0-1.649a1.598 1.598 0 0 0-1.413-.807h-.993c-1.129 0-2.044-.932-2.044-2.081V73.088c0-8.3-6.613-15.029-14.77-15.029-8.156 0-14.768 6.728-14.768 15.029v14.407c0 1.149-.916 2.08-2.045 2.08h-.992z"/>
+        </g>
+        <use stroke-opacity=".08" stroke="#2961FF" mask="url(#22jv8meibf)" stroke-width="2" stroke-dasharray="0,0" xlink:href="#dy5aptldac"/>
+        <path d="M12 32a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM5 128a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM103 22a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM135 58a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM18 2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM117 39a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM103 139a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM22 144a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM4 50a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="#313381"/>
+    </g>
+</svg>
