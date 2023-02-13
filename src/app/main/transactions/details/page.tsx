@@ -2,6 +2,7 @@ import Divider from '@/components/Divider';
 import IconButton from '@/components/IconButton';
 import Image from 'next/image';
 import TransferSvg from '@/assets/transfer.svg';
+import TextField from '@/components/TextField';
 
 export default function TransactionDetails() {
   return (
@@ -111,12 +112,7 @@ export default function TransactionDetails() {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-[100px] px-[20px] py-[16px] flex justify-between items-center">
-            <span className="text-gray-steel text-[.875rem] leading-[18px]">
-              Comment…
-            </span>
-            <TransferSvg />
-          </div>
+          <TextField variant='filled' placeholder='Comment…' size='small' endAdornment={<TransferSvg />} />
         </div>
       </div>
     </div>

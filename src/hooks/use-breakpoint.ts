@@ -4,7 +4,7 @@ import { getCurrentBreakpoint } from '@/utils/tailwind';
 
 const useBreakpoint = () => {
   const [brkPnt, setBrkPnt] = useState<string>(getCurrentBreakpoint());
-  const isMobile = useMemo(() => ['xs', 'sm', 'md'].includes(brkPnt), [brkPnt]);
+  const mobile = useMemo(() => ['xs', 'sm', 'md'].includes(brkPnt), [brkPnt]);
 
   useEffect(() => {
     const calcInnerWidth = throttle(() => {
@@ -16,7 +16,8 @@ const useBreakpoint = () => {
 
   return {
     bp: brkPnt,
-    isMobile,
+    mobile,
+    desktop: !mobile 
   };
 };
 

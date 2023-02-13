@@ -20,8 +20,10 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname() as string;
+  const { mobile } = useBreakpoint();
   const breadcrumb = useMemo(() => BREADCRUMBS[pathname] || [], [pathname]);
-  const { isMobile } = useBreakpoint();
+  const isHome = useMemo(() => pathname.startsWith(LINKS.home.path), [pathname]);
+  const isParentPage = useMemo(() => pathname.split('/').length <= 3, [pathname]);
 
   return (
     <div className="lg:ml-[240px] lg:mr-[372px] bg-gray-pale h-screen">
@@ -59,14 +61,14 @@ export default function MainLayout({
       </header>
       <div className="relative px-[25px] pt-[40px] pb-[104px] lg:p-[40px] bg-gray-pale">
         <div className="flex justify-between">
-          {(!isMobile || pathname.split('/').length <= 3) && (
-            <div className="mb-[11px] lg:mb-[24px]">
-              {breadcrumb.length > 1 && (
-                <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
-                  {breadcrumb[1].label}
-                </div>
-              )}
-              <nav className="hidden lg:block w-full">
+          <div className="mb-[11px] lg:mb-[24px]">
+            {(isHome ? false : mobile ? isParentPage : true) && (
+              <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
+                {breadcrumb[1].label}
+              </div>
+            )}
+            {(mobile ? isHome : true) && (
+              <nav className="w-full">
                 <ol className="list-reset flex font-manrope-semibold text-[.875rem]">
                   {breadcrumb.map(({ breadcrumb: bread, label, path }, idx) => (
                     <Fragment key={idx}>
@@ -92,15 +94,15 @@ export default function MainLayout({
                   ))}
                 </ol>
               </nav>
-              {pathname.startsWith(LINKS.home.path) && (
-                <span className="font-manrope-bold text-[22px] leading-[32px]">
-                  Elwin Sharvill
-                </span>
-              )}
-            </div>
-          )}
+            )}
+            {isHome && (
+              <span className="font-manrope-bold text-[22px] leading-[32px]">
+                Elwin Sharvill
+              </span>
+            )}
+          </div>
 
-          {pathname.startsWith(LINKS.home.path) ? (
+          {isHome ? (
             <div className="relative mb-[40px]">
               <Image
                 src="/images/language-switcher.svg"
