@@ -22,6 +22,9 @@ const LINKS = {
     amount: {
       path: '/main/request-send/amount',
     },
+    noPaymentMethod: {
+      path: '/main/request-send/no-payment-method',
+    },
   },
 };
 

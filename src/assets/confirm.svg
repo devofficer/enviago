@@ -1,0 +1,32 @@
+<svg width="139" height="144" viewBox="0 0 139 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M66 130c27.614 0 50-22.386 50-50S93.614 30 66 30 16 52.386 16 80s22.386 50 50 50z" id="92gnkculxa"/>
+        <path d="M66 134c29.823 0 54-24.177 54-54S95.823 26 66 26 12 50.177 12 80s24.177 54 54 54z" id="nmstzrhlbb"/>
+        <path d="M66 138c32.033 0 58-25.967 58-58S98.033 22 66 22 8 47.967 8 80s25.967 58 58 58z" id="muyllr250c"/>
+        <mask id="o690siwice" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="100" height="100" fill="#fff">
+            <use xlink:href="#92gnkculxa"/>
+        </mask>
+        <mask id="agzrcp8xuf" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="108" height="108" fill="#fff">
+            <use xlink:href="#nmstzrhlbb"/>
+        </mask>
+        <mask id="bvysb8ar4g" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="116" height="116" fill="#fff">
+            <use xlink:href="#muyllr250c"/>
+        </mask>
+        <radialGradient cx="39.741%" cy="70.238%" fx="39.741%" fy="70.238%" r="101.892%" gradientTransform="matrix(.76674 0 0 1 .093 0)" id="l3d9ijho4d">
+            <stop stop-color="#313381" offset="0%"/>
+            <stop stop-color="#313381" offset="20%"/>
+            <stop stop-color="#313381" offset="58%"/>
+            <stop stop-color="#313381" offset="100%"/>
+        </radialGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <path d="M92.112 59.635a5.039 5.039 0 0 0-3.804-.45 5.022 5.022 0 0 0-1.742.877S59.288 82.748 58.5 83.432L47.76 74.074a6.315 6.315 0 0 0-3.959-1.549 6.323 6.323 0 0 0-4.047 1.306c-2.733 2.106-2.835 5.237-.707 7.943l13.38 18.287a7.583 7.583 0 0 0 5.353 2.86 7.608 7.608 0 0 0 5.503-1.754L93.23 66.684l.09-.097c1.663-1.77 1.831-3.746.277-5.694a4.989 4.989 0 0 0-1.484-1.258z" fill="#313381"/>
+            <path d="M54.739.635a5.039 5.039 0 0 0-3.805-.45 5.022 5.022 0 0 0-1.741.877s-27.278 22.686-28.067 23.37l-10.74-9.358a6.315 6.315 0 0 0-4.234-1.517 6.31 6.31 0 0 0-4.171 1.681 6.167 6.167 0 0 0-.698 8.293l13.77 17.514a7.583 7.583 0 0 0 5.353 2.86 7.608 7.608 0 0 0 5.504-1.754L55.855 8.44l.09-.097a4.922 4.922 0 0 0 .277-6.451A4.989 4.989 0 0 0 54.74.635z" fill="url(#l3d9ijho4d)" transform="translate(37.374 57.067)"/>
+        </g>
+        <use stroke="#2961FF" mask="url(#o690siwice)" stroke-width="2.222" stroke-dasharray="0,0" xlink:href="#92gnkculxa"/>
+        <use stroke-opacity=".523" stroke="#2961FF" mask="url(#agzrcp8xuf)" stroke-width="1.6" stroke-dasharray="0,0" xlink:href="#nmstzrhlbb"/>
+        <use stroke-opacity=".08" stroke="#2961FF" mask="url(#bvysb8ar4g)" stroke-width="2" stroke-dasharray="0,0" xlink:href="#muyllr250c"/>
+        <path d="M12 32a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM5 128a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM103 22a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM135 58a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM18 2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM117 39a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM103 139a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM22 144a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM4 50a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="#313381"/>
+    </g>
+</svg>
