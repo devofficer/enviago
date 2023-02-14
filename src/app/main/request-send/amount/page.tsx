@@ -5,16 +5,18 @@ import Button from '@/components/Button';
 import IconButton from '@/components/IconButton';
 import TextField from '@/components/TextField';
 import { useContext, useState } from 'react';
-import PaymentMethod from '../payment-method';
 import TabContext from '../tab-context';
 import Dialog from '@/components/Dialog';
 import ConfirmSvg from '@/assets/confirm.svg';
 import Image from 'next/image';
 import Divider from '@/components/Divider';
+import LoadingSvg from '@/assets/loading.svg';
 
 export default function Amount() {
   const { tab } = useContext(TabContext);
-  const [openDialog, setOpenDialog] = useState(true);
+  const [openRequestDialog, setOpenRequestDialog] = useState(false);
+  const [openProcessingDialog, setOpenProcessingDialog] = useState(false);
+  const [, setOpenSendDialog] = useState(false);
 
   return (
     <>
@@ -42,12 +44,70 @@ export default function Amount() {
         </div>
         <TextField placeholder="Message" value="For rent" />
       </div>
-      {tab === 'Send' && <PaymentMethod />}
-      <Button onClick={() => setOpenDialog(true)}>Continue</Button>
+      {tab === 'Send' && (
+        <div className="pt-[30px] pb-[22px] px-[45px] bg-white rounded-[18px] mb-[16px]">
+          <div className="font-manrope-bold text-[18px] leading-[24px] mb-[20px]">
+            Payment Method
+          </div>
+          <div className="grid grid-cols-1 gap-[13px]">
+            <div className="flex items-center bg-gray-pale rounded-[18px] px-[8px] py-[9px] gap-[12px] border border-blue hover:bg-gray-light">
+              <div className="bg-purple rounded-[10px] w-[87px] h-[55px]"></div>
+              <div>
+                <div className="text-[14px] text-dark leading-[20px] mb-[8px]">
+                  Credit Card <span className="text-gray">(Visa)</span>
+                </div>
+                <div className="text-[12px] leading-[16px] text-blue">
+                  **** *** *** 2918
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center bg-gray-pale rounded-[18px] px-[8px] py-[9px] gap-[12px] hover:bg-gray-light">
+              <div className="flex items-center justify-center bg-gray rounded-[10px] w-[87px] h-[55px]">
+                <Image
+                  src="/images/bank.svg"
+                  width={34}
+                  height={32}
+                  alt="bank"
+                />
+              </div>
+              <div>
+                <div className="text-[14px] text-dark leading-[20px] mb-[8px]">
+                  Bank account
+                </div>
+                <div className="text-[12px] leading-[16px] text-blue">
+                  Ilya Vasin <span className="text-gray">- 623852453</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      <Button onClick={() => setOpenProcessingDialog(true)}>Continue</Button>
+
       <Dialog
-        open={openDialog}
+        open={openProcessingDialog}
+        onClose={() => {
+          setOpenProcessingDialog(false);
+          if (tab === 'Request') {
+            setOpenRequestDialog(true);
+          } else {
+            setOpenSendDialog(true);
+          }
+        }}
+        className="text-center w-[323px] bg-white rounded-[25px] px-[90px] py-[40px]"
+      >
+        <LoadingSvg className="mx-auto mb-[19px]" />
+        <div className="font-manrope-bold text-[22px] leading-[32px] mb-[8px]">
+          Processing...
+        </div>
+        <div className="text-[14px] text-gray-dark leading-[18px]">
+          We are processing your paymet.
+        </div>
+      </Dialog>
+      <Dialog
+        open={openRequestDialog}
         className="px-[34px] py-[23px] w-[388px]"
-        onClose={() => setOpenDialog(false)}
+        onClose={() => setOpenRequestDialog(false)}
       >
         <ConfirmSvg className="mx-auto mb-[15px]" />
         <p className="font-manrope-bold text-[22px] text-center leading-[32px] text-black mb-[13px]">
