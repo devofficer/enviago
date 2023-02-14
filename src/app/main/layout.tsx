@@ -61,34 +61,36 @@ export default function MainLayout({
           <div className="mb-[11px] lg:mb-[24px]">
             {(isHome ? false : isMobile ? isParentPage : true) && (
               <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
-                {breadcrumb[1]?.label}
+                {breadcrumb?.[1]?.label}
               </div>
             )}
             {(isMobile ? isHome : true) && (
               <nav className="w-full">
                 <ol className="list-reset flex font-manrope-semibold text-[.875rem]">
-                  {breadcrumb.map(({ breadcrumb: bread, label, path }, idx) => (
-                    <Fragment key={idx}>
-                      <li>
-                        <Link
-                          href={path}
-                          className={clsx('hover:text-blue', {
-                            'text-blue':
-                              idx > 0 && idx === breadcrumb.length - 1,
-                            'text-gray-steel':
-                              idx === 0 || idx < breadcrumb.length - 1,
-                          })}
-                        >
-                          {bread || label}
-                        </Link>
-                      </li>
-                      {idx < breadcrumb.length - 1 && (
+                  {breadcrumb?.map(
+                    ({ breadcrumb: bread, label, path }, idx) => (
+                      <Fragment key={idx}>
                         <li>
-                          <span className="text-gray-500 mx-2">/</span>
+                          <Link
+                            href={path}
+                            className={clsx('hover:text-blue', {
+                              'text-blue':
+                                idx > 0 && idx === breadcrumb.length - 1,
+                              'text-gray-steel':
+                                idx === 0 || idx < breadcrumb.length - 1,
+                            })}
+                          >
+                            {bread || label}
+                          </Link>
                         </li>
-                      )}
-                    </Fragment>
-                  ))}
+                        {idx < breadcrumb.length - 1 && (
+                          <li>
+                            <span className="text-gray-500 mx-2">/</span>
+                          </li>
+                        )}
+                      </Fragment>
+                    )
+                  )}
                 </ol>
               </nav>
             )}
