@@ -1,9 +1,16 @@
+'use client';
+
 import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
 import IconButton from '@/components/IconButton';
 import TextField from '@/components/TextField';
+import { useContext } from 'react';
+import PaymentMethod from '../payment-method';
+import TabContext from '../tab-context';
 
 export default function Amount() {
+  const { tab } = useContext(TabContext);
+
   return (
     <>
       <div className="bg-white rounded-[18px] px-[45px] pt-[30px] pb-[24px] mb-[28px]">
@@ -30,6 +37,7 @@ export default function Amount() {
         </div>
         <TextField placeholder="Message" value="For rent" />
       </div>
+      {tab === 'Send' && <PaymentMethod />}
       <Button>Continue</Button>
     </>
   );
