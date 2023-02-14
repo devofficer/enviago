@@ -8,6 +8,7 @@ const BREAD_CRUMBS: {
   [LINKS.trans.path]: [LINKS.home, LINKS.trans],
   [LINKS.transDetails.path]: [LINKS.home, LINKS.trans, LINKS.transDetails],
   [LINKS.reqSend.path]: [LINKS.home, LINKS.reqSend],
+  [LINKS.reqSend.amount.path]: [LINKS.home, LINKS.reqSend],
 };
 
 export default BREAD_CRUMBS;

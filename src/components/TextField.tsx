@@ -64,18 +64,17 @@ export default function TextField({
             'transition-all',
             'origin-top-left',
             'pointer-events-none',
-
             'text-[.875rem]',
             'z-10',
             {
               'translate-y-[12px] text-purple': shrink && size === 'medium',
-              'translate-y-[28px]': !shrink && size === 'medium',
+              'translate-y-[24px]': !shrink && size === 'medium',
               'translate-y-[16px] opacity-100': size === 'small',
               'opacity-0': (focused || text) && size === 'small',
               'translate-x-[18px]': !startAdornment,
               'translate-x-[52px]': !!startAdornment,
-              'text-black/30': color === 'primary',
-              'text-gray-steel': color === 'secondary',
+              'text-black/30': !shrink && color === 'primary',
+              'text-gray-steel': !shrink && color === 'secondary',
             }
           )}
         >

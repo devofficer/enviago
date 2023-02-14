@@ -1,24 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useContext } from 'react';
 import TextField from '@/components/TextField';
 import AttachmentSvg from '@/assets/attachment.svg';
 import SearchSvg from '@/assets/icons/search.svg';
 import Image from 'next/image';
 import Button from '@/components/Button';
-import Tab from '@/components/Tab';
+import TabContext from './tab-context';
+import LINKS from '@/utils/links';
 
 export default function RequestOrSend() {
-  const [tab, setTab] = useState('Request');
+  const { tab } = useContext(TabContext);
 
   return (
     <div>
-      <Tab
-        active={tab}
-        tabs={['Request', 'Send']}
-        onSelect={(id) => setTab(id)}
-        className="mb-[28px]"
-      />
       <div className="bg-white px-[45px] pt-[34px] pb-[50px] rounded-[18px] mb-[28px]">
         <TextField
           placeholder="Name, @username, email, phone"
@@ -97,7 +92,7 @@ export default function RequestOrSend() {
           </div>
         </div>
       </div>
-      <Button>Continue</Button>
+      <Button href={LINKS.reqSend.amount.path}>Continue</Button>
     </div>
   );
 }
