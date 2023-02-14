@@ -1,49 +1,45 @@
-import Icon from '@/components/Icon';
+'use client';
+
+import { useState } from 'react';
 import TextField from '@/components/TextField';
 import AttachmentSvg from '@/assets/attachment.svg';
+import SearchSvg from '@/assets/icons/search.svg';
 import Image from 'next/image';
 import Button from '@/components/Button';
+import Tab from '@/components/Tab';
 
 export default function RequestOrSend() {
+  const [tab, setTab] = useState('Request');
+
   return (
     <div>
-      <ul className="flex flex-wrap text-[.875rem] font-manrope-bold text-center text-gray mb-[28px]">
-        <li>
-          <a
-            href="#"
-            className="inline-block px-[42px] py-[8px] text-white bg-blue rounded-[39px] active"
-            aria-current="page"
-          >
-            Request
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="inline-block px-[42px] py-[8px] rounded-[39px] hover:text-gray-dark hover:bg-gray-light"
-          >
-            Send
-          </a>
-        </li>
-      </ul>
+      <Tab
+        active={tab}
+        tabs={['Request', 'Send']}
+        onSelect={(id) => setTab(id)}
+        className="mb-[28px]"
+      />
       <div className="bg-white px-[45px] pt-[34px] pb-[50px] rounded-[18px] mb-[28px]">
         <TextField
           placeholder="Name, @username, email, phone"
           size="small"
-          startAdornment={<Icon type="pen" />}
+          startAdornment={<SearchSvg />}
           className="mb-[21px]"
         />
-        <div className="flex items-center mb-[21px]">
-          <AttachmentSvg className="mr-[14px]" />
-          <div>
-            <div className="mb-[5px] text-[.875rem] font-manrope-medium text-black">
-              Share your <span className="text-blue">Enviago.com</span> link
-            </div>
-            <div className="text-gray text-[12px] leading-[16px]">
-              Text, post, or share your link to get paid
+        {tab === 'Request' && (
+          <div className="flex items-center mb-[21px]">
+            <AttachmentSvg className="mr-[14px]" />
+            <div>
+              <div className="mb-[5px] text-[.875rem] font-manrope-medium text-black">
+                Share your <span className="text-blue">Enviago.com</span> link
+              </div>
+              <div className="text-gray text-[12px] leading-[16px]">
+                Text, post, or share your link to get paid
+              </div>
             </div>
           </div>
-        </div>
+        )}
+
         <h2 className="text-[18px] font-manrope-bold leading-[24px] text-black mb-[9px]">
           Top people
         </h2>
