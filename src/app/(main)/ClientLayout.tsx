@@ -2,7 +2,7 @@
 
 import { Fragment } from 'react';
 import Image from 'next/image';
-import Sidebar from './sidebar';
+import Sidebar from '@/components/layout/Sidebar';
 import BREADCRUMBS from '@/utils/breadcrumbs';
 import Link from 'next/link';
 import clsx from 'classnames';
