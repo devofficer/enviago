@@ -67,8 +67,8 @@ export default function Sidebar() {
                       'flex items-center pl-[40px] pr-[16px] py-[20px] cursor-pointer hover:bg-gray-pale',
                       {
                         'font-manrope-bold text-blue bg-gray-pale':
-                          pathname.endsWith(item.path),
-                        'font-manrope-medium text-gray': !pathname.endsWith(
+                          pathname.startsWith(item.path),
+                        'font-manrope-medium text-gray': !pathname.startsWith(
                           item.path
                         ),
                       }
@@ -76,8 +76,8 @@ export default function Sidebar() {
                   >
                     <item.icon
                       className={clsx('mr-[.875rem]', {
-                        'fill-blue': pathname.endsWith(item.path),
-                        'fill-gray': !pathname.endsWith(item.path),
+                        'fill-blue': pathname.startsWith(item.path),
+                        'fill-gray': !pathname.startsWith(item.path),
                       })}
                     />
                     <span>{item.label}</span>
@@ -91,8 +91,8 @@ export default function Sidebar() {
               className={clsx(
                 'group hover:bg-blue hover:text-white pl-[6px] py-[4px] mx-[20px] rounded-[30px] flex items-center text-[16px] font-manrope-medium cursor-pointer',
                 {
-                  'bg-blue text-white': pathname.endsWith(LINKS.reqSend.path),
-                  'bg-gray-pale text-black': !pathname.endsWith(
+                  'bg-blue text-white': pathname.startsWith(LINKS.reqSend.path),
+                  'bg-gray-pale text-black': !pathname.startsWith(
                     LINKS.reqSend.path
                   ),
                 }
@@ -100,13 +100,13 @@ export default function Sidebar() {
             >
               <ExchangeSvg
                 className={clsx('mr-[8px] group-hover:hidden', {
-                  hidden: pathname.endsWith(LINKS.reqSend.path),
+                  hidden: pathname.startsWith(LINKS.reqSend.path),
                 })}
               />
               <ExchangeLightSvg
                 className={clsx('mr-[8px] group-hover:block', {
-                  block: pathname.endsWith(LINKS.reqSend.path),
-                  hidden: !pathname.endsWith(LINKS.reqSend.path),
+                  block: pathname.startsWith(LINKS.reqSend.path),
+                  hidden: !pathname.startsWith(LINKS.reqSend.path),
                 })}
               />
               Send&nbsp;/&nbsp;Request
@@ -120,8 +120,8 @@ export default function Sidebar() {
             <Link key={idx} href={item.path}>
               <item.icon
                 className={clsx('hover:fill-blue', {
-                  'fill-blue': pathname.endsWith(item.path),
-                  'fill-gray': !pathname.endsWith(item.path),
+                  'fill-blue': pathname.startsWith(item.path),
+                  'fill-gray': !pathname.startsWith(item.path),
                 })}
               />
             </Link>

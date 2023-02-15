@@ -22,7 +22,7 @@ export default function ClientLayout({
 }) {
   const pathname = usePathname() as string;
   const breadcrumb = BREADCRUMBS[pathname];
-  const isHome = pathname === LINKS.home.path;
+  const isHome = pathname.startsWith(LINKS.home.path);
   const isParentPage = pathname.split('/').length <= 2;
 
   return (
