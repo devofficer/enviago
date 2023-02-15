@@ -1,3 +1,5 @@
+'use client';
+
 import { Fragment } from 'react';
 import Image from 'next/image';
 import Sidebar from './sidebar';
@@ -9,15 +11,15 @@ import PenSvg from '@/assets/icons/pen.svg';
 import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
 import LINKS from '@/utils/links';
-import { checkMobile, getServerPath } from '@/utils/next-helpers';
+import { usePathname } from 'next/navigation';
 
 export default function MainLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = getServerPath();
-  const isMobile = checkMobile();
+  const pathname = usePathname() as string;
+  const isMobile = true;
   const breadcrumb = BREADCRUMBS[pathname];
   const isHome = pathname.startsWith(LINKS.home.path);
   const isParentPage = pathname.split('/').length <= 3;

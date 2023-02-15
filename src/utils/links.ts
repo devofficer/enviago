@@ -1,29 +1,29 @@
 const LINKS = {
   home: {
-    path: '/main/home',
+    path: '/',
     label: 'Enviago',
   },
   homeAfterSignUp: {
-    path: '/main/home-after-signup',
+    path: '/home-after-signup',
     label: 'Home',
   },
   trans: {
-    path: '/main/transactions',
+    path: '/transactions',
     label: 'Transactions',
   },
   transDetails: {
-    path: '/main/transactions/details',
+    path: '/transactions/details',
     label: 'Transaction details',
   },
   reqSend: {
-    path: '/main/request-send',
+    path: '/request-send',
     label: 'Send or Request Money',
     breadcrumb: 'Send or Request',
     amount: {
-      path: '/main/request-send/amount',
+      path: '/request-send/amount',
     },
     noPaymentMethod: {
-      path: '/main/request-send/no-payment-method',
+      path: '/request-send/no-payment-method',
     },
   },
 };
