@@ -6,7 +6,7 @@ import AttachmentSvg from '@/assets/attachment.svg';
 import SearchSvg from '@/assets/icons/search.svg';
 import Image from 'next/image';
 import Button from '@/components/Button';
-import TabContext from './tab-context';
+import TabContext from '@/contexts/TabContext';
 import LINKS from '@/utils/links';
 
 export default function RequestOrSend() {

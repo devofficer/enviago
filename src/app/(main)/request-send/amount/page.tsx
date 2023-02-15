@@ -5,7 +5,7 @@ import Button from '@/components/Button';
 import IconButton from '@/components/IconButton';
 import TextField from '@/components/TextField';
 import { useContext, useState } from 'react';
-import TabContext from '../tab-context';
+import TabContext from '../../../../contexts/TabContext';
 import Dialog from '@/components/Dialog';
 import ConfirmSvg from '@/assets/confirm.svg';
 import Image from 'next/image';

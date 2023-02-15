@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Tab from '@/components/Tab';
-import TabContext from './tab-context';
+import TabContext from '@/contexts/TabContext';
 
 export default function RequestSendLayout({
   children,
