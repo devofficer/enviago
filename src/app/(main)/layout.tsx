@@ -1,6 +1,6 @@
-import Sidebar from '@/components/layout/Sidebar';
-import Profile from '@/components/layout/Profile';
-import Header from '@/components/layout/Header';
+import Sidebar from '@/containers/Sidebar';
+import Profile from '@/containers/Profile';
+import Header from '@/containers/Header';
 import { checkMobile } from '@/utils/next-helpers';
 
 export default function MainLayout({
@@ -9,7 +9,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="lg:ml-[240px] lg:mr-[372px] bg-gray-pale h-screen">
+    <div className="main-content lg:ml-[240px] lg:mr-[372px] bg-gray-pale h-screen">
       <header className="lg:pointer-events-none lg:fixed lg:inset-0 lg:z-header lg:flex">
         <div className="fixed w-full h-[84px] bg-white z-sidebar bottom-0 pointer-events-auto flex lg:flex-col lg:justify-start lg:w-[240px] lg:h-full lg:overflow-y-auto lg:pt-[36px] lg:pb-[60px]">
           <Sidebar />

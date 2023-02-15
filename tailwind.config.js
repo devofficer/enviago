@@ -1,8 +1,11 @@
+const plugin = require('tailwindcss/plugin');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/containers/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -63,6 +66,9 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms')({
       strategy: 'class',
+    }),
+    plugin(function ({ addVariant }) {
+      addVariant('main-content', '.main-content:has(&)');
     }),
   ],
 };

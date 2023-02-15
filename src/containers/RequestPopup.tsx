@@ -62,7 +62,7 @@ export default function RequestPopup({ open, onClose }: RequestPopupProps) {
             </div>
           </div>
         </div>
-        <div className="flex items-center px-[16px] py-[19px] bg-gray-pale rounded-[18px]">
+        <div className="flex items-center group px-[16px] py-[19px] bg-gray-pale rounded-[18px]">
           <Image
             src="/images/avatars/female.png"
             width={101}
