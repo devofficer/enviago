@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 
-type WizardData = { [key: string]: string };
-type WizardComponentProps = {
+export type WizardData = { [key: string]: string };
+export type WizardComponentProps = {
   goForward: (data: WizardData) => void;
   goBack: () => void;
   onClose: () => void;
@@ -43,16 +43,14 @@ export default function Wizard({
     }
   };
 
-  return (
-    open && (
-      <div className="fixed inset-0 z-wizard">
-        <CurrentComponent
-          data={data}
-          goForward={handleGoForward}
-          goBack={handleGoBack}
-          onClose={onClose}
-        />
-      </div>
-    )
-  );
+  return open ? (
+    <div className="fixed inset-0 z-wizard">
+      <CurrentComponent
+        data={data}
+        goForward={handleGoForward}
+        goBack={handleGoBack}
+        onClose={onClose}
+      />
+    </div>
+  ) : null;
 }

@@ -14,7 +14,8 @@ import SettingSvg from '@/assets/icons/setting.svg';
 import ProfileSvg from '@/assets/icons/user.svg';
 import LINKS from '@/utils/links';
 import { useMemo, useState } from 'react';
-import RequestPopup from '@/parts/RequestPopup';
+import RequestWizard from '@/parts/RequestWizard';
+import Wizard, { WizardData } from '@/components/Wizard';
 
 const navbarItems = [
   {
@@ -50,7 +51,7 @@ export default function Sidebar() {
     () => pathname.startsWith(LINKS.reqSend.path),
     [pathname]
   );
-  const [requestPopupOpen, setRequestPopupOpen] = useState(false);
+  const [requestWizardOpen, setRequestWizardOpen] = useState(false);
 
   return (
     <>
@@ -126,7 +127,7 @@ export default function Sidebar() {
               />
             </Link>
           ) : (
-            <item.icon key={idx} onClick={() => setRequestPopupOpen(true)} />
+            <item.icon key={idx} onClick={() => setRequestWizardOpen(true)} />
           )
         )}
       </div>
@@ -137,9 +138,12 @@ export default function Sidebar() {
         <LogoutSvg className="mr-[.875rem]" />
         <span>Log out</span>
       </Link>
-      <RequestPopup
-        open={requestPopupOpen}
-        onClose={() => setRequestPopupOpen(false)}
+      <Wizard
+        open={requestWizardOpen}
+        steps={[RequestWizard]}
+        initData={{}}
+        onCompleted={(_data: WizardData) => setRequestWizardOpen(false)}
+        onClose={() => setRequestWizardOpen(false)}
       />
     </>
   );
