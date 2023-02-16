@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import Wallet from '@/components/Wallet';
+import Wallet from '@/parts/Wallet';
 import RequestSvg from '@/assets/request.svg';
 import ShareSvg from '@/assets/share.svg';
 import SendSvg from '@/assets/send.svg';
-import TransactionCard from '@/components/TransactionCard';
+import TransactionCard from '@/parts/TransactionCard';
 import transactions from '@/mock/transactions';
 import Dialog from '@/components/Dialog';
 import NotifySvg from '@/assets/notify.svg';

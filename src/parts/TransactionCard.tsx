@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import clsx from 'classnames';
-import Button from './Button';
+import Button from '../components/Button';
 import LINKS from '@/utils/links';
 
 type TransactionCardProps = {

@@ -1,7 +1,7 @@
 'use client';
 
 import Tab from '@/components/Tab';
-import TransactionCard from '@/components/TransactionCard';
+import TransactionCard from '@/parts/TransactionCard';
 import transactions from '@/mock/transactions';
 import { useState } from 'react';
 

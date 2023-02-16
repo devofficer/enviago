@@ -1,6 +1,6 @@
-import Sidebar from '@/containers/Sidebar';
-import Profile from '@/containers/Profile';
-import Header from '@/containers/Header';
+import Sidebar from '@/parts/Sidebar';
+import Profile from '@/parts/Profile';
+import Header from '@/parts/Header';
 import { checkMobile } from '@/utils/next-helpers';
 
 export default function MainLayout({

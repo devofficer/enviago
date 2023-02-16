@@ -1,4 +1,4 @@
-import Wallet from '@/components/Wallet';
+import Wallet from '@/parts/Wallet';
 import RequestSvg from '@/assets/request.svg';
 import ShareSvg from '@/assets/share.svg';
 import SendSvg from '@/assets/send.svg';

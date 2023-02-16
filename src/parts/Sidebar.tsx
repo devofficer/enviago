@@ -14,7 +14,7 @@ import SettingSvg from '@/assets/icons/setting.svg';
 import ProfileSvg from '@/assets/icons/user.svg';
 import LINKS from '@/utils/links';
 import { useMemo, useState } from 'react';
-import RequestPopup from '@/containers/RequestPopup';
+import RequestPopup from '@/parts/RequestPopup';
 
 const navbarItems = [
   {
