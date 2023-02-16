@@ -23,7 +23,7 @@ export default function IconButton({
   return (
     <div
       className={clsx(
-        'flex items-center justify-center hover:scale-[1.15] transition-all',
+        'flex items-center justify-center transition-all',
         className,
         {
           'rounded-[11px] w-[2.5rem] h-[2.5rem] p-[12px]': variant === 'square',

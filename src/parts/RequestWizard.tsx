@@ -31,17 +31,19 @@ export default function RequestPopup({
         startAdornment={<SearchSvg />}
         className="mb-[21px]"
       />
-      <div className="flex items-center mb-[21px]">
-        <AttachmentSvg className="mr-[14px]" />
-        <div>
-          <div className="mb-[5px] text-[.875rem] font-manrope-medium text-black">
-            Share your <span className="text-blue">Enviago.com</span> link
-          </div>
-          <div className="text-gray text-[12px] leading-[16px]">
-            Text, post, or share your link to get paid
+      {tab === 'Request' && (
+        <div className="flex items-center mb-[21px]">
+          <AttachmentSvg className="mr-[14px]" />
+          <div>
+            <div className="mb-[5px] text-[.875rem] font-manrope-medium text-black">
+              Share your <span className="text-blue">Enviago.com</span> link
+            </div>
+            <div className="text-gray text-[12px] leading-[16px]">
+              Text, post, or share your link to get paid
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <h2 className="text-[18px] font-manrope-bold leading-[24px] text-black mb-[9px]">
         Top people
       </h2>
