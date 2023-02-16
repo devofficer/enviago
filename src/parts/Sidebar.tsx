@@ -17,6 +17,7 @@ import { useMemo, useState } from 'react';
 import Wizard, { WizardData } from '@/components/Wizard';
 import RequestWizard from '@/parts/RequestWizard';
 import RequestAmountWizard from '@/parts/RequestAmountWizard';
+import RequestSentWizard from './RequestSentWizard';
 
 const navbarItems = [
   {
@@ -141,7 +142,7 @@ export default function Sidebar() {
       </Link>
       <Wizard
         open={requestWizardOpen}
-        steps={[RequestWizard, RequestAmountWizard]}
+        steps={[RequestWizard, RequestAmountWizard, RequestSentWizard]}
         initData={{}}
         onCompleted={(_data: WizardData) => setRequestWizardOpen(false)}
         onClose={() => setRequestWizardOpen(false)}
