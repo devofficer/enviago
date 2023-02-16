@@ -4,16 +4,25 @@ type WizardData = { [key: string]: string };
 type WizardComponentProps = {
   goForward: (data: WizardData) => void;
   goBack: () => void;
+  onClose: () => void;
   data: WizardData;
 };
 
 type WizardProps = {
   initData: WizardData;
   steps: Array<React.FC<WizardComponentProps>>;
-  onCompleted: (data: WizardData) => void;
+  onCompleted: (_data: WizardData) => void;
+  open: boolean;
+  onClose: () => void;
 };
 
-export default function Wizard({ steps, initData, onCompleted }: WizardProps) {
+export default function Wizard({
+  open,
+  steps,
+  initData,
+  onClose,
+  onCompleted,
+}: WizardProps) {
   const [cursor, setCursor] = useState(0);
   const [data, setData] = useState(initData);
   const CurrentComponent = useMemo(() => steps[cursor], [steps, cursor]);
@@ -35,12 +44,15 @@ export default function Wizard({ steps, initData, onCompleted }: WizardProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-wizard">
-      <CurrentComponent
-        data={data}
-        goForward={handleGoForward}
-        goBack={handleGoBack}
-      />
-    </div>
+    open && (
+      <div className="fixed inset-0 z-wizard">
+        <CurrentComponent
+          data={data}
+          goForward={handleGoForward}
+          goBack={handleGoBack}
+          onClose={onClose}
+        />
+      </div>
+    )
   );
 }
