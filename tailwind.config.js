@@ -5,7 +5,7 @@ module.exports = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/containers/**/*.{js,ts,jsx,tsx}',
+    './src/parts/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -58,6 +58,7 @@ module.exports = {
         base: '0',
         header: '50',
         sidebar: '51',
+        wizard: '60',
         backdrop: '100',
         dialog: '101',
       },

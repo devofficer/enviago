@@ -35,10 +35,12 @@ export default function Wizard({ steps, initData, onCompleted }: WizardProps) {
   };
 
   return (
-    <CurrentComponent
-      data={data}
-      goForward={handleGoForward}
-      goBack={handleGoBack}
-    />
+    <div className="fixed inset-0 z-wizard">
+      <CurrentComponent
+        data={data}
+        goForward={handleGoForward}
+        goBack={handleGoBack}
+      />
+    </div>
   );
 }
