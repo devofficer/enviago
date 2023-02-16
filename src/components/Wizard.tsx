@@ -32,6 +32,7 @@ export default function Wizard({
 
     if (cursor === steps.length - 1) {
       onCompleted(_data);
+      setCursor(0);
     } else {
       setCursor((cur) => cur + 1);
     }
@@ -44,7 +45,7 @@ export default function Wizard({
   };
 
   return open ? (
-    <div className="fixed inset-0 z-wizard">
+    <div className="fixed inset-0 z-wizard main-content:overflow-hidden">
       <CurrentComponent
         data={data}
         goForward={handleGoForward}

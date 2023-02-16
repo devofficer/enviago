@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import clsx from 'classnames';
 import Link from 'next/link';
+import { twMerge } from 'tailwind-merge';
 
 export type ButtonProps = {
   children: React.ReactNode;
@@ -23,26 +24,28 @@ export default function Button({
 }: ButtonProps) {
   const classes = useMemo(
     () =>
-      clsx(
-        className,
-        'flex items-center justify-center',
-        'text-center text-[0.875rem] font-manrope-extrabold',
-        'rounded-[18px]',
-        'hover:brightness-75',
-        {
-          'min-h-[42px] px-[24px]': size === 'small',
-          'min-h-[60px] px-[1.75rem] w-full': size === 'medium',
-          'text-purple':
-            color === 'primary' &&
-            (variant === 'outlined' || variant === 'naked'),
-          'bg-purple text-white':
-            color === 'primary' && variant === 'contained',
-          'bg-white': variant === 'outlined',
-          'border-purple': color === 'primary' && variant === 'outlined',
-          'border-gray-trans text-gray-cool':
-            color === 'secondary' && variant === 'outlined',
-          'border border-solid': variant === 'outlined',
-        }
+      twMerge(
+        clsx(
+          'flex items-center justify-center',
+          'text-center text-[14px] font-manrope-extrabold',
+          'rounded-[18px]',
+          'hover:brightness-75',
+          {
+            'min-h-[42px] px-[24px]': size === 'small',
+            'min-h-[60px] px-[1.75rem] w-full': size === 'medium',
+            'text-purple':
+              color === 'primary' &&
+              (variant === 'outlined' || variant === 'naked'),
+            'bg-purple text-white':
+              color === 'primary' && variant === 'contained',
+            'bg-white': variant === 'outlined',
+            'border-purple': color === 'primary' && variant === 'outlined',
+            'border-gray-trans text-gray-cool':
+              color === 'secondary' && variant === 'outlined',
+            'border border-solid': variant === 'outlined',
+          }
+        ),
+        className
       ),
     [size, color, variant, className]
   );

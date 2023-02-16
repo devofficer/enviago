@@ -14,8 +14,9 @@ import SettingSvg from '@/assets/icons/setting.svg';
 import ProfileSvg from '@/assets/icons/user.svg';
 import LINKS from '@/utils/links';
 import { useMemo, useState } from 'react';
-import RequestWizard from '@/parts/RequestWizard';
 import Wizard, { WizardData } from '@/components/Wizard';
+import RequestWizard from '@/parts/RequestWizard';
+import RequestAmountWizard from '@/parts/RequestAmountWizard';
 
 const navbarItems = [
   {
@@ -140,7 +141,7 @@ export default function Sidebar() {
       </Link>
       <Wizard
         open={requestWizardOpen}
-        steps={[RequestWizard]}
+        steps={[RequestWizard, RequestAmountWizard]}
         initData={{}}
         onCompleted={(_data: WizardData) => setRequestWizardOpen(false)}
         onClose={() => setRequestWizardOpen(false)}
