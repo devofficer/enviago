@@ -13,7 +13,7 @@ export default function Header({ mobile }: { mobile: boolean }) {
   const { breadcrumb, isHome, isParentPage } = useMemo(
     () => ({
       breadcrumb: BREADCRUMBS[pathname],
-      isHome: pathname.startsWith(LINKS.home.path),
+      isHome: pathname === LINKS.home.path,
       isParentPage: pathname.split('/').length <= 2,
     }),
     [pathname]
