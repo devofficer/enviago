@@ -9,20 +9,22 @@ import BankSvg from '@/assets/bank.svg';
 
 export default function HomeAfterSignup() {
   return (
-    <div>
+    <>
       <div className="flex flex-wrap justify-center lg:justify-start">
-        <Wallet className="lg:mr-[16px] mb-[16px] w-full lg:w-max" />
-        <div className="hidden lg:flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
-          <RequestSvg className="mb-[9px]" />
-          <span className="text-gray text-[.875rem]">Request</span>
-        </div>
-        <div className="hidden lg:flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
-          <ShareSvg className="mb-[9px]" />
-          <span className="text-gray text-[.875rem]">Share URL</span>
-        </div>
-        <div className="hidden lg:flex flex-col w-[121px] h-[106px] items-center justify-center bg-white rounded-[18px] mr-[14px] mb-[16px]">
-          <SendSvg className="mb-[9px]" />
-          <span className="text-gray text-[.875rem]">Send</span>
+        <Wallet className="w-full mb-[16px] lg:mr-[16px] lg:w-max" />
+        <div className="grid grid-cols-3 gap-[14px] flex-grow">
+          <div className="flex flex-col p-[8px] items-center justify-center bg-white rounded-[18px] mb-[16px] lg:py-[16px]">
+            <RequestSvg className="mb-[9px]" />
+            <span className="text-gray text-[.875rem]">Request</span>
+          </div>
+          <div className="flex flex-col p-[8px] items-center justify-center bg-white rounded-[18px] mb-[16px] lg:py-[16px]">
+            <ShareSvg className="mb-[9px]" />
+            <span className="text-gray text-[.875rem]">Share URL</span>
+          </div>
+          <div className="flex flex-col p-[8px] items-center justify-center bg-white rounded-[18px] mb-[16px] lg:py-[16px]">
+            <SendSvg className="mb-[9px]" />
+            <span className="text-gray text-[.875rem]">Send</span>
+          </div>
         </div>
       </div>
       <h1 className="font-manrope-bold text-[1.125rem] leading-[24px] text-black mb-[9px] text-center lg:text-start">
@@ -83,6 +85,6 @@ export default function HomeAfterSignup() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
