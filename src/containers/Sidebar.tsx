@@ -13,7 +13,7 @@ import TimeSvg from '@/assets/icons/time.svg';
 import SettingSvg from '@/assets/icons/setting.svg';
 import ProfileSvg from '@/assets/icons/user.svg';
 import LINKS from '@/utils/links';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import RequestPopup from '@/containers/RequestPopup';
 
 const navbarItems = [
@@ -46,6 +46,10 @@ const navbarItems = [
 
 export default function Sidebar() {
   const pathname = usePathname() as string;
+  const isRequestPage = useMemo(
+    () => pathname.startsWith(LINKS.reqSend.path),
+    [pathname]
+  );
   const [requestPopupOpen, setRequestPopupOpen] = useState(false);
 
   return (
@@ -67,17 +71,15 @@ export default function Sidebar() {
                       'flex items-center pl-[40px] pr-[16px] py-[20px] cursor-pointer hover:bg-gray-pale',
                       {
                         'font-manrope-bold text-blue bg-gray-pale':
-                          pathname.startsWith(item.path),
-                        'font-manrope-medium text-gray': !pathname.startsWith(
-                          item.path
-                        ),
+                          pathname === item.path,
+                        'font-manrope-medium text-gray': pathname !== item.path,
                       }
                     )}
                   >
                     <item.icon
                       className={clsx('mr-[.875rem]', {
-                        'fill-blue': pathname.startsWith(item.path),
-                        'fill-gray': !pathname.startsWith(item.path),
+                        'fill-blue': pathname === item.path,
+                        'fill-gray': pathname !== item.path,
                       })}
                     />
                     <span>{item.label}</span>
@@ -91,22 +93,20 @@ export default function Sidebar() {
               className={clsx(
                 'group hover:bg-blue hover:text-white pl-[6px] py-[4px] mx-[20px] rounded-[30px] flex items-center text-[16px] font-manrope-medium cursor-pointer',
                 {
-                  'bg-blue text-white': pathname.startsWith(LINKS.reqSend.path),
-                  'bg-gray-pale text-black': !pathname.startsWith(
-                    LINKS.reqSend.path
-                  ),
+                  'bg-blue text-white': isRequestPage,
+                  'bg-gray-pale text-black': !isRequestPage,
                 }
               )}
             >
               <ExchangeSvg
                 className={clsx('mr-[8px] group-hover:hidden', {
-                  hidden: pathname.startsWith(LINKS.reqSend.path),
+                  hidden: isRequestPage,
                 })}
               />
               <ExchangeLightSvg
                 className={clsx('mr-[8px] group-hover:block', {
-                  block: pathname.startsWith(LINKS.reqSend.path),
-                  hidden: !pathname.startsWith(LINKS.reqSend.path),
+                  block: isRequestPage,
+                  hidden: !isRequestPage,
                 })}
               />
               Send&nbsp;/&nbsp;Request
@@ -120,8 +120,8 @@ export default function Sidebar() {
             <Link key={idx} href={item.path}>
               <item.icon
                 className={clsx('hover:fill-blue', {
-                  'fill-blue': pathname.startsWith(item.path),
-                  'fill-gray': !pathname.startsWith(item.path),
+                  'fill-blue': pathname === item.path,
+                  'fill-gray': pathname !== item.path,
                 })}
               />
             </Link>

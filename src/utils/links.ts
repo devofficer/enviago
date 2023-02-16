@@ -1,6 +1,6 @@
 const LINKS = {
   home: {
-    path: '/home',
+    path: '/',
     label: 'Enviago',
   },
   homeAfterSignUp: {
