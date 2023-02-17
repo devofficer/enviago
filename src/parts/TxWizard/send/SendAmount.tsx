@@ -1,14 +1,31 @@
+import React, { useState } from 'react';
 import IconButton from '@/components/IconButton';
 import BackArrowSvg from '@/assets/icons/back-arrow.svg';
 import { WizardComponent } from '@/components/Wizard';
 import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
+import PaymentLoadingDialog from '@/parts/PaymentLoadingDialog';
 
 export default function SendAmount({
   data,
   goForward,
+  goTo,
   goBack,
 }: WizardComponent) {
+  const [openLoading, setOpenLoading] = useState(false);
+
+  const handleContinue = () => {
+    if (data.payment === 'selected') {
+      setOpenLoading(true);
+    } else {
+      goForward();
+    }
+  };
+
+  const handleCloseLoading = () => {
+    goTo(2);
+  };
+
   return (
     <div className="bg-blue h-screen flex flex-col justify-between overflow-auto">
       <div className="pl-[28px] mb-[16px]">
@@ -79,8 +96,9 @@ export default function SendAmount({
             #
           </Button>
         </div>
-        <Button onClick={() => goForward(data)}>Continue</Button>
+        <Button onClick={handleContinue}>Continue</Button>
       </div>
+      <PaymentLoadingDialog open={openLoading} onClose={handleCloseLoading} />
     </div>
   );
 }

@@ -5,16 +5,16 @@ import Button from '@/components/Button';
 import PaymentMethod from '@/parts/PaymentMethod';
 import TextField from '@/components/TextField';
 
-export default function SelectPayment({
-  data,
-  goForward,
-  goBack,
-}: WizardComponent) {
+export default function SelectPayment({ goBack }: WizardComponent) {
   return (
     <div className="bg-blue h-screen flex flex-col overflow-auto">
       <div className="pl-[28px] mb-[30px]">
         <div className="flex items-center pt-[16px] pb-[6px]">
-          <IconButton variant="custom" className="mr-[10px]" onClick={goBack}>
+          <IconButton
+            variant="custom"
+            className="mr-[10px]"
+            onClick={() => goBack()}
+          >
             <BackArrowSvg />
           </IconButton>
           <span className="text-[18px] text-white leading-[24px] font-manrope-bold">
@@ -35,7 +35,9 @@ export default function SelectPayment({
             className="mb-[16px]"
           />
         </div>
-        <Button onClick={() => goForward(data)}>Continue</Button>
+        <Button onClick={() => goBack({ payment: 'selected' })}>
+          Continue
+        </Button>
       </div>
     </div>
   );

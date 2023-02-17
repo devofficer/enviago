@@ -3,8 +3,9 @@ import { twMerge } from 'tailwind-merge';
 
 export type WizardData = { [key: string]: string };
 export type WizardComponent = {
-  goForward: (data: WizardData) => void;
-  goBack: () => void;
+  goForward: (_data?: WizardData) => void;
+  goBack: (_data?: WizardData) => void;
+  goTo: (_index: number, _data?: WizardData) => void;
   onClose: () => void;
   data: WizardData;
 };
@@ -30,23 +31,34 @@ export default function Wizard({
   const [data, setData] = useState(initData);
   const Component = useMemo(() => steps[cursor], [steps, cursor]);
 
-  const handleGoForward = (_data: { [key: string]: string }) => {
-    setData(_data);
+  const handleGoForward = (newData?: WizardData) => {
+    setData((d) => ({ ...d, ...newData }));
 
     if (cursor === steps.length - 1) {
-      onCompleted(_data);
+      onCompleted({ ...data, ...newData });
       setCursor(0);
     } else {
       setCursor((cur) => cur + 1);
     }
   };
 
-  const handleGoBack = () => {
+  const handleGoBack = (newData?: WizardData) => {
     if (cursor > 0) {
+      if (newData) {
+        setData((d) => ({ ...d, ...newData }));
+      }
       setCursor(cursor - 1);
     } else {
       onClose();
     }
+  };
+
+  const handleGoTo = (index: number, newData?: WizardData) => {
+    if (index < 0 || index >= steps.length) {
+      throw 'Invalid wizard index';
+    }
+    setData((d) => ({ ...d, ...newData }));
+    setCursor(index);
   };
 
   return open && Component ? (
@@ -60,6 +72,7 @@ export default function Wizard({
         data={data}
         goForward={handleGoForward}
         goBack={handleGoBack}
+        goTo={handleGoTo}
         onClose={onClose}
       />
     </div>
