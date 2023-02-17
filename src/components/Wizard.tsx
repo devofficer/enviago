@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export type WizardData = { [key: string]: string };
 export type WizardComponentProps = {
@@ -9,6 +10,7 @@ export type WizardComponentProps = {
 };
 
 type WizardProps = {
+  className?: string;
   initData: WizardData;
   steps: Array<React.FC<WizardComponentProps>>;
   onCompleted: (_data: WizardData) => void;
@@ -20,6 +22,7 @@ export default function Wizard({
   open,
   steps,
   initData,
+  className,
   onClose,
   onCompleted,
 }: WizardProps) {
@@ -45,7 +48,12 @@ export default function Wizard({
   };
 
   return open ? (
-    <div className="fixed inset-0 z-wizard main-content:overflow-hidden">
+    <div
+      className={twMerge(
+        'fixed inset-0 z-wizard main-content:overflow-hidden',
+        className
+      )}
+    >
       <CurrentComponent
         data={data}
         goForward={handleGoForward}

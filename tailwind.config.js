@@ -61,6 +61,8 @@ module.exports = {
         wizard: '60',
         backdrop: '100',
         dialog: '101',
+        top: '1000',
+        topmost: '1001',
       },
     },
   },
