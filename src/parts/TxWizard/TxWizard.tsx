@@ -9,24 +9,36 @@ import Image from 'next/image';
 import IconButton from '@/components/IconButton';
 import TOP_PEOPLE from '@/mock/top-people';
 import { TX_LABELS, TX_TYPES } from '@/utils/constants/enums';
+import Wizard, { WizardData } from '@/components/Wizard';
+import RequestAmount from './request/RequestAmount';
+import RequestSent from './request/RequestSent';
 
 type TxWizardProps = {
   open: boolean;
   onClose: () => void;
 };
 
-const txTabs = [
-  { id: TX_TYPES.request, label: TX_LABELS[TX_TYPES.request] },
-  { id: TX_TYPES.send, label: TX_LABELS[TX_TYPES.send] },
-];
 export default function TxWizard({ open, onClose }: TxWizardProps) {
   const [tab, setTab] = useState<string>(TX_TYPES.request);
+  const [requestWizardOpen, setRequestWizardOpen] = useState(false);
+  const [sendWizardOpen, setSendWizardOpen] = useState(false);
+
+  const handleStartTx = () => {
+    if (tab === TX_TYPES.request) {
+      setRequestWizardOpen(true);
+    } else {
+      setSendWizardOpen(true);
+    }
+  };
 
   return (
     <Popup open={open} onClose={onClose} className="mt-[10vh] h-[90vh]">
       <Tab
         active={tab}
-        tabs={txTabs}
+        tabs={[
+          { id: TX_TYPES.request, label: TX_LABELS[TX_TYPES.request] },
+          { id: TX_TYPES.send, label: TX_LABELS[TX_TYPES.send] },
+        ]}
         onSelect={(tabId) => setTab(tabId)}
         className="mb-[13px]"
       />
@@ -56,6 +68,7 @@ export default function TxWizard({ open, onClose }: TxWizardProps) {
         {TOP_PEOPLE.map(({ username, id }, idx) => (
           <div
             key={idx}
+            onClick={handleStartTx}
             className="flex items-center px-[16px] py-[19px] bg-gray-pale rounded-[18px]"
           >
             <Image
@@ -77,6 +90,20 @@ export default function TxWizard({ open, onClose }: TxWizardProps) {
       <IconButton variant="custom" onClick={onClose}>
         <CloseSvg />
       </IconButton>
+      <Wizard
+        open={requestWizardOpen}
+        initData={{}}
+        steps={[RequestAmount, RequestSent]}
+        onClose={() => setRequestWizardOpen(false)}
+        onCompleted={(_data: WizardData) => setRequestWizardOpen(false)}
+      />
+      <Wizard
+        open={sendWizardOpen}
+        initData={{}}
+        steps={[]}
+        onClose={() => setSendWizardOpen(false)}
+        onCompleted={(_data: WizardData) => setSendWizardOpen(false)}
+      />
     </Popup>
   );
 }

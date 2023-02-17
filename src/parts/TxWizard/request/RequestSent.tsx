@@ -2,12 +2,9 @@ import Divider from '@/components/Divider';
 import Image from 'next/image';
 import ConfirmSvg from '@/assets/confirm.svg';
 import Button from '@/components/Button';
-import { WizardComponentProps } from '@/components/Wizard';
+import { WizardComponent } from '@/components/Wizard';
 
-export default function RequestSentWizard({
-  data,
-  goForward,
-}: WizardComponentProps) {
+export default function RequestSent({ data, goForward }: WizardComponent) {
   return (
     <div className="bg-gray-pale h-full px-[25px] py-[34px] overflow-auto">
       <ConfirmSvg className="mx-auto mb-[21px]" />

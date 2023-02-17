@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 export type WizardData = { [key: string]: string };
-export type WizardComponentProps = {
+export type WizardComponent = {
   goForward: (data: WizardData) => void;
   goBack: () => void;
   onClose: () => void;
@@ -12,7 +12,7 @@ export type WizardComponentProps = {
 type WizardProps = {
   className?: string;
   initData: WizardData;
-  steps: Array<React.FC<WizardComponentProps>>;
+  steps: Array<React.FC<WizardComponent>>;
   onCompleted: (_data: WizardData) => void;
   open: boolean;
   onClose: () => void;
@@ -28,7 +28,7 @@ export default function Wizard({
 }: WizardProps) {
   const [cursor, setCursor] = useState(0);
   const [data, setData] = useState(initData);
-  const CurrentComponent = useMemo(() => steps[cursor], [steps, cursor]);
+  const Component = useMemo(() => steps[cursor], [steps, cursor]);
 
   const handleGoForward = (_data: { [key: string]: string }) => {
     setData(_data);
@@ -47,14 +47,14 @@ export default function Wizard({
     }
   };
 
-  return open ? (
+  return open && Component ? (
     <div
       className={twMerge(
         'fixed inset-0 z-wizard main-content:overflow-hidden',
         className
       )}
     >
-      <CurrentComponent
+      <Component
         data={data}
         goForward={handleGoForward}
         goBack={handleGoBack}

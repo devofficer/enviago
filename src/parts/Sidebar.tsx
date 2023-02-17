@@ -14,7 +14,7 @@ import TimeSvg from '@/assets/icons/time.svg';
 import SettingSvg from '@/assets/icons/setting.svg';
 import ProfileSvg from '@/assets/icons/user.svg';
 import LINKS from '@/utils/constants/links';
-import TxWizard from '@/parts/TxWizard';
+import TxWizard from '@/parts/TxWizard/TxWizard';
 
 const navbarItems = [
   {

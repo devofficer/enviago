@@ -1,14 +1,14 @@
 import IconButton from '@/components/IconButton';
 import BackArrowSvg from '@/assets/icons/back-arrow.svg';
-import { WizardComponentProps } from '@/components/Wizard';
+import { WizardComponent } from '@/components/Wizard';
 import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
 
-export default function RequestAmountWizard({
+export default function RequestAmount({
   data,
   goForward,
   goBack,
-}: WizardComponentProps) {
+}: WizardComponent) {
   return (
     <div className="bg-blue h-screen flex flex-col justify-between overflow-auto">
       <div className="pl-[28px] mb-[16px]">
