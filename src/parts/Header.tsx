@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'classnames';
-import BREADCRUMBS from '@/utils/breadcrumbs';
-import LINKS from '@/utils/links';
+import BREADCRUMBS from '@/utils/constants/breadcrumbs';
+import LINKS from '@/utils/constants/links';
 
 export default function Header({ mobile }: { mobile: boolean }) {
   const pathname = usePathname() as string;

@@ -7,18 +7,18 @@ import AttachmentSvg from '@/assets/attachment.svg';
 import CloseSvg from '@/assets/icons/close.svg';
 import Image from 'next/image';
 import IconButton from '@/components/IconButton';
-import { WizardComponentProps } from '@/components/Wizard';
 import TOP_PEOPLE from '@/mock/top-people';
 
-export default function RequestPopup({
-  data,
-  goForward,
-  onClose,
-}: WizardComponentProps) {
+type TxWizardProps = {
+  open: boolean;
+  onClose: () => void;
+};
+
+export default function TxWizard({ open, onClose }: TxWizardProps) {
   const [tab, setTab] = useState('Request');
 
   return (
-    <Popup open={true} onClose={onClose} className="mt-[10vh] h-[90vh]">
+    <Popup open={open} onClose={onClose} className="mt-[10vh] h-[90vh]">
       <Tab
         active={tab}
         tabs={['Request', 'Send']}
@@ -51,7 +51,6 @@ export default function RequestPopup({
         {TOP_PEOPLE.map(({ username, id }, idx) => (
           <div
             key={idx}
-            onClick={() => goForward(data)}
             className="flex items-center px-[16px] py-[19px] bg-gray-pale rounded-[18px]"
           >
             <Image

@@ -1,8 +1,9 @@
 'use client';
 
+import React, { useMemo, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import clsx from 'classnames';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 import LogoSvg from '@/assets/icons/logo.svg';
 import ExchangeSvg from '@/assets/exchange.svg';
@@ -12,12 +13,8 @@ import HomeSvg from '@/assets/icons/home.svg';
 import TimeSvg from '@/assets/icons/time.svg';
 import SettingSvg from '@/assets/icons/setting.svg';
 import ProfileSvg from '@/assets/icons/user.svg';
-import LINKS from '@/utils/links';
-import { useMemo, useState } from 'react';
-import Wizard, { WizardData } from '@/components/Wizard';
-import RequestWizard from '@/parts/RequestWizard';
-import RequestAmountWizard from '@/parts/RequestAmountWizard';
-import RequestSentWizard from './RequestSentWizard';
+import LINKS from '@/utils/constants/links';
+import TxWizard from '@/parts/TxWizard';
 
 const navbarItems = [
   {
@@ -140,11 +137,8 @@ export default function Sidebar() {
         <LogoutSvg className="mr-[.875rem]" />
         <span>Log out</span>
       </Link>
-      <Wizard
+      <TxWizard
         open={requestWizardOpen}
-        steps={[RequestWizard, RequestAmountWizard, RequestSentWizard]}
-        initData={{}}
-        onCompleted={(_data: WizardData) => setRequestWizardOpen(false)}
         onClose={() => setRequestWizardOpen(false)}
       />
     </>

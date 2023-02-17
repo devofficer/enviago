@@ -7,7 +7,7 @@ import SearchSvg from '@/assets/icons/search.svg';
 import Image from 'next/image';
 import Button from '@/components/Button';
 import TabContext from '@/contexts/TabContext';
-import LINKS from '@/utils/links';
+import LINKS from '@/utils/constants/links';
 
 export default function RequestOrSend() {
   const { tab } = useContext(TabContext);
