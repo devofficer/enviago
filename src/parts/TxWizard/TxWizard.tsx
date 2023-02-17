@@ -12,6 +12,7 @@ import { TX_LABELS, TX_TYPES } from '@/utils/constants/enums';
 import Wizard, { WizardData } from '@/components/Wizard';
 import RequestAmount from './request/RequestAmount';
 import RequestSent from './request/RequestSent';
+import SendAmount from './send/SendAmount';
 
 type TxWizardProps = {
   open: boolean;
@@ -100,7 +101,7 @@ export default function TxWizard({ open, onClose }: TxWizardProps) {
       <Wizard
         open={sendWizardOpen}
         initData={{}}
-        steps={[]}
+        steps={[SendAmount]}
         onClose={() => setSendWizardOpen(false)}
         onCompleted={(_data: WizardData) => setSendWizardOpen(false)}
       />

@@ -44,6 +44,8 @@ export default function Wizard({
   const handleGoBack = () => {
     if (cursor > 0) {
       setCursor(cursor - 1);
+    } else {
+      onClose();
     }
   };
 
