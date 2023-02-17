@@ -63,18 +63,12 @@ export default function Button({
     [size, color, variant, className]
   );
 
-  const handleClick = () => {
-    if (!disabled && onClick) {
-      onClick();
-    }
-  };
-
   return href ? (
     <Link href={href} className={classes}>
       {children}
     </Link>
   ) : (
-    <button className={classes} onClick={handleClick}>
+    <button className={classes} onClick={onClick}>
       {children}
     </button>
   );
