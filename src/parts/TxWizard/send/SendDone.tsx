@@ -35,6 +35,11 @@ export default function SendDone({ data, goForward }: WizardComponent) {
             Quinten Kortum
           </span>
         </div>
+        <Divider color="secondary" className="mb-[20px]" />
+        <div className="flex items-center justify-between text-[13px] leading-[18px] mb-[25px]">
+          <span className="text-black">Transaction Date:</span>
+          <span className="text-gray-dark">Jan 14, 2023</span>
+        </div>
         <Divider color="secondary" className="mb-[16px]" />
         <div className="flex items-center justify-between text-[13px] leading-[18px]">
           <span className="text-black">Message</span>
