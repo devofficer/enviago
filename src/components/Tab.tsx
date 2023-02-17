@@ -3,7 +3,7 @@
 import clsx from 'classnames';
 
 type TabProps = {
-  tabs: Array<string>;
+  tabs: Array<string> | Array<{ id: string; label: string }>;
   onSelect?: (_tabId: string) => void;
   active: string;
   className?: string;
@@ -19,17 +19,21 @@ export default function Tab({ tabs, active, onSelect, className }: TabProps) {
     >
       {tabs.map((tab) => (
         <li
-          key={tab}
+          key={typeof tab === 'string' ? tab : tab.id}
           className={clsx(
             'inline-block w-[100px] py-[8px] rounded-[39px] cursor-pointer',
             {
-              'hover:text-gray-dark hover:bg-gray-light': active !== tab,
-              'text-white bg-blue': active === tab,
+              'hover:text-gray-dark hover:bg-gray-light':
+                active !== (typeof tab === 'string' ? tab : tab.id),
+              'text-white bg-blue':
+                active === (typeof tab === 'string' ? tab : tab.id),
             }
           )}
-          onClick={() => onSelect && onSelect(tab)}
+          onClick={() =>
+            onSelect && onSelect(typeof tab === 'string' ? tab : tab.id)
+          }
         >
-          {tab}
+          {typeof tab === 'string' ? tab : tab.label}
         </li>
       ))}
     </ul>

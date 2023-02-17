@@ -8,20 +8,25 @@ import CloseSvg from '@/assets/icons/close.svg';
 import Image from 'next/image';
 import IconButton from '@/components/IconButton';
 import TOP_PEOPLE from '@/mock/top-people';
+import { TX_LABELS, TX_TYPES } from '@/utils/constants/enums';
 
 type TxWizardProps = {
   open: boolean;
   onClose: () => void;
 };
 
+const txTabs = [
+  { id: TX_TYPES.request, label: TX_LABELS[TX_TYPES.request] },
+  { id: TX_TYPES.send, label: TX_LABELS[TX_TYPES.send] },
+];
 export default function TxWizard({ open, onClose }: TxWizardProps) {
-  const [tab, setTab] = useState('Request');
+  const [tab, setTab] = useState<string>(TX_TYPES.request);
 
   return (
     <Popup open={open} onClose={onClose} className="mt-[10vh] h-[90vh]">
       <Tab
         active={tab}
-        tabs={['Request', 'Send']}
+        tabs={txTabs}
         onSelect={(tabId) => setTab(tabId)}
         className="mb-[13px]"
       />
