@@ -36,7 +36,9 @@ export default function NoPayment({ goBack, goForward }: WizardComponent) {
             Add credit card
           </Button>
         </div>
-        <Button onClick={() => goForward()}>Continue</Button>
+        <Button onClick={() => goForward()} disabled>
+          Continue
+        </Button>
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ export type ButtonProps = {
   color?: 'primary' | 'secondary';
   variant?: 'contained' | 'outlined' | 'naked';
   href?: string;
+  disabled?: boolean;
   onClick?: () => void;
 };
 
@@ -18,6 +19,7 @@ export default function Button({
   children,
   href,
   onClick,
+  disabled = false,
   color = 'primary',
   variant = 'contained',
   size = 'medium',
@@ -30,19 +32,30 @@ export default function Button({
           'text-center text-[14px] font-manrope-extrabold',
           'rounded-[18px]',
           'hover:brightness-75',
+          disabled
+            ? {
+                'bg-gray/30 text-gray/50': variant === 'contained',
+                'bg-white text-gray/50': variant === 'outlined',
+              }
+            : variant === 'contained'
+            ? {
+                'text-purple': color === 'primary',
+                'bg-purple text-white': color === 'primary',
+              }
+            : variant === 'outlined'
+            ? {
+                'bg-white border border-solid': true,
+                'text-purple': color === 'primary',
+                'tex-gray-cool': color === 'secondary',
+                'border-purple': color === 'primary',
+                'border-gray-trans': color === 'secondary',
+              }
+            : {
+                'text-purple': color === 'primary',
+              },
           {
             'min-h-[42px] px-[24px]': size === 'small',
             'min-h-[60px] px-[1.75rem] w-full': size === 'medium',
-            'text-purple':
-              color === 'primary' &&
-              (variant === 'outlined' || variant === 'naked'),
-            'bg-purple text-white':
-              color === 'primary' && variant === 'contained',
-            'bg-white': variant === 'outlined',
-            'border-purple': color === 'primary' && variant === 'outlined',
-            'border-gray-trans text-gray-cool':
-              color === 'secondary' && variant === 'outlined',
-            'border border-solid': variant === 'outlined',
           }
         ),
         className
@@ -50,12 +63,18 @@ export default function Button({
     [size, color, variant, className]
   );
 
+  const handleClick = () => {
+    if (!disabled && onClick) {
+      onClick();
+    }
+  };
+
   return href ? (
     <Link href={href} className={classes}>
       {children}
     </Link>
   ) : (
-    <button className={classes} onClick={onClick}>
+    <button className={classes} onClick={handleClick}>
       {children}
     </button>
   );
