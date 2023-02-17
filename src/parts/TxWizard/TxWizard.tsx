@@ -1,6 +1,7 @@
+import React, { useState } from 'react';
+import clsx from 'classnames';
 import Popup from '@/components/Popup';
 import Tab from '@/components/Tab';
-import { useState } from 'react';
 import SearchSvg from '@/assets/icons/search.svg';
 import TextField from '@/components/TextField';
 import AttachmentSvg from '@/assets/attachment.svg';
@@ -13,6 +14,7 @@ import Wizard, { WizardData } from '@/components/Wizard';
 import RequestAmount from './request/RequestAmount';
 import RequestSent from './request/RequestSent';
 import SendAmount from './send/SendAmount';
+import SelectPayment from './send/SelectPayment';
 
 type TxWizardProps = {
   open: boolean;
@@ -33,7 +35,13 @@ export default function TxWizard({ open, onClose }: TxWizardProps) {
   };
 
   return (
-    <Popup open={open} onClose={onClose} className="mt-[10vh] h-[90vh]">
+    <Popup
+      open={open}
+      onClose={onClose}
+      className={clsx('mt-[10vh] h-[90vh]', {
+        'overflow-hidden': requestWizardOpen || sendWizardOpen,
+      })}
+    >
       <Tab
         active={tab}
         tabs={[
@@ -49,7 +57,7 @@ export default function TxWizard({ open, onClose }: TxWizardProps) {
         startAdornment={<SearchSvg />}
         className="mb-[21px]"
       />
-      {tab === 'Request' && (
+      {tab === TX_TYPES.request && (
         <div className="flex items-center mb-[21px]">
           <AttachmentSvg className="mr-[14px]" />
           <div>
@@ -101,7 +109,7 @@ export default function TxWizard({ open, onClose }: TxWizardProps) {
       <Wizard
         open={sendWizardOpen}
         initData={{}}
-        steps={[SendAmount]}
+        steps={[SendAmount, SelectPayment]}
         onClose={() => setSendWizardOpen(false)}
         onCompleted={(_data: WizardData) => setSendWizardOpen(false)}
       />

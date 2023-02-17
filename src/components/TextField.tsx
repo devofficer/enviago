@@ -2,13 +2,14 @@
 
 import clsx from 'classnames';
 import React, { useId, useMemo, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 type TextFieldProps = {
   placeholder?: string;
   className?: string;
   value?: string;
   password?: boolean;
-  variant?: 'filled' | 'outlined';
+  variant?: 'filled' | 'outlined' | 'multilined';
   size?: 'small' | 'medium' | 'large';
   color?: 'primary' | 'secondary';
   startAdornment?: React.ReactNode;
@@ -39,7 +40,33 @@ export default function TextField({
     setText(e.currentTarget.value);
   };
 
-  return (
+  return variant === 'multilined' ? (
+    <textarea
+      placeholder={placeholder}
+      className={twMerge(
+        clsx(
+          'text-black',
+          'text-[.875rem]',
+          'font-manrope-semibold',
+          'focus:ring-purple',
+          'focus:border-purple',
+          'focus:outline-none',
+          'w-full',
+          'border border-gray-trans',
+          'resize-none',
+          'h-[160px]',
+          {
+            'bg-white': color === 'primary',
+            'bg-gray-pale': color === 'secondary',
+            'px-[18px] py-[24px]': size === 'medium',
+            'rounded-[15px]': size === 'medium',
+            'rounded-[25px]': size === 'small',
+          }
+        ),
+        className
+      )}
+    />
+  ) : (
     <div
       className={clsx(className, 'w-full', 'relative', 'flex', 'text-left', {
         'justify-start': !!startAdornment,
