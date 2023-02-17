@@ -16,6 +16,7 @@ import RequestSent from './request/RequestSent';
 import SendAmount from './send/SendAmount';
 import SelectPayment from './send/SelectPayment';
 import SendDone from './send/SendDone';
+import NoPayment from './send/NoPayment';
 
 type TxWizardProps = {
   open: boolean;
@@ -110,7 +111,7 @@ export default function TxWizard({ open, onClose }: TxWizardProps) {
       <Wizard
         open={sendWizardOpen}
         initData={{}}
-        steps={[SendAmount, SelectPayment, SendDone]}
+        steps={[SendAmount, NoPayment, SelectPayment, SendDone]}
         onClose={() => setSendWizardOpen(false)}
         onCompleted={(_data: WizardData) => setSendWizardOpen(false)}
       />

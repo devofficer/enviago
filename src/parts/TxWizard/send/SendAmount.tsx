@@ -23,7 +23,7 @@ export default function SendAmount({
   };
 
   const handleCloseLoading = () => {
-    goTo(2);
+    goTo(3);
   };
 
   return (

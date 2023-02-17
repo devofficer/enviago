@@ -21,7 +21,7 @@ export default function SendDone({ data, goForward }: WizardComponent) {
           </span>
         </div>
         <div className="text-gray-steel text-[.875rem] leading-[18px] mb-[12px]">
-          Requested from
+          Send to
         </div>
         <div className="flex items-center mb-[12px]">
           <Image
@@ -32,7 +32,7 @@ export default function SendDone({ data, goForward }: WizardComponent) {
             className="rounded-full w-[48px] h-[48px] mr-[15px]"
           />
           <span className="text-[.875rem] text-dark leading-[20px]">
-            Gibby Radki
+            Quinten Kortum
           </span>
         </div>
         <Divider color="secondary" className="mb-[16px]" />

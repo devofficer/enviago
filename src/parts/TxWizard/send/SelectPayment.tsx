@@ -5,7 +5,7 @@ import Button from '@/components/Button';
 import PaymentMethod from '@/parts/PaymentMethod';
 import TextField from '@/components/TextField';
 
-export default function SelectPayment({ goBack }: WizardComponent) {
+export default function SelectPayment({ goTo }: WizardComponent) {
   return (
     <div className="bg-blue h-screen flex flex-col overflow-auto">
       <div className="pl-[28px] mb-[30px]">
@@ -13,7 +13,7 @@ export default function SelectPayment({ goBack }: WizardComponent) {
           <IconButton
             variant="custom"
             className="mr-[10px]"
-            onClick={() => goBack()}
+            onClick={() => goTo(0)}
           >
             <BackArrowSvg />
           </IconButton>
@@ -35,7 +35,7 @@ export default function SelectPayment({ goBack }: WizardComponent) {
             className="mb-[16px]"
           />
         </div>
-        <Button onClick={() => goBack({ payment: 'selected' })}>
+        <Button onClick={() => goTo(0, { payment: 'selected' })}>
           Continue
         </Button>
       </div>
