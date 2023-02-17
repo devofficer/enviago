@@ -1,7 +1,7 @@
 import Sidebar from '@/parts/Sidebar';
 import Profile from '@/parts/Profile';
 import Header from '@/parts/Header';
-import { checkMobile } from '@/utils/next-helpers';
+import { checkMobile } from '@/utils/helpers/next';
 
 export default function MainLayout({
   children,

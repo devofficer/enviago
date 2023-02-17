@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import throttle from 'lodash.throttle';
-import { getCurrentBreakpoint } from '@/utils/tailwind';
+import { getCurrentBreakpoint } from '@/utils/helpers/tailwind';
 
 const useBreakpoint = () => {
   const [brkPnt, setBrkPnt] = useState<string | null>(null);

@@ -1,6 +1,6 @@
 import resolveConfig from 'tailwindcss/resolveConfig';
 import { KeyValuePair } from 'tailwindcss/types/config';
-import tailwindConfig from '../../tailwind.config';
+import tailwindConfig from '../../../tailwind.config';
 
 const fullConfig = resolveConfig(tailwindConfig);
 
