@@ -89,14 +89,17 @@ export default function Settings() {
           Change
         </Button>
       </div>
-      <div className="rounded-[30px] h-[106px] bg-white hover:bg-blue group flex justify-between items-center pl-[39px] pr-[29px]">
+      <Link
+        href={LINKS.settings.preferences.path}
+        className="rounded-[30px] h-[106px] bg-white hover:bg-blue group flex justify-between items-center pl-[39px] pr-[29px]"
+      >
         <div className="flex items-center gap-[32px]">
           <PreferencesSvg className="w-[25px] h-auto fill-blue group-hover:fill-white" />
           <span className="text-[12px] text-purple group-hover:text-white">
             Manage Preferences
           </span>
         </div>
-      </div>
+      </Link>
       <div className="rounded-[30px] h-[106px] bg-white hover:bg-blue group flex justify-between items-center pl-[39px] pr-[29px]">
         <div className="flex items-center gap-[32px]">
           <PreferencesSvg className="w-[25px] h-auto fill-blue group-hover:fill-white" />

@@ -54,6 +54,10 @@ const LINKS = {
         path: '/settings/my-contacts/no-synced',
       },
     },
+    preferences: {
+      path: '/settings/preferences',
+      label: 'Manage preferences',
+    },
   },
   profile: {
     path: '/profile',

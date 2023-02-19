@@ -43,6 +43,11 @@ const BREAD_CRUMBS: {
     LINKS.settings,
     LINKS.settings.myContacts,
   ],
+  [LINKS.settings.preferences.path]: [
+    LINKS.home,
+    LINKS.settings,
+    LINKS.settings.preferences,
+  ],
 };
 
 export default BREAD_CRUMBS;
