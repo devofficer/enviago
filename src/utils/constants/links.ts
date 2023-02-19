@@ -31,6 +31,10 @@ const LINKS = {
   settings: {
     path: '/settings',
     label: 'Settings',
+    payment: {
+      path: '/settings/payment',
+      label: 'Payment methods',
+    },
   },
   profile: {
     path: '/profile',

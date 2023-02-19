@@ -4,6 +4,7 @@ import FriendSvg from '@/assets/friend.svg';
 import ContactSvg from '@/assets/contact.svg';
 import CurrencySvg from '@/assets/currency.svg';
 import PreferencesSvg from '@/assets/preferences.svg';
+import LINKS from '@/utils/constants/links';
 
 export default function Settings() {
   return (
@@ -34,6 +35,7 @@ export default function Settings() {
         <Button
           size="xsmall"
           className="bg-blue group-hover:bg-white group-hover:text-purple"
+          href={LINKS.settings.payment.path}
         >
           Manage
         </Button>
@@ -50,7 +52,7 @@ export default function Settings() {
         <div className="flex items-center gap-[32px]">
           <ContactSvg className="w-[28px] h-auto fill-blue group-hover:fill-white" />
           <span className="text-[12px] text-purple group-hover:text-white">
-            Invite Friends
+            My Contacts
           </span>
         </div>
       </div>
