@@ -50,6 +50,9 @@ const LINKS = {
     myContacts: {
       path: '/settings/my-contacts',
       label: 'My Contacts',
+      noSynced: {
+        path: '/settings/my-contacts/no-synced',
+      },
     },
   },
   profile: {
