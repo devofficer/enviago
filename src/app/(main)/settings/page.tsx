@@ -1,3 +1,6 @@
+'use client';
+
+import React, { useState } from 'react';
 import Button from '@/components/Button';
 import BankSvg from '@/assets/bank.svg';
 import FriendSvg from '@/assets/friend.svg';
@@ -6,8 +9,13 @@ import CurrencySvg from '@/assets/currency.svg';
 import PreferencesSvg from '@/assets/preferences.svg';
 import LINKS from '@/utils/constants/links';
 import Link from 'next/link';
+import Dialog from '@/components/Dialog';
+import Select from '@/components/Select';
 
 export default function Settings() {
+  const [openCurrency, setOpenCurrency] = useState(false);
+  const [currency, setCurrency] = useState('');
+
   return (
     <div className="grid grid-cols-1 xl:grid-cols-2 gap-[16px]">
       <div className="rounded-[30px] h-[106px] bg-white hover:bg-blue group flex justify-between items-center px-[31px]">
@@ -76,6 +84,7 @@ export default function Settings() {
         <Button
           size="xsmall"
           className="bg-blue group-hover:bg-white group-hover:text-purple"
+          onClick={() => setOpenCurrency(true)}
         >
           Change
         </Button>
@@ -96,6 +105,21 @@ export default function Settings() {
           </span>
         </div>
       </div>
+      <Dialog
+        open={openCurrency}
+        onClose={() => setOpenCurrency(false)}
+        className="w-[388px] rounded-[15px] px-[25px] pt-[17px] pb-[25px]"
+      >
+        <div className="text-[18px] font-manrop-bold leading-[24px] mb-[14px]">
+          Select currency
+        </div>
+        <Select
+          placeholder="Currency"
+          items={['$ (CPL)', 'Brazilian real (R$)']}
+          value={currency}
+          onChange={(value) => setCurrency(value)}
+        />
+      </Dialog>
     </div>
   );
 }
