@@ -34,6 +34,10 @@ const LINKS = {
     payment: {
       path: '/settings/payment',
       label: 'Payment methods',
+      addCard: {
+        path: '/settings/payment/add-card',
+        label: 'Add new card',
+      },
     },
   },
   profile: {
