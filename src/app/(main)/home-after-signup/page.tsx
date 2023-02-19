@@ -49,7 +49,7 @@ export default function HomeAfterSignup() {
         </div>
         <div className="bg-white rounded-[18px] px-[16px] py-[19px] flex items-center">
           <div className="flex items-center justify-center w-[39px] h-[39px] bg-green rounded-full mr-[14px]">
-            <ContactSvg />
+            <ContactSvg className="fill-white" />
           </div>
           <div>
             <h2 className="text-dark text-[.875rem] leading-[20px] mb-[4px]">
@@ -73,7 +73,7 @@ export default function HomeAfterSignup() {
         </div>
         <div className="bg-white rounded-[18px] px-[16px] py-[19px] flex items-center">
           <div className="flex items-center justify-center w-[39px] h-[39px] bg-orange rounded-full mr-[14px]">
-            <BankSvg />
+            <BankSvg className="w-[19.5px] h-auto fill-white" />
           </div>
           <div>
             <h2 className="text-dark text-[.875rem] leading-[20px] mb-[4px]">

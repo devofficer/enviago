@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge';
 export type ButtonProps = {
   children: React.ReactNode;
   className?: string;
-  size?: 'small' | 'medium' | 'large' | `${string}px`;
+  size?: 'xsmall' | 'small' | 'medium' | 'large' | `${string}px`;
   color?: 'primary' | 'secondary';
   variant?: 'contained' | 'outlined' | 'naked';
   href?: string;
@@ -29,8 +29,7 @@ export default function Button({
       twMerge(
         clsx(
           'flex items-center justify-center',
-          'text-center text-[14px] font-manrope-extrabold',
-          'rounded-[18px]',
+          'text-center',
           'hover:brightness-75',
           disabled
             ? {
@@ -46,16 +45,20 @@ export default function Button({
             ? {
                 'bg-white border border-solid': true,
                 'text-purple': color === 'primary',
-                'tex-gray-cool': color === 'secondary',
                 'border-purple': color === 'primary',
+                'tex-gray-cool': color === 'secondary',
                 'border-gray-trans': color === 'secondary',
               }
             : {
                 'text-purple': color === 'primary',
               },
           {
-            'min-h-[42px] px-[24px]': size === 'small',
-            'min-h-[60px] px-[1.75rem] w-full': size === 'medium',
+            'min-h-[30px] px-[20px] rounded-[18px] text-[12px] font-manrope-semibold':
+              size === 'xsmall',
+            'min-h-[42px] px-[24px] rounded-[18px] text-[14px] font-manrope-extrabold':
+              size === 'small',
+            'min-h-[60px] px-[28px] rounded-[18px] text-[14px] font-manrope-extrabold w-full':
+              size === 'medium',
           }
         ),
         className

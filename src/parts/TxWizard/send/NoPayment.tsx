@@ -2,7 +2,7 @@ import IconButton from '@/components/IconButton';
 import BackArrowSvg from '@/assets/icons/back-arrow.svg';
 import { WizardComponent } from '@/components/Wizard';
 import Button from '@/components/Button';
-import BankBlueSvg from '@/assets/bank-blue.svg';
+import BankSvg from '@/assets/bank.svg';
 
 export default function NoPayment({ goBack, goForward }: WizardComponent) {
   return (
@@ -23,7 +23,7 @@ export default function NoPayment({ goBack, goForward }: WizardComponent) {
       </div>
       <div className="flex flex-col justify-between flex-grow bg-white rounded-t-[30px] px-[27px] pt-[41px] pb-[34px]">
         <div className="text-center">
-          <BankBlueSvg className="mx-auto mb-[28px]" />
+          <BankSvg className="w-[53px] h-auto fill-blue mx-auto mb-[28px]" />
           <p className="text-[22px] leading-[32px] font-manrope-bold mb-[9px]">
             No payment method yet
           </p>

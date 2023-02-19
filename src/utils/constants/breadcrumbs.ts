@@ -10,6 +10,7 @@ const BREAD_CRUMBS: {
   [LINKS.reqSend.path]: [LINKS.home, LINKS.reqSend],
   [LINKS.reqSend.amount.path]: [LINKS.home, LINKS.reqSend],
   [LINKS.reqSend.noPaymentMethod.path]: [LINKS.home, LINKS.reqSend],
+  [LINKS.settings.path]: [LINKS.home, LINKS.settings],
 };
 
 export default BREAD_CRUMBS;
