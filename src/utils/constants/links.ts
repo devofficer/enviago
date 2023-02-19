@@ -38,6 +38,10 @@ const LINKS = {
         path: '/settings/payment/add-card',
         label: 'Add new card',
       },
+      linkBank: {
+        path: '/settings/payment/link-bank',
+        label: 'Link bank account',
+      },
     },
   },
   profile: {

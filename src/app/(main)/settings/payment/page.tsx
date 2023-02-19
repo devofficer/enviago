@@ -1,5 +1,6 @@
 import BankSvg from '@/assets/bank.svg';
 import Button from '@/components/Button';
+import LINKS from '@/utils/constants/links';
 
 export default function Payment() {
   return (
@@ -30,8 +31,12 @@ export default function Payment() {
           </div>
         </div>
       </div>
-      <Button className="mb-[18px]">Connect new bank account</Button>
-      <Button variant="outlined">Add new credit card</Button>
+      <Button className="mb-[18px]" href={LINKS.settings.payment.linkBank.path}>
+        Connect new bank account
+      </Button>
+      <Button variant="outlined" href={LINKS.settings.payment.addCard.path}>
+        Add new credit card
+      </Button>
     </>
   );
 }

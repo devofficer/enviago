@@ -22,6 +22,12 @@ const BREAD_CRUMBS: {
     LINKS.settings.payment,
     LINKS.settings.payment.addCard,
   ],
+  [LINKS.settings.payment.linkBank.path]: [
+    LINKS.home,
+    LINKS.settings,
+    LINKS.settings.payment,
+    LINKS.settings.payment.linkBank,
+  ],
 };
 
 export default BREAD_CRUMBS;

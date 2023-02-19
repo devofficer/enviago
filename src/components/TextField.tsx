@@ -94,15 +94,20 @@ export default function TextField({
             'text-[.875rem]',
             'z-10',
             {
-              'translate-y-[12px] text-purple': shrink && size === 'medium',
-              'translate-y-[24px]': !shrink && size === 'medium',
               'translate-y-[16px] opacity-100': size === 'small',
               'opacity-0': (focused || text) && size === 'small',
               'translate-x-[18px]': !startAdornment,
               'translate-x-[52px]': !!startAdornment,
-              'text-black/30': !shrink && color === 'primary',
-              'text-gray-steel': !shrink && color === 'secondary',
-            }
+            },
+            shrink
+              ? {
+                  'translate-y-[12px] text-purple': size === 'medium',
+                }
+              : {
+                  'translate-y-[26px]': size === 'medium',
+                  'text-black/30': color === 'primary',
+                  'text-gray-steel': color === 'secondary',
+                }
           )}
         >
           {placeholder}
