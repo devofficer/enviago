@@ -9,7 +9,7 @@ type TextFieldProps = {
   className?: string;
   value?: string;
   password?: boolean;
-  variant?: 'filled' | 'outlined' | 'multilined';
+  variant?: 'filled' | 'outlined' | 'multilined' | 'currency';
   size?: 'small' | 'medium' | 'large';
   color?: 'primary' | 'secondary';
   startAdornment?: React.ReactNode;
@@ -66,6 +66,13 @@ export default function TextField({
         className
       )}
     />
+  ) : variant === 'currency' ? (
+    <div className={twMerge('flex text-[32px] relative', className)}>
+      <span>$</span>
+      <span contentEditable className="focus:outline-none w-full caret-blue">
+        {value}
+      </span>
+    </div>
   ) : (
     <div
       className={clsx(className, 'w-full', 'relative', 'flex', 'text-left', {

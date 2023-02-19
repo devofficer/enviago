@@ -11,9 +11,11 @@ import LINKS from '@/utils/constants/links';
 import Link from 'next/link';
 import Dialog from '@/components/Dialog';
 import Select from '@/components/Select';
+import TextField from '@/components/TextField';
 
 export default function Settings() {
   const [openCurrency, setOpenCurrency] = useState(false);
+  const [openWithdraw, setOpenWithdraw] = useState(false);
   const [currency, setCurrency] = useState('');
 
   return (
@@ -30,6 +32,7 @@ export default function Settings() {
         <Button
           size="xsmall"
           className="bg-blue group-hover:bg-white group-hover:text-purple"
+          onClick={() => setOpenWithdraw(true)}
         >
           Withdraw
         </Button>
@@ -122,6 +125,17 @@ export default function Settings() {
           value={currency}
           onChange={(value) => setCurrency(value)}
         />
+      </Dialog>
+      <Dialog
+        open={openWithdraw}
+        onClose={() => setOpenWithdraw(false)}
+        className="w-[388px] rounded-[15px] px-[26px] py-[105px] flex flex-col items-center"
+      >
+        <div className="text-[15px] leading-[20px] mb-[25px]">
+          Balance: <span className="text-purple">$ 115.00</span>
+        </div>
+        <TextField variant="currency" className="mb-[44px]" value="50.00" />
+        <Button>Withdraw</Button>
       </Dialog>
     </div>
   );
