@@ -24,8 +24,8 @@ export default function Switch({ className, active, onChange }: SwitchProps) {
           'justify-end': active,
         }),
         className,
-        'w-[32px] h-[18px] relative',
-        'p-[3px] rounded-full transition-transform'
+        'w-[32px] h-[18px] relative p-[3px]',
+        'cursor-pointer rounded-full transition-transform'
       )}
       onClick={handleClick}
     >
