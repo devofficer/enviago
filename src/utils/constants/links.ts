@@ -1,11 +1,13 @@
 const LINKS = {
   home: {
     path: '/',
-    label: 'Enviago',
+    label: 'Home',
+    breadcrumb: 'Enviago',
   },
   homeAfterSignUp: {
     path: '/home-after-signup',
     label: 'Home',
+    breadcrumb: 'Enviago',
   },
   trans: {
     path: '/transactions',
@@ -25,6 +27,14 @@ const LINKS = {
     noPaymentMethod: {
       path: '/request-send/no-payment-method',
     },
+  },
+  settings: {
+    path: '/settings',
+    label: 'Settings',
+  },
+  profile: {
+    path: '/profile',
+    label: 'Profile',
   },
 };
 

@@ -20,27 +20,27 @@ const navbarItems = [
   {
     path: LINKS.home.path,
     icon: HomeSvg,
-    label: 'Home',
+    label: LINKS.home.label,
   },
   {
     path: LINKS.trans.path,
     icon: TimeSvg,
-    label: 'Transactions',
+    label: LINKS.trans.label,
   },
   {
     path: LINKS.reqSend.path,
     icon: ExchangeSvg,
-    label: 'Transactions',
+    label: LINKS.reqSend.label,
   },
   {
-    path: '/main/settings',
+    path: LINKS.settings.path,
     icon: SettingSvg,
-    label: 'Settings',
+    label: LINKS.settings.label,
   },
   {
-    path: '/main/profile',
+    path: LINKS.profile.path,
     icon: ProfileSvg,
-    label: 'My profile',
+    label: LINKS.profile.label,
   },
 ];
 
