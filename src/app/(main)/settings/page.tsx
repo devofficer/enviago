@@ -1,21 +1,24 @@
 'use client';
 
 import React, { useState } from 'react';
-import Button from '@/components/Button';
-import BankSvg from '@/assets/bank.svg';
-import FriendSvg from '@/assets/friend.svg';
-import ContactSvg from '@/assets/contact.svg';
-import CurrencySvg from '@/assets/currency.svg';
-import PreferencesSvg from '@/assets/preferences.svg';
 import LINKS from '@/utils/constants/links';
 import Link from 'next/link';
 import Dialog from '@/components/Dialog';
 import Select from '@/components/Select';
 import TextField from '@/components/TextField';
+import Button from '@/components/Button';
+
+import BankSvg from '@/assets/bank.svg';
+import FriendSvg from '@/assets/friend.svg';
+import ContactSvg from '@/assets/contact.svg';
+import CurrencySvg from '@/assets/currency.svg';
+import PreferencesSvg from '@/assets/preferences.svg';
+import EyeHiddenSvg from '@/assets/eye-hidden.svg';
 
 export default function Settings() {
   const [openCurrency, setOpenCurrency] = useState(false);
   const [openWithdraw, setOpenWithdraw] = useState(false);
+  const [openContactInfo, setOpenContactInfo] = useState(false);
   const [currency, setCurrency] = useState('');
 
   return (
@@ -103,7 +106,10 @@ export default function Settings() {
           </span>
         </div>
       </Link>
-      <div className="rounded-[30px] h-[106px] bg-white hover:bg-blue group flex justify-between items-center pl-[39px] pr-[29px]">
+      <div
+        onClick={() => setOpenContactInfo(true)}
+        className="rounded-[30px] h-[106px] bg-white hover:bg-blue group flex justify-between items-center pl-[39px] pr-[29px]"
+      >
         <div className="flex items-center gap-[32px]">
           <PreferencesSvg className="w-[25px] h-auto fill-blue group-hover:fill-white" />
           <span className="text-[12px] text-purple group-hover:text-white">
@@ -136,6 +142,28 @@ export default function Settings() {
         </div>
         <TextField variant="currency" className="mb-[44px]" value="50.00" />
         <Button>Withdraw</Button>
+      </Dialog>
+      <Dialog
+        open={openContactInfo}
+        onClose={() => setOpenContactInfo(false)}
+        className="w-[388px] rounded-[15px] px-[28px] pt-[15px] pb-[37px] "
+      >
+        <div className="text-[18px] font-manrop-bold leading-[24px] mb-[19px]">
+          My contact info
+        </div>
+        <div className="grid grid-cols-1 gap-[15px]">
+          <TextField placeholder="Full name" value="Elwin Sharvill" />
+          <TextField placeholder="Username" value="@sharvillelwin" />
+          <TextField placeholder="Email" value="elwinsharwill@mail.com" />
+          <TextField placeholder="Phone" value="+1 264 2910 3002" />
+          <TextField
+            placeholder="Password"
+            value="1234567890"
+            password
+            endAdornment={<EyeHiddenSvg />}
+          />
+          <Button>Save changes</Button>
+        </div>
       </Dialog>
     </div>
   );
