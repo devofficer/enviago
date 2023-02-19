@@ -28,6 +28,11 @@ const BREAD_CRUMBS: {
     LINKS.settings.payment,
     LINKS.settings.payment.linkBank,
   ],
+  [LINKS.settings.invite.path]: [
+    LINKS.home,
+    LINKS.settings,
+    LINKS.settings.invite,
+  ],
 };
 
 export default BREAD_CRUMBS;

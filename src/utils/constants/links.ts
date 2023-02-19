@@ -43,6 +43,10 @@ const LINKS = {
         label: 'Link bank account',
       },
     },
+    invite: {
+      path: '/settings/invite',
+      label: 'Invite Friends',
+    },
   },
   profile: {
     path: '/profile',
