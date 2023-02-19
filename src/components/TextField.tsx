@@ -94,7 +94,7 @@ export default function TextField({
             'text-[.875rem]',
             'z-10',
             {
-              'translate-y-[16px] opacity-100': size === 'small',
+              'translate-y-[18px] opacity-100': size === 'small',
               'opacity-0': (focused || text) && size === 'small',
               'translate-x-[18px]': !startAdornment,
               'translate-x-[52px]': !!startAdornment,
