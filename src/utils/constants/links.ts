@@ -47,6 +47,10 @@ const LINKS = {
       path: '/settings/invite',
       label: 'Invite Friends',
     },
+    myContacts: {
+      path: '/settings/my-contacts',
+      label: 'My Contacts',
+    },
   },
   profile: {
     path: '/profile',
