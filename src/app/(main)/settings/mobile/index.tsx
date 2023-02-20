@@ -13,7 +13,7 @@ import EditSvg from '@/assets/edit.svg';
 import Wallet from '@/parts/Wallet';
 import ArrowRightSvg from '@/assets/icons/arrow-right.svg';
 
-import WithdrawBalancePopup from './mobile-popups/WithdrawBalance';
+import WithdrawBalancePopup from './WithdrawBalancePopup';
 
 export enum SettingItem {
   none,

@@ -4,7 +4,7 @@ import Popup from '@/components/Popup';
 import TextField from '@/components/TextField';
 import Keyboard from '@/parts/Keyboard';
 import LangSwitcher from '@/parts/LangSwitcher';
-import { SettingsPopup } from '../mobile';
+import { SettingsPopup } from '.';
 
 export default function WithdrawBalancePopup({ open, onClose }: SettingsPopup) {
   return (
