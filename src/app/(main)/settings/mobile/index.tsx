@@ -19,6 +19,7 @@ import InviteFriendPopup from './InviteFriendPopup';
 import MyContactPopup from './MyContactPopup';
 import EditContactPopup from './EditContactPopup';
 import ManagePreferencePopup from './ManagePreferencePopup';
+import CurrencyPopup from './CurrencyPopup';
 
 enum SettingItem {
   none,
@@ -67,6 +68,7 @@ const settingsItems = [
     iconSize: 'w-[19.5px]',
     label: 'Currency',
     info: '$ (CPL)',
+    popup: CurrencyPopup,
   },
   {
     id: SettingItem.managePreferences,
