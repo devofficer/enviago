@@ -7,11 +7,13 @@ import DeleteSvg from '@/assets/icons/delete.svg';
 type PaymentMethodProps = {
   className?: string;
   itemClass?: string;
+  onSelect?: () => void;
 };
 
 export default function PaymentMethod({
   className,
   itemClass,
+  onSelect,
 }: PaymentMethodProps) {
   return (
     <div className={twMerge('grid grid-cols-1 gap-[13px]', className)}>
@@ -20,6 +22,7 @@ export default function PaymentMethod({
           'flex items-center bg-gray-pale rounded-[18px] px-[8px] py-[9px] gap-[12px] hover:bg-gray-light',
           itemClass
         )}
+        onClick={() => onSelect && onSelect()}
       >
         <div className="bg-purple rounded-[10px] w-[87px] h-[55px]"></div>
         <div>
@@ -44,6 +47,7 @@ export default function PaymentMethod({
           'flex items-center bg-gray-pale rounded-[18px] px-[8px] py-[9px] gap-[12px] hover:bg-gray-light',
           itemClass
         )}
+        onClick={() => onSelect && onSelect()}
       >
         <div className="flex items-center justify-center bg-gray rounded-[10px] w-[87px] h-[55px]">
           <Image src="/images/bank.svg" width={34} height={32} alt="bank" />

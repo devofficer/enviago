@@ -6,10 +6,12 @@ import LangSwitcher from '@/parts/LangSwitcher';
 import PaymentMethod from '@/parts/PaymentMethod';
 import AddCardPopup from './AddCardPopup';
 import LinkBankPopup from './LinkBankPopup';
+import BankAccountPopup from './BankAccountPopup';
 
 export default function PaymentMethodPopup({ open, onClose }: PopupProps) {
   const [openAddCard, setOpenAddCard] = useState(false);
   const [openLinkBank, setOpenLinkBank] = useState(false);
+  const [openBankAccount, setOpenBankAccount] = useState(false);
 
   return (
     <>
@@ -25,7 +27,11 @@ export default function PaymentMethodPopup({ open, onClose }: PopupProps) {
             <span className="text-[14px]">Payment methods</span>
             <LangSwitcher />
           </div>
-          <PaymentMethod className="gap-[16px]" itemClass="bg-white" />
+          <PaymentMethod
+            className="gap-[16px]"
+            itemClass="bg-white"
+            onSelect={() => setOpenBankAccount(true)}
+          />
         </div>
         <div className="grid grid-cols-1 gap-[18px]">
           <Button onClick={() => setOpenLinkBank(true)}>
@@ -40,10 +46,16 @@ export default function PaymentMethodPopup({ open, onClose }: PopupProps) {
       {/* Add new card popup */}
       <AddCardPopup open={openAddCard} onClose={() => setOpenAddCard(false)} />
 
-      {/* Link bank account */}
+      {/* Link bank account popup */}
       <LinkBankPopup
         open={openLinkBank}
         onClose={() => setOpenLinkBank(false)}
+      />
+
+      {/* Bank account popup */}
+      <BankAccountPopup
+        open={openBankAccount}
+        onClose={() => setOpenBankAccount(false)}
       />
     </>
   );
