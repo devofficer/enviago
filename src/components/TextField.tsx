@@ -69,7 +69,11 @@ export default function TextField({
   ) : variant === 'currency' ? (
     <div className={twMerge('flex text-[32px] relative', className)}>
       <span>$</span>
-      <span contentEditable className="focus:outline-none w-full caret-blue">
+      <span
+        contentEditable
+        suppressContentEditableWarning
+        className="focus:outline-none w-full caret-blue"
+      >
         {value}
       </span>
     </div>

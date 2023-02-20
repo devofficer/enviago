@@ -2,11 +2,11 @@
 
 import React, { Fragment, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'classnames';
 import BREADCRUMBS from '@/utils/constants/breadcrumbs';
 import LINKS from '@/utils/constants/links';
+import LangSwitcher from './LangSwitcher';
 
 export default function Header({ mobile }: { mobile: boolean }) {
   const pathname = usePathname() as string;
@@ -65,16 +65,7 @@ export default function Header({ mobile }: { mobile: boolean }) {
         )}
       </div>
 
-      {showLang && (
-        <div className="relative mb-[40px]">
-          <Image
-            src="/images/language-switcher.svg"
-            width={30}
-            height={34}
-            alt="avatar"
-          />
-        </div>
-      )}
+      {showLang && <LangSwitcher className="mb-[40px]" />}
     </div>
   );
 }

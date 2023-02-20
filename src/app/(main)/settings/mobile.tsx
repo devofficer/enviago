@@ -13,7 +13,7 @@ import EditSvg from '@/assets/edit.svg';
 import Wallet from '@/parts/Wallet';
 import ArrowRightSvg from '@/assets/icons/arrow-right.svg';
 
-import WithdrawBalancePopup from './popups/WithdrawBalance';
+import WithdrawBalancePopup from './mobile-popups/WithdrawBalance';
 
 export enum SettingItem {
   none,
@@ -95,9 +95,8 @@ export default function SettingsMobile() {
       <Wallet className="mb-[25px]" />
       <div className="grid grid-cols-1 gap-[15px]">
         {settingsItems.map((item) => (
-          <>
+          <React.Fragment key={item.id}>
             <div
-              key={item.id}
               onClick={() => handleClick(item.id)}
               className="flex items-center justify-between text-[14px]"
             >
@@ -120,7 +119,7 @@ export default function SettingsMobile() {
                 onClose={handleClosePopup}
               />
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </>
