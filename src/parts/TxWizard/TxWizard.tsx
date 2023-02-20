@@ -40,9 +40,12 @@ export default function TxWizard({ open, onClose }: TxWizardProps) {
     <Popup
       open={open}
       onClose={onClose}
-      className={clsx('mt-[10vh] h-[90vh]', {
-        'overflow-hidden': requestWizardOpen || sendWizardOpen,
-      })}
+      className={clsx(
+        'mt-[10vh] h-[90vh] bg-white rounded-t-[30px] px-[25px] py-[41px]',
+        {
+          'overflow-hidden': requestWizardOpen || sendWizardOpen,
+        }
+      )}
     >
       <Tab
         active={tab}

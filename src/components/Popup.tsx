@@ -30,12 +30,7 @@ export default function Popup({
       className="main-content:overflow-hidden fixed z-backdrop bg-black/50 inset-0 transition-opacity opacity-100 flex items-center justify-center"
       onClick={handleClickOutside}
     >
-      <div
-        className={twMerge(
-          'bg-white rounded-t-[30px] z-dialog mt-[20vh] w-full h-[80vh] px-[25px] py-[41px] overflow-y-auto',
-          className
-        )}
-      >
+      <div className={twMerge('z-dialog w-full overflow-y-auto', className)}>
         {children}
       </div>
     </div>

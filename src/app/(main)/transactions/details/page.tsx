@@ -138,7 +138,7 @@ export default function TransactionDetails() {
       <Popup
         open={popupOpen}
         onClose={() => setPopupOpen(false)}
-        className="flex flex-col justify-between"
+        className="flex flex-col justify-between bg-white rounded-t-[30px] mt-[20vh] h-[80vh] px-[25px] py-[41px]"
       >
         <div className="px-[16px] py-[18px] flex items-center bg-gray-pale rounded-[15px] mb-[12px]">
           <Image
