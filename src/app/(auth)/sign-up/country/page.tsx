@@ -20,7 +20,7 @@ export default function Country() {
           Please select your country of residence.
         </p>
         <Select
-          options={[]}
+          items={['United States']}
           placeholder="Select country"
           className="mb-[1.125rem]"
         />
