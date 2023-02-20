@@ -15,6 +15,7 @@ import ArrowRightSvg from '@/assets/icons/arrow-right.svg';
 
 import WithdrawBalancePopup from './WithdrawBalancePopup';
 import PaymentMethodPopup from './PaymentMethodPopup';
+import InviteFriendPopup from './InviteFriendPopup';
 
 enum SettingItem {
   none,
@@ -48,6 +49,7 @@ const settingsItems = [
     icon: FriendSvg,
     iconSize: 'w-[15.3px]',
     label: 'Invite Friends',
+    popup: InviteFriendPopup,
   },
   {
     id: SettingItem.myContacts,
