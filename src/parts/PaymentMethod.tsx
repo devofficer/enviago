@@ -1,3 +1,5 @@
+'use client';
+
 import { twMerge } from 'tailwind-merge';
 import IconButton from '@/components/IconButton';
 import Image from 'next/image';
