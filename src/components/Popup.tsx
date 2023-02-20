@@ -1,8 +1,8 @@
 import React, { useId } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-type PopupProps = {
-  children: React.ReactNode;
+export type PopupProps = {
+  children?: React.ReactNode;
   className?: string;
   open: boolean;
   onClose?: () => void;

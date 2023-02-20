@@ -14,8 +14,9 @@ import Wallet from '@/parts/Wallet';
 import ArrowRightSvg from '@/assets/icons/arrow-right.svg';
 
 import WithdrawBalancePopup from './WithdrawBalancePopup';
+import PaymentMethodPopup from './PaymentMethodPopup';
 
-export enum SettingItem {
+enum SettingItem {
   none,
   withdrawBalance,
   paymentMethods,
@@ -25,11 +26,6 @@ export enum SettingItem {
   managePreferences,
   editContactInfo,
 }
-
-export type SettingsPopup = {
-  open: boolean;
-  onClose: () => void;
-};
 
 const settingsItems = [
   {
@@ -45,6 +41,7 @@ const settingsItems = [
     icon: BankSvg,
     iconSize: 'w-[19.5px]',
     label: 'Payment methods',
+    popup: PaymentMethodPopup,
   },
   {
     id: SettingItem.inviteFriends,

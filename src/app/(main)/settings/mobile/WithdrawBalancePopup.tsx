@@ -1,12 +1,11 @@
 import Button from '@/components/Button';
 import IconButton from '@/components/IconButton';
-import Popup from '@/components/Popup';
+import Popup, { PopupProps } from '@/components/Popup';
 import TextField from '@/components/TextField';
 import Keyboard from '@/parts/Keyboard';
 import LangSwitcher from '@/parts/LangSwitcher';
-import { SettingsPopup } from '.';
 
-export default function WithdrawBalancePopup({ open, onClose }: SettingsPopup) {
+export default function WithdrawBalancePopup({ open, onClose }: PopupProps) {
   return (
     <Popup
       open={open}
