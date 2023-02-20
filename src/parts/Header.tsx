@@ -18,6 +18,10 @@ export default function Header({ mobile }: { mobile: boolean }) {
     }),
     [pathname]
   );
+  const showLang = useMemo(
+    () => !mobile || [LINKS.home.path, LINKS.settings.path].includes(pathname),
+    [mobile, pathname]
+  );
 
   return (
     <div className="flex justify-between">
@@ -61,17 +65,8 @@ export default function Header({ mobile }: { mobile: boolean }) {
         )}
       </div>
 
-      {isHome ? (
+      {showLang && (
         <div className="relative mb-[40px]">
-          <Image
-            src="/images/language-switcher.svg"
-            width={30}
-            height={34}
-            alt="avatar"
-          />
-        </div>
-      ) : (
-        <div className="hidden lg:block relative mb-[40px]">
           <Image
             src="/images/language-switcher.svg"
             width={30}
