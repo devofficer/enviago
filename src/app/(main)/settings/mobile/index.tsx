@@ -17,6 +17,7 @@ import WithdrawBalancePopup from './WithdrawBalancePopup';
 import PaymentMethodPopup from './PaymentMethodPopup';
 import InviteFriendPopup from './InviteFriendPopup';
 import MyContactPopup from './MyContactPopup';
+import EditContactPopup from './EditContactPopup';
 
 enum SettingItem {
   none,
@@ -77,6 +78,7 @@ const settingsItems = [
     icon: EditSvg,
     iconSize: 'w-[18.5px]',
     label: 'Edit contact info',
+    popup: EditContactPopup,
   },
 ];
 
