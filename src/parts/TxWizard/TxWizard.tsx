@@ -41,7 +41,7 @@ export default function TxWizard({ open, onClose }: TxWizardProps) {
       open={open}
       onClose={onClose}
       className={clsx(
-        'mt-[10vh] h-[90vh] bg-white rounded-t-[30px] px-[25px] py-[41px]',
+        'mt-[10vh] h-[90vh] bg-white rounded-t-[30px] px-[25px] py-[41px] flex flex-col',
         {
           'overflow-hidden': requestWizardOpen || sendWizardOpen,
         }
@@ -101,9 +101,11 @@ export default function TxWizard({ open, onClose }: TxWizardProps) {
           </div>
         ))}
       </div>
-      <IconButton variant="custom" onClick={onClose}>
-        <CloseSvg />
-      </IconButton>
+      <div className="flex-grow flex flex-col justify-end">
+        <IconButton variant="custom" onClick={onClose}>
+          <CloseSvg />
+        </IconButton>
+      </div>
       <Wizard
         open={requestWizardOpen}
         initData={{}}

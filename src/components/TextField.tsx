@@ -79,12 +79,19 @@ export default function TextField({
     </div>
   ) : (
     <div
-      className={clsx(className, 'w-full', 'relative', 'flex', 'text-left', {
-        'justify-start': !!startAdornment,
-        'justify-end': !!endAdornment,
-        'h-[52px]': size === 'small',
-        'h-[72px]': size === 'medium',
-      })}
+      className={clsx(
+        className,
+        'w-full',
+        'relative',
+        'flex flex-shrink-0',
+        'text-left',
+        {
+          'justify-start': !!startAdornment,
+          'justify-end': !!endAdornment,
+          'h-[52px]': size === 'small',
+          'h-[72px]': size === 'medium',
+        }
+      )}
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
     >

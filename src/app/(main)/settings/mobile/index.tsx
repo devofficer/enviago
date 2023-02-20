@@ -16,6 +16,7 @@ import ArrowRightSvg from '@/assets/icons/arrow-right.svg';
 import WithdrawBalancePopup from './WithdrawBalancePopup';
 import PaymentMethodPopup from './PaymentMethodPopup';
 import InviteFriendPopup from './InviteFriendPopup';
+import MyContactPopup from './MyContactPopup';
 
 enum SettingItem {
   none,
@@ -56,6 +57,7 @@ const settingsItems = [
     icon: ContactSvg,
     iconSize: 'w-[18.5px]',
     label: 'My Contacts',
+    popup: MyContactPopup,
   },
   {
     id: SettingItem.currency,
