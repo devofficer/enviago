@@ -18,6 +18,7 @@ import PaymentMethodPopup from './PaymentMethodPopup';
 import InviteFriendPopup from './InviteFriendPopup';
 import MyContactPopup from './MyContactPopup';
 import EditContactPopup from './EditContactPopup';
+import ManagePreferencePopup from './ManagePreferencePopup';
 
 enum SettingItem {
   none,
@@ -72,6 +73,7 @@ const settingsItems = [
     icon: PreferencesSvg,
     iconSize: 'w-[18.5px]',
     label: 'Manage preferences',
+    popup: ManagePreferencePopup,
   },
   {
     id: SettingItem.editContactInfo,

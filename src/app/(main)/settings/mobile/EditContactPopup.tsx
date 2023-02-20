@@ -14,7 +14,7 @@ export default function EditContactPopup({ open, onClose }: PopupProps) {
       <div>
         <div className="flex items-center justify-between mb-[30px]">
           <IconButton icon="backward" color="secondary" onClick={onClose} />
-          <span className="text-[14px]">Link bank account</span>
+          <span className="text-[14px]">My contact info</span>
           <LangSwitcher />
         </div>
         <div className="grid grid-cols-1 gap-[15px] mb-[20px]">
