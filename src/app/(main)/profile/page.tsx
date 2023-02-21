@@ -11,9 +11,12 @@ import Divider from '@/components/Divider';
 import PenSvg from '@/assets/icons/pen.svg';
 import LogoutSvg from '@/assets/icons/logout.svg';
 import Link from 'next/link';
+import useBreakpoint from '@/hooks/use-breakpoint';
+import Popup from '@/components/Popup';
 
 export default function Profile() {
   const [openCover, setOpenCover] = useState(false);
+  const { mobile } = useBreakpoint();
 
   return (
     <>
@@ -96,7 +99,7 @@ export default function Profile() {
         </div>
       </div>
       <Dialog
-        open={openCover}
+        open={openCover && !mobile}
         onClose={() => setOpenCover(false)}
         className="w-[388px] rounded-[15px] px-[28px] pt-[15px] pb-[28px]"
       >
@@ -112,6 +115,23 @@ export default function Profile() {
         <Divider className="mb-[18px]">or</Divider>
         <Button>Upload your photo</Button>
       </Dialog>
+      <Popup
+        open={openCover && !!mobile}
+        onClose={() => setOpenCover(false)}
+        className="rounded-t-[30px] py-[37px] px-[27px] mt-[15vh] h-[85vh] bg-white"
+      >
+        <div className="text-[18px] font-manrope-bold mb-[19px] text-center lg:text-left">
+          Select cover image
+        </div>
+        <div className="grid grid-cols-1 gap-[13px] mb-[21px]">
+          <div className="h-[106px] rounded-[25px] bg-blue"></div>
+          <div className="h-[106px] rounded-[25px] bg-green"></div>
+          <div className="h-[106px] rounded-[25px] bg-orange"></div>
+          <div className="h-[106px] rounded-[25px] bg-gray"></div>
+        </div>
+        <Divider className="mb-[18px]">or</Divider>
+        <Button>Upload your photo</Button>
+      </Popup>
     </>
   );
 }
