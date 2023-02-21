@@ -5,9 +5,9 @@ import Button from '@/components/Button';
 
 export default function Profile() {
   return (
-    <>
+    <div className="pt-[44px] pl-[29px] pr-[17px] bg-[url(/images/wallet-bg.svg)] bg-top bg-no-repeat bg-[length:100%_184px]">
       <div className="flex items-center justify-between mb-[8px]">
-        <span className="font-manrope-bold text-white text-[22px] leading-[32px] bg-gray mb-[11px]">
+        <span className="font-manrope-bold text-white text-[22px] leading-[32px] mb-[11px]">
           Indira Shree
         </span>
         <IconButton variant="custom">
@@ -18,7 +18,7 @@ export default function Profile() {
           />
         </IconButton>
       </div>
-      <div className="font-manrope-bold text-[18px] leading-[24px] text-white/70 bg-gray mb-[23px]">
+      <div className="font-manrope-bold text-[18px] leading-[24px] text-white/70 mb-[23px]">
         @indirashree
       </div>
       <Avatar className="mx-auto mb-[26px]" url="/images/avatars/female.png" />
@@ -30,6 +30,6 @@ export default function Profile() {
         enviago.com/<span className="text-purple">@indirashree</span>
       </div>
       <Button>Share link</Button>
-    </>
+    </div>
   );
 }

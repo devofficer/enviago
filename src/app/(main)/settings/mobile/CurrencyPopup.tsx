@@ -9,7 +9,7 @@ export default function CurrencyPopup({ open, onClose }: PopupProps) {
     <Popup
       open={open}
       onClose={onClose}
-      className="h-[100vh] bg-gray-pale px-[28px] pt-[20px] flex flex-col"
+      className="h-[100vh] bg-gray-pale px-[28px] pt-[20px] pb-[34px] flex flex-col"
     >
       <div className="flex items-center justify-between mb-[27px]">
         <IconButton icon="backward" color="secondary" onClick={onClose} />

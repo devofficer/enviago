@@ -13,7 +13,7 @@ export default function Tab({ tabs, active, onSelect, className }: TabProps) {
   return (
     <ul
       className={clsx(
-        'flex flex-wrap gap-[5px] w-max bg-white rounded-[39px] p-[3px] lg:p-0 lg:bg-inherit text-[.875rem] font-manrope-bold text-center text-gray',
+        'flex flex-wrap gap-[5px] w-max bg-white rounded-[39px] p-[3px] lg:p-0 lg:bg-gray-pale text-[.875rem] font-manrope-bold text-center text-gray',
         className
       )}
     >
