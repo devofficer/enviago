@@ -1,5 +1,6 @@
 import React from 'react';
-import cls from 'classnames';
+import clsx from 'classnames';
+import { twMerge } from 'tailwind-merge';
 
 type DividerProps = {
   className?: string;
@@ -14,17 +15,16 @@ export default function Divider({
 }: DividerProps) {
   return (
     <div
-      className={cls(
-        className,
-        'border border-sold w-full h-0 flex justify-center relative',
-        {
+      className={twMerge(
+        clsx('border border-sold w-full h-0 flex justify-center relative', {
           'border-[#efefef]': color === 'primary',
           'border-[#f5f7f9]': color === 'secondary',
-        }
+        }),
+        className
       )}
     >
       {children ? (
-        <div className="px-[1rem] text-[#969aa8] font-montserrat-semibold bg-white absolute mt-[-.75rem]">
+        <div className="px-[16px] text-[#969aa8] text-[16px] font-montserrat-semibold bg-white absolute mt-[-12px]">
           {children}
         </div>
       ) : null}
