@@ -1,4 +1,4 @@
-const transactions: Array<Transaction> = [
+const TRANSACTIONS: Array<Transaction> = [
   {
     username: 'Hu Guiying',
     type: 'request',
@@ -50,4 +50,4 @@ const transactions: Array<Transaction> = [
   },
 ];
 
-export default transactions;
+export default TRANSACTIONS;

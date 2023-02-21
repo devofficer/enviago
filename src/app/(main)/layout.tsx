@@ -1,7 +1,7 @@
 import Sidebar from '@/parts/Sidebar';
-import Profile from '@/parts/Profile';
 import Header from '@/parts/Header';
 import { checkMobile } from '@/utils/helpers/next';
+import Rightbar from '@/parts/Rightbar';
 
 export default function MainLayout({
   children,
@@ -17,7 +17,7 @@ export default function MainLayout({
         </div>
         {isMobile === false && (
           <div className="hidden lg:pointer-events-auto lg:block lg:w-[372px] lg:overflow-y-auto lg:ml-auto">
-            <Profile />
+            <Rightbar />
           </div>
         )}
       </header>

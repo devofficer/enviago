@@ -2,6 +2,7 @@ import Image from 'next/image';
 import clsx from 'classnames';
 import Button from '../components/Button';
 import LINKS from '@/utils/constants/links';
+import { twMerge } from 'tailwind-merge';
 
 type TransactionCardProps = {
   className?: string;
@@ -14,9 +15,9 @@ export default function TransactionCard({
 }: TransactionCardProps) {
   return (
     <div
-      className={clsx(
-        className,
-        'rounded-[18px] bg-white hover:bg-gray group h-[77px] flex items-center justify-between px-[16px]'
+      className={twMerge(
+        'rounded-[18px] bg-white hover:bg-gray group h-[77px] flex items-center justify-between px-[16px]',
+        className
       )}
     >
       <div className="flex">
