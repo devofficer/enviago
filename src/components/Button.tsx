@@ -7,7 +7,7 @@ export type ButtonProps = {
   children: React.ReactNode;
   className?: string;
   size?: 'xsmall' | 'small' | 'medium' | 'large' | `${string}px`;
-  color?: 'primary' | 'secondary';
+  color?: 'primary' | 'secondary' | 'info';
   variant?: 'contained' | 'outlined' | 'naked';
   href?: string;
   disabled?: boolean;
@@ -38,16 +38,19 @@ export default function Button({
               }
             : variant === 'contained'
             ? {
-                'text-purple': color === 'primary',
-                'bg-purple text-white': color === 'primary',
+                'text-white': true,
+                'bg-purple': color === 'primary',
+                'bg-blue': color === 'info',
               }
             : variant === 'outlined'
             ? {
                 'bg-white border border-solid': true,
                 'text-purple': color === 'primary',
                 'border-purple': color === 'primary',
-                'tex-gray-cool': color === 'secondary',
+                'text-gray-cool': color === 'secondary',
                 'border-gray-trans': color === 'secondary',
+                'text-blue': color === 'info',
+                'border-blue': color === 'info',
               }
             : {
                 'text-purple': color === 'primary',
