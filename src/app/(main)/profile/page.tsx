@@ -2,33 +2,36 @@
 
 import React, { useState } from 'react';
 import IconButton from '@/components/IconButton';
-import PenSvg from '@/assets/icons/pen.svg';
 import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
 import TextField from '@/components/TextField';
 import Dialog from '@/components/Dialog';
 import Divider from '@/components/Divider';
 
+import PenSvg from '@/assets/icons/pen.svg';
+import LogoutSvg from '@/assets/icons/logout.svg';
+import Link from 'next/link';
+
 export default function Profile() {
   const [openCover, setOpenCover] = useState(false);
 
   return (
     <>
-      <div className="lg:px-[40px] lg:pb-[40px]">
+      <div className="pb-[90px] lg:px-[40px] lg:pb-[40px]">
         <div
           onClick={() => setOpenCover(true)}
-          className="w-full h-[225px] bg-blue rounded-[25px] pt-[74px] mb-[82px] relative"
+          className="w-full h-[185px] lg:h-[225px] bg-blue rounded-b-[25px] lg:rounded-[25px] pt-[28px] lg:pt-[74px] mb-[82px] relative px-[29px]"
         >
-          <div className="font-manrope-bold text-white text-[22px] leading-[32px] text-center mb-[7px]">
+          <div className="font-manrope-bold text-white text-[22px] leading-[32px] text-left lg:text-center mb-[11px] lg:mb-[7px]">
             Elwin Sharvill
           </div>
-          <div className="font-manrope-bold text-[18px] leading-[24px] text-white/70 text-center mb-[38px]">
+          <div className="font-manrope-bold text-[18px] leading-[24px] text-white/70 text-left lg:text-center mb-[38px]">
             @sharvillelwin
           </div>
           <Avatar className="mx-auto" url="/images/avatars/male.png" />
           <IconButton
             variant="custom"
-            className="absolute right-[55px] top-[32px]"
+            className="absolute top-[28px] right-[20px] lg:right-[55px] lg:top-[32px]"
           >
             <PenSvg
               width={36}
@@ -37,48 +40,60 @@ export default function Profile() {
             />
           </IconButton>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[15px] mb-[24px]">
-          <div className="border border-gray-trans rounded-[15px] px-[16px] py-[25px] font-manrope-semibold text-gray text-[14px]">
-            enviago.com/<span className="text-purple">@sharvillelwin</span>
+        <div className="px-[21px] pb-[21px] lg:p-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[15px] mb-[24px]">
+            <div className="border border-gray-trans rounded-[15px] px-[16px] py-[25px] font-manrope-semibold text-gray text-[14px]">
+              enviago.com/<span className="text-purple">@sharvillelwin</span>
+            </div>
+            <Button>Share link</Button>
           </div>
-          <Button>Share link</Button>
+          <div className="text-[14px] text-dark mb-[10px]">Price points</div>
+          <p className="text-[14px] text-gray-dark mb-[15px] lg:mb-[23px]">
+            Select the amounts other users can send to you when logged out.
+          </p>
+          <div className="flex flex-wrap gap-[6px] lg:gap-[7px] text-[14px] font-manrope-bold mb-[28px]">
+            <div className="w-[79px] lg:w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
+              $20
+            </div>
+            <div className="w-[79px] lg:w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
+              $50
+            </div>
+            <div className="w-[79px] lg:w-[85px] bg-gray text-white/50 text-center py-[7px] rounded-full">
+              $75
+            </div>
+            <div className="w-[79px] lg:w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
+              $100
+            </div>
+            <div className="w-[79px] lg:w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
+              $150
+            </div>
+            <div className="w-[79px] lg:w-[85px] bg-gray text-white/50 text-center py-[7px] rounded-full">
+              $200
+            </div>
+            <div className="w-[79px] lg:w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
+              $250
+            </div>
+            <div className="w-[79px] lg:w-[85px] bg-gray text-white/50 text-center py-[7px] rounded-full">
+              $500
+            </div>
+          </div>
+          <div className="text-[14px] text-dark mb-[15px]">Bio message</div>
+          <TextField
+            variant="multilined"
+            color="secondary"
+            placeholder="Tell other users something about you"
+            className="mb-[66px] lg:mb-0"
+          />
+          <div>
+            <Link
+              href="#"
+              className="flex items-center gap-[20px] w-max lg:hidden"
+            >
+              <LogoutSvg className="fill-blue" />
+              <span className="text-dark text-[14px]">Log out</span>
+            </Link>
+          </div>
         </div>
-        <div className="text-[14px] text-dark mb-[10px]">Price points</div>
-        <p className="text-[14px] text-gray-dark mb-[23px]">
-          Select the amounts other users can send to you when logged out.
-        </p>
-        <div className="flex flex-wrap gap-[7px] font-manrope-bold mb-[28px]">
-          <div className="w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
-            $20
-          </div>
-          <div className="w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
-            $50
-          </div>
-          <div className="w-[85px] bg-gray text-white/50 text-center py-[7px] rounded-full">
-            $75
-          </div>
-          <div className="w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
-            $100
-          </div>
-          <div className="w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
-            $150
-          </div>
-          <div className="w-[85px] bg-gray text-white/50 text-center py-[7px] rounded-full">
-            $200
-          </div>
-          <div className="w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
-            $250
-          </div>
-          <div className="w-[85px] bg-gray text-white/50 text-center py-[7px] rounded-full">
-            $500
-          </div>
-        </div>
-        <div className="text-[14px] text-dark mb-[15px]">Bio message</div>
-        <TextField
-          variant="multilined"
-          color="secondary"
-          placeholder="Tell other users something about you"
-        />
       </div>
       <Dialog
         open={openCover}
