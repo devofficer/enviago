@@ -7,8 +7,8 @@ import Image from 'next/image';
 export default function SharedProfile() {
   return (
     <div className="bg-gray-pale w-full">
-      <div className="container pt-[37px] pb-[55px]">
-        <div className="flex items-center justify-between mb-[33px]">
+      <div className="container lg:pt-[37px] lg:pb-[55px]">
+        <div className="hidden lg:flex items-center justify-between mb-[33px]">
           <LogoSvg className="fill-blue" />
           <div className="flex items-center">
             <LangSwitcher className="mr-[30px]" />
@@ -24,12 +24,12 @@ export default function SharedProfile() {
             </Button>
           </div>
         </div>
-        <div className="bg-white rounded-[30px]">
-          <div className="bg-orange h-[306px] pt-[145px] text-center rounded-t-[30px] rounded-b-[20px] mb-[86px]">
+        <div className="lg:bg-white bg-gray-pale rounded-[30px] min-h-screen">
+          <div className="bg-orange h-[185px] px-[29px] lg:px-0 lg:h-[306px] pt-[35px] lg:pt-[145px] lg:text-center lg:rounded-t-[30px] rounded-b-[20px] mb-[86px]">
             <div className="text-[22px] text-white font-manrope-bold mb-[7px]">
               Indira Shree
             </div>
-            <div className="text-[18px] text-white/80 font-manrope-bold mb-[38px]">
+            <div className="text-[18px] text-white/80 font-manrope-bold mb-[28px] lg:mb-[38px]">
               @indirashree
             </div>
             <Image
@@ -40,8 +40,8 @@ export default function SharedProfile() {
               className="mx-auto"
             />
           </div>
-          <div className="grid grid-cols-3">
-            <div className="col-start-2 text-center">
+          <div className="grid grid-cols-1 px-[29px] lg:px-0 lg:grid-cols-3">
+            <div className="lg:col-start-2 text-center">
               <p className="text-gray-dark text-[14px] mb-[23px]">
                 A writer, digital marketing pioneer, and Wall Street Journal
                 best-selling author who inspires and empowers people.
