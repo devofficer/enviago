@@ -61,7 +61,7 @@ const LINKS = {
   },
   profile: {
     path: '/profile',
-    label: 'Profile',
+    label: 'My Profile',
   },
 };
 

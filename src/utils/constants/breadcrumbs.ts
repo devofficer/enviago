@@ -48,6 +48,7 @@ const BREAD_CRUMBS: {
     LINKS.settings,
     LINKS.settings.preferences,
   ],
+  [LINKS.profile.path]: [LINKS.home, LINKS.profile],
 };
 
 export default BREAD_CRUMBS;

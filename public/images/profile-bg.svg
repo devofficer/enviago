@@ -1,0 +1,12 @@
+<svg width="728" height="225" viewBox="0 0 728 225" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="s8abiez0ra" x="0" y="0" width="728" height="225" rx="25"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="9fde1bxftb" fill="#fff">
+            <use xlink:href="#s8abiez0ra"/>
+        </mask>
+        <use fill="#0C4D58" xlink:href="#s8abiez0ra"/>
+        <rect fill="#2961FF" mask="url(#9fde1bxftb)" width="728" height="225" rx="25"/>
+    </g>
+</svg>
