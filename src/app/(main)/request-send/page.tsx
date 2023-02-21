@@ -13,7 +13,7 @@ export default function RequestOrSend() {
   const { tab } = useContext(TabContext);
 
   return (
-    <div>
+    <>
       <div className="bg-white px-[45px] pt-[34px] pb-[50px] rounded-[18px] mb-[28px]">
         <TextField
           placeholder="Name, @username, email, phone"
@@ -93,6 +93,6 @@ export default function RequestOrSend() {
         </div>
       </div>
       <Button href={LINKS.reqSend.amount.path}>Continue</Button>
-    </div>
+    </>
   );
 }

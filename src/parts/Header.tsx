@@ -22,16 +22,32 @@ export default function Header({ mobile }: { mobile: boolean }) {
     () => !mobile || [LINKS.home.path, LINKS.settings.path].includes(pathname),
     [mobile, pathname]
   );
+  const showLabel = useMemo(() => {
+    if (isHome) return false;
+    if (mobile) {
+      if (isParentPage && !pathname.startsWith(LINKS.profile.path)) {
+        return true;
+      }
+      return false;
+    }
+    return true;
+  }, [isHome, mobile, isParentPage, pathname]);
 
-  return (
-    <div className="flex justify-between">
+  const showBreadcrumbs = useMemo(
+    () => (mobile ? isHome : true),
+    [mobile, isHome]
+  );
+  const hiddenSidebar = !showLabel && !showBreadcrumbs && !isHome && !showLang;
+
+  return hiddenSidebar ? null : (
+    <div className="flex justify-between px-[25px] pt-[40px] lg:px-[40px] lg:pt-[40px]">
       <div className="mb-[11px] lg:mb-[24px]">
-        {(isHome ? false : mobile ? isParentPage : true) && (
+        {showLabel && (
           <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
             {breadcrumb?.[1]?.label}
           </div>
         )}
-        {(mobile ? isHome : true) && (
+        {showBreadcrumbs && (
           <nav className="w-full">
             <ol className="list-reset flex font-manrope-semibold text-[.875rem]">
               {breadcrumb?.map(({ breadcrumb: bread, label, path }, idx) => (

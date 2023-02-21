@@ -21,7 +21,7 @@ export default function MainLayout({
           </div>
         )}
       </header>
-      <div className="relative px-[25px] pt-[40px] pb-[104px] lg:p-[40px] bg-gray-pale">
+      <div className="relative bg-gray-pale">
         <Header mobile={isMobile} />
         <main>{children}</main>
       </div>

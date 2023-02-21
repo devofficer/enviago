@@ -14,7 +14,7 @@ export default function Profile() {
 
   return (
     <>
-      <div>
+      <div className="lg:px-[40px] lg:pb-[40px]">
         <div
           onClick={() => setOpenCover(true)}
           className="w-full h-[225px] bg-blue rounded-[25px] pt-[74px] mb-[82px] relative"
@@ -37,7 +37,7 @@ export default function Profile() {
             />
           </IconButton>
         </div>
-        <div className="grid grid-cols-2 gap-[15px] mb-[24px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[15px] mb-[24px]">
           <div className="border border-gray-trans rounded-[15px] px-[16px] py-[25px] font-manrope-semibold text-gray text-[14px]">
             enviago.com/<span className="text-purple">@sharvillelwin</span>
           </div>
@@ -47,7 +47,7 @@ export default function Profile() {
         <p className="text-[14px] text-gray-dark mb-[23px]">
           Select the amounts other users can send to you when logged out.
         </p>
-        <div className="flex flex-wrap gap-[7px] mb-[28px]">
+        <div className="flex flex-wrap gap-[7px] font-manrope-bold mb-[28px]">
           <div className="w-[85px] bg-blue text-white text-center py-[7px] rounded-full">
             $20
           </div>

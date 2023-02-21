@@ -12,7 +12,7 @@ export default function RequestSendLayout({
   const [tab, setTab] = useState('Request');
 
   return (
-    <div>
+    <div className="px-[25px] pb-[104px] lg:px-[40px] lg:pb-[40px]">
       <Tab
         active={tab}
         tabs={['Request', 'Send']}

@@ -15,7 +15,7 @@ export default function Home() {
   const [openDialog, setOpenDialog] = useState(true);
 
   return (
-    <>
+    <div className="px-[25px] pb-[104px] lg:px-[40px] lg:pb-[40px]">
       <div className="flex flex-wrap">
         <Wallet className="w-full mb-[16px] lg:mr-[16px] lg:w-max" />
         <div className="grid grid-cols-3 gap-[14px] flex-grow">
@@ -64,6 +64,6 @@ export default function Home() {
           Not now
         </Button>
       </Dialog>
-    </>
+    </div>
   );
 }
