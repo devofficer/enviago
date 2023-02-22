@@ -42,9 +42,9 @@ export default function Header({ mobile }: { mobile: boolean }) {
   return hiddenSidebar ? null : (
     <div className="flex justify-between px-[25px] pt-[40px] lg:px-[40px] lg:pt-[40px]">
       <div className="mb-[11px] lg:mb-[24px]">
-        {showLabel && (
+        {showLabel && breadcrumb && (
           <div className="font-manrope-bold text-[22px] leading-[32px] text-black">
-            {breadcrumb?.[1]?.label}
+            {breadcrumb[breadcrumb.length - 1].label}
           </div>
         )}
         {showBreadcrumbs && (
