@@ -22,7 +22,7 @@ export default function SignIn() {
         Enter your details to sign in.
       </p>
       <TextField placeholder="Username, phone, or email" className="mb-4" />
-      <TextField placeholder="Password" className="mb-4" />
+      <TextField placeholder="Password" password className="mb-4" />
       <Button className="bg-purple text-white mb-[1.875rem]">Log in</Button>
       <Divider className="mb-[1.5rem]">or</Divider>
       <Button className="mb-[1.5rem] " variant="outlined" color="secondary">

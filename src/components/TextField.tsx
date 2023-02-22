@@ -23,6 +23,7 @@ export default function TextField({
   placeholder,
   startAdornment,
   endAdornment,
+  onChange,
   color = 'primary',
   size = 'medium',
   variant = 'outlined',
@@ -38,6 +39,9 @@ export default function TextField({
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     setText(e.currentTarget.value);
+    if (onChange) {
+      onChange(e.currentTarget.value);
+    }
   };
 
   return variant === 'multilined' ? (
