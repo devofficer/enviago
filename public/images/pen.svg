@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="40px" viewBox="0 0 41 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 22366</title>
+    <defs>
+        <path d="M16,32 C24.836556,32 32,24.836556 32,16 C32,7.163444 24.836556,0 16,0 C7.163444,0 0,7.163444 0,16 C0,24.836556 7.163444,32 16,32 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-4" y="-4" width="40" height="40">
+            <rect x="-4" y="-4" width="40" height="40" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[D]-Home-" transform="translate(-1268.000000, -198.000000)">
+            <g id="Left-Bar" transform="translate(1066.867000, -1.251830)">
+                <g id="Group-2" transform="translate(0.133000, -19.748170)">
+                    <g id="Group-22401" transform="translate(137.500000, 155.000000)">
+                        <g id="Group-22366" transform="translate(68.000000, 68.000000)">
+                            <use id="Ellipse-10" stroke="#FEFEFE" mask="url(#mask-2)" stroke-width="8" fill="#1D51FE" stroke-dasharray="0,0" xlink:href="#path-1"></use>
+                            <g id="Edit" transform="translate(7.000000, 7.000000)">
+                                <path d="M0,0 L18,0 L18,18 L0,18 Z" id="vuesax/linear/edit-2-(Background)"></path>
+                                <g id="edit-2">
+                                    <path d="M3.78751083,9.2174942 C3.5550108,9.4649942 3.33001067,9.95249441 3.28501066,10.2899944 L3.00751072,12.7199934 C2.91001071,13.5974933 3.54001077,14.1974944 4.41001086,14.0474944 L6.82501131,13.634995 C7.16251135,13.574995 7.63501096,13.3274943 7.867511,13.0724943 L14.0250126,6.55499416 C15.0900127,5.4299942 15.5700117,4.14749458 13.9125114,2.5799947 C12.2625112,1.02749481 11.0100117,1.57499463 9.94501163,2.69999458 L3.78751083,9.2174942 Z" id="Vector" stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+                                    <path d="M8.91751099,3.7875061 C9.24001105,5.85750584 10.9200112,7.44000537 13.0050116,7.65000534" id="Vector" stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+                                    <path d="M18,0 L18,18 L0,18 L0,0 L18,0 Z" id="Vector" opacity="0"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

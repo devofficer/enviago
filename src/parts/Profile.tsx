@@ -1,11 +1,12 @@
 import IconButton from '@/components/IconButton';
 import PenSvg from '@/assets/icons/pen.svg';
+import LinkSvg from '@/assets/icons/link.svg';
 import Avatar from '@/components/Avatar';
 import Button from '@/components/Button';
 
 export default function Profile() {
   return (
-    <div className="pt-[44px] pl-[29px] pr-[17px] bg-[url(/images/wallet-bg.svg)] bg-top bg-no-repeat bg-[length:100%_184px]">
+    <div className="pt-[44px] pl-[29px] pr-[17px] bg-[url(/images/env-bg.png)] bg-top bg-no-repeat bg-[length:100%_184px]">
       <div className="flex items-center justify-between mb-[8px]">
         <span className="font-manrope-bold text-white text-[22px] leading-[32px] mb-[11px]">
           Indira Shree
@@ -26,8 +27,11 @@ export default function Profile() {
         A writer, digital marketing pioneer, and Wall Street Journal
         best-selling author who inspires and empowers people.
       </p>
-      <div className="border border-gray-trans rounded-[15px] px-[16px] py-[26px] font-manrope-semibold text-gray text-[.875rem] mb-[10px]">
-        enviago.com/<span className="text-purple">@indirashree</span>
+      <div className="flex items-center gap-[13px] border border-gray-trans rounded-[15px] px-[16px] py-[26px] font-manrope-semibold text-gray text-[.875rem] mb-[10px]">
+        <LinkSvg />
+        <span>
+          enviago.com/<span className="text-purple">@indirashree</span>
+        </span>
       </div>
       <Button>Share link</Button>
     </div>
