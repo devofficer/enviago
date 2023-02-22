@@ -146,6 +146,7 @@ export default function SettingsDesktop() {
       </Dialog>
       <Dialog
         open={openContactInfo}
+        closeBtn={true}
         onClose={() => setOpenContactInfo(false)}
         className="w-[388px] rounded-[15px] px-[28px] pt-[15px] pb-[37px] "
       >
