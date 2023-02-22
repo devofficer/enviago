@@ -7,6 +7,7 @@ import Button from '@/components/Button';
 import TextField from '@/components/TextField';
 import Dialog from '@/components/Dialog';
 import Divider from '@/components/Divider';
+import clsx from 'classnames';
 
 import PenSvg from '@/assets/icons/pen.svg';
 import LogoutSvg from '@/assets/icons/logout.svg';
@@ -107,10 +108,15 @@ export default function Profile() {
           Select cover image
         </div>
         <div className="grid grid-cols-1 gap-[13px] mb-[21px]">
-          <div className="h-[106px] rounded-[25px] bg-blue"></div>
-          <div className="h-[106px] rounded-[25px] bg-green"></div>
-          <div className="h-[106px] rounded-[25px] bg-orange"></div>
-          <div className="h-[106px] rounded-[25px] bg-gray"></div>
+          {['bg-blue', 'bg-green', 'bg-orange', 'bg-gray'].map((color, idx) => (
+            <div
+              key={idx}
+              className={clsx(
+                'bg-[url(/images/circles.svg)] bg-no-repeat bg-[center_right_-20px] h-[106px] rounded-[25px]',
+                color
+              )}
+            ></div>
+          ))}
         </div>
         <Divider className="mb-[18px]">or</Divider>
         <Button>Upload your photo</Button>
