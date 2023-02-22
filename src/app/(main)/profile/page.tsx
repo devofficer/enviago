@@ -24,7 +24,7 @@ export default function Profile() {
       <div className="pb-[90px] lg:px-[40px] lg:pb-[40px]">
         <div
           onClick={() => setOpenCover(true)}
-          className="w-full h-[185px] lg:h-[225px] bg-blue rounded-b-[25px] lg:rounded-[25px] pt-[28px] lg:pt-[74px] mb-[82px] relative px-[29px]"
+          className="w-full h-[185px] lg:h-[225px] bg-blue bg-[url(/images/circles.svg)] bg-no-repeat bg-[top_-20px_right_-20px] rounded-b-[25px] lg:rounded-[25px] pt-[28px] lg:pt-[74px] mb-[82px] relative px-[29px]"
         >
           <div className="font-manrope-bold text-white text-[22px] leading-[32px] text-left lg:text-center mb-[11px] lg:mb-[7px]">
             Elwin Sharvill
