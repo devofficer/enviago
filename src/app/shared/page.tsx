@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function SharedProfile() {
   return (
     <div className="bg-gray-pale w-full">
-      <div className="container lg:pt-[37px] lg:pb-[55px]">
+      <div className="lg:container lg:pt-[37px] lg:pb-[55px]">
         <div className="hidden lg:flex items-center justify-between mb-[33px]">
           <LogoSvg className="fill-blue" />
           <div className="flex items-center">
@@ -25,7 +25,7 @@ export default function SharedProfile() {
           </div>
         </div>
         <div className="lg:bg-white bg-gray-pale rounded-[30px] min-h-screen">
-          <div className="bg-orange h-[185px] px-[29px] lg:px-0 lg:h-[306px] pt-[35px] lg:pt-[145px] lg:text-center lg:rounded-t-[30px] rounded-b-[20px] mb-[86px]">
+          <div className="lg:bg-orange lg:bg-none h-[184px] bg-[url(/images/env-bg.png)] bg-top bg-no-repeat bg-[length:100%_184px] px-[29px] lg:px-0 lg:h-[306px] pt-[35px] lg:pt-[145px] lg:text-center lg:rounded-t-[30px] rounded-b-[20px] mb-[86px]">
             <div className="text-[22px] text-white font-manrope-bold mb-[7px]">
               Indira Shree
             </div>
