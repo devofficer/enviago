@@ -57,6 +57,7 @@ export default function Amount() {
 
       <Dialog
         open={openProcessingDialog}
+        closeBtn={false}
         onClose={() => {
           setOpenProcessingDialog(false);
           if (tab === 'Request') {

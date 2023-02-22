@@ -15,7 +15,7 @@ export default function Dialog({
   children,
   className,
   open,
-  closeBtn = false,
+  closeBtn = true,
   onClose,
 }: DialogProps) {
   const id = useId();

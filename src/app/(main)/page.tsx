@@ -41,6 +41,7 @@ export default function Home() {
       ))}
       <Dialog
         open={openDialog}
+        closeBtn={false}
         className="px-[24px] py-[30px] w-[325px] text-center"
         onClose={() => setOpenDialog(false)}
       >
