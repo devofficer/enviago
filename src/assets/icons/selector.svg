@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="11px" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5</title>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-339.000000, -96.000000)">
+            <g id="Language-Switcher" transform="translate(321.000000, 73.000000)">
+                <g id="Group-5" transform="translate(18.000000, 23.000000)">
+                    <rect id="Rectangle" fill="#E4E9F2" x="0" y="0" width="11" height="11" rx="5.5"></rect>
+                    <g id="Icons/Line/Down-Arrow" transform="translate(3.166667, 4.666667)" fill="#222B45">
+                        <path d="M2.1754907,2.42010371 C2.1525959,2.41071684 2.13180439,2.3968564 2.11433347,2.3793335 L-4.4408921e-16,0.263999939 L0.264000018,0 L2.24766668,1.98366674 L4.23133341,0 L4.49533335,0.263999939 L2.37966665,2.3793335 C2.36235362,2.39669625 2.3417785,2.4104644 2.31912486,2.41984622 C2.29647121,2.42922803 2.27218615,2.4340382 2.24766668,2.43400701 C2.22292321,2.43421503 2.1983855,2.42949058 2.1754907,2.42010371 Z" id="Chev-Icon"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
