@@ -30,7 +30,6 @@ export default function Button({
         clsx(
           'flex items-center justify-center',
           'text-center',
-          'hover:brightness-75',
           disabled
             ? {
                 'bg-gray/30 text-gray/50': variant === 'contained',
@@ -40,6 +39,8 @@ export default function Button({
             ? {
                 'text-white': true,
                 'bg-purple': color === 'primary',
+                'hover:bg-blue': color === 'primary',
+                'hover:brightness-75': color === 'secondary',
                 'bg-blue': color === 'info',
               }
             : variant === 'outlined'

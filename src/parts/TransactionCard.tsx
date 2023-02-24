@@ -16,7 +16,7 @@ export default function TransactionCard({
   return (
     <div
       className={twMerge(
-        'rounded-[18px] bg-white hover:bg-gray-pale group h-[77px] flex items-center justify-between px-[16px]',
+        'rounded-[18px] bg-white hover:bg-gray-light group h-[77px] flex items-center justify-between px-[16px]',
         className
       )}
     >
@@ -32,12 +32,12 @@ export default function TransactionCard({
           <div className="group-hover:hidden text-dark text-[.875rem] leading-[20px] mb-[4px]">
             {data.username}
           </div>
-          <div className="hidden group-hover:block text-white text-[.875rem] leading-[20px] mb-[4px]">
+          <div className="hidden group-hover:block text-black text-[.875rem] leading-[20px] mb-[4px]">
             {`${data.username} ${
               data.type === 'request' ? 'Requested' : 'Sent'
             } ${data.amount}`}
           </div>
-          <div className="text-gray group-hover:text-white text-[12px] leading-[16px]">
+          <div className="text-gray text-[12px] leading-[16px]">
             {`${data.timestamp} ago`}
           </div>
         </div>
