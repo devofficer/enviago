@@ -16,7 +16,7 @@ export default function TransactionCard({
   return (
     <div
       className={twMerge(
-        'rounded-[18px] bg-white hover:bg-gray group h-[77px] flex items-center justify-between px-[16px]',
+        'rounded-[18px] bg-white hover:bg-gray-pale group h-[77px] flex items-center justify-between px-[16px]',
         className
       )}
     >
